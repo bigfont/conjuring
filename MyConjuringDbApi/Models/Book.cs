@@ -9,5 +9,6 @@ namespace MyConjuringDbApi.Models
     {
         public int ID {  get; set; }
         public string Title { get; set; }
+        public string Subtitle { get; set; }
     }
 }
