@@ -12,9 +12,10 @@
 
     <div ng-controller="BookCtrl">
         <h2>Books</h2>
-        <input ng-model="search.$" placeholder= "Search All" />
-        <input ng-model="search.Title" placeholder="Title Search" />
-        <input ng-model="search.Subtitle" placeholder="Subtitle Search" />
+        <h3>Search</h3>
+        <label>All <input ng-model="search.$" placeholder="All" /></label>
+        <label>Title <input ng-model="search.Title" placeholder="Title" /></label>
+        <label>Subtitle <input ng-model="search.Subtitle" placeholder="Subtitle" /></label>
         <ul class="list-unstyled" ng-repeat="book in books | filter:search">
             <li><strong>{{ book.Title }}</strong> {{ book.Subtitle }}</li>
         </ul>
