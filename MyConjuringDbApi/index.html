@@ -12,7 +12,8 @@
 
     <div ng-controller="BookCtrl">
         <h2>Books</h2>
-        <ul class="list-unstyled" ng-repeat="book in books">
+        <input ng-model="search.title" />
+        <ul class="list-unstyled" ng-repeat="book in books | filter:search">
             <li><strong>{{ book.Title }}</strong> {{ book.Subtitle }}</li>
         </ul>
     </div>
