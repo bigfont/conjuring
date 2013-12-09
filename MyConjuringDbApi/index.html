@@ -6,7 +6,9 @@
 <body>
 
     <div ng-controller="BookCtrl">
-        <ul></ul>
+        <ul ng-repeat="book in books">
+            <li>{{book.title}}</li>
+        </ul>
     </div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.4/angular.min.js"></script>
