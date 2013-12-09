@@ -16,6 +16,7 @@
         <label>All <input ng-model="search.$" placeholder="All" /></label>
         <label>Title <input ng-model="search.Title" placeholder="Title" /></label>
         <label>Subtitle <input ng-model="search.Subtitle" placeholder="Subtitle" /></label>
+        <h3>Results</h3>
         <ul class="list-unstyled" ng-repeat="book in books | filter:search">
             <li><strong>{{ book.Title }}</strong> {{ book.Subtitle }}</li>
         </ul>
