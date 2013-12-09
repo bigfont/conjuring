@@ -89,6 +89,15 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201312082335130_InitialCreate.cs" />
+    <Compile Include="Migrations\201312082335130_InitialCreate.Designer.cs">
+      <DependentUpon>201312082335130_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201312090115046_AddSubtitle.cs" />
+    <Compile Include="Migrations\201312090115046_AddSubtitle.Designer.cs">
+      <DependentUpon>201312090115046_AddSubtitle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Book.cs" />
     <Compile Include="Models\ConjuringDb.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -104,6 +113,14 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201312082335130_InitialCreate.resx">
+      <DependentUpon>201312082335130_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201312090115046_AddSubtitle.resx">
+      <DependentUpon>201312090115046_AddSubtitle.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
