@@ -1,9 +1,16 @@
 ﻿var myApp = angular.module('conjuringApp', []);
 
 
-myApp.controller('BookCtrl', ['$scope', '$http', function ($scope, $http) {
-    
-    var books = $http.get('http://conjuring.azurewebsites.net/api/book/get');
-    $scope.books = books;
+myApp.controller('BookCtrl', ['$scope', '$http', '$window', function ($scope, $http, $window) {
 
+    $http.get('http://conjuring.azurewebsites.net/api/book/get')
+        .success(function (data, status, headers, config) {
+            
+            $window.alert('success');
+
+        })
+        .error(function (data, status, headers, config) {
+            $window.alert('error');
+
+        });    
 }]);
