@@ -13,11 +13,11 @@
     <div ng-controller="BookCtrl">
         <h2>Books</h2>
         <h3>Search</h3>
-        <label>All <input ng-model="search.$" placeholder="All" /></label>
-        <label>Title <input ng-model="search.Title" placeholder="Title" /></label>
-        <label>Subtitle <input ng-model="search.Subtitle" placeholder="Subtitle" /></label>
-        <label>Author Last Name <input ng-model="search.LastName" placeholder="Last Name" /></label>
-        <label>Author First Name <input ng-model="search.FirstName" placeholder="First Name" /></label>
+        <label>General Search <input class="form-control" ng-model="search.$" placeholder="General Search" /></label>
+        <label>Title <input class="form-control" ng-model="search.Title" placeholder="Title" /></label>
+        <label>Subtitle <input class="form-control" ng-model="search.Subtitle" placeholder="Subtitle" /></label>
+        <label>Author Last Name <input class="form-control" ng-model="search.LastName" placeholder="Last Name" /></label>
+        <label>Author First Name <input class="form-control" ng-model="search.FirstName" placeholder="First Name" /></label>
         <h3>Results</h3>
         <ul class="list-group" ng-repeat="book in books | filter:search:false">
             <li class="list-group-item">
