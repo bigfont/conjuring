@@ -20,7 +20,6 @@ namespace MyConjuringDbApi.Controllers
                         join au in db.Authors on b.AuthorID equals au.ID
                         select new BookDetails() { 
                             Title = b.Title, 
-                            Subtitle = b.Subtitle, 
                             FirstName = au.FirstName, 
                             LastName = au.LastName 
                         };
