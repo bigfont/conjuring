@@ -14,18 +14,23 @@ namespace MyConjuringDbApi.Controllers
         // GET api/<controller>
         public IEnumerable<BookDetails> Get()
         {
-            ConjuringDb db = new ConjuringDb();
+            ////ConjuringDb db = new ConjuringDb();
 
-            var query = from b in db.Books
-                        join au in db.Authors on b.AuthorID equals au.ID
-                        select new BookDetails() { 
-                            Title = b.Title, 
-                            FirstName = au.FirstName, 
-                            LastName = au.LastName 
-                        };
+            ////var query = from b in db.Books
+            ////            join au in db.Authors on b.AuthorID equals au.ID
+            ////            select new BookDetails() { 
+            ////                Title = b.Title, 
+            ////                FirstName = au.FirstName, 
+            ////                LastName = au.LastName 
+            ////            };
 
 
-            return query.AsEnumerable<BookDetails>();
-        }
+            ////return query.AsEnumerable<BookDetails>();
+
+            string connString = Environment.GetEnvironmentVariable("SQLCONNSTR_ConjuringDb");
+            BookDetails deet = new BookDetails() { Title = connString };
+
+            return new List<BookDetails>() { deet };
+        }        
     }
 }
