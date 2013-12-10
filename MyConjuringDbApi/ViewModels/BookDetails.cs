@@ -3,13 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 
-namespace MyConjuringDbApi.Models
+namespace MyConjuringDbApi.ViewModels
 {
-    public class Book
+    public class BookDetails
     {
-        public int ID {  get; set; }
         public string Title { get; set; }
         public string Subtitle { get; set; }
-        public int AuthorID { get; set; }
+        public string FirstName { get; set; }
+        public string LastName { get; set; }
     }
 }
