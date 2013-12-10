@@ -13,7 +13,7 @@ namespace MyConjuringDbApi.Models
 
         public ConjuringDb()
         {
-            string connString = Environment.GetEnvironmentVariable("SQLCONNSTR_");
+            string connString = Environment.GetEnvironmentVariable("SQLCONNSTR_ConjuringDb");
             Database.Connection.ConnectionString = connString;
         }
     }
