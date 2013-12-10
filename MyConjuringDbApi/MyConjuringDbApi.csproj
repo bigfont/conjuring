@@ -97,10 +97,20 @@
     <Compile Include="Migrations\201312090115046_AddSubtitle.Designer.cs">
       <DependentUpon>201312090115046_AddSubtitle.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201312100404439_AuthorClass.cs" />
+    <Compile Include="Migrations\201312100404439_AuthorClass.Designer.cs">
+      <DependentUpon>201312100404439_AuthorClass.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201312100415387_AddAuthorID.cs" />
+    <Compile Include="Migrations\201312100415387_AddAuthorID.Designer.cs">
+      <DependentUpon>201312100415387_AddAuthorID.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Models\Authors.cs" />
     <Compile Include="Models\Book.cs" />
     <Compile Include="Models\ConjuringDb.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ViewModels\BookDetails.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
@@ -120,6 +130,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201312090115046_AddSubtitle.resx">
       <DependentUpon>201312090115046_AddSubtitle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201312100404439_AuthorClass.resx">
+      <DependentUpon>201312100404439_AuthorClass.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201312100415387_AddAuthorID.resx">
+      <DependentUpon>201312100415387_AddAuthorID.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
