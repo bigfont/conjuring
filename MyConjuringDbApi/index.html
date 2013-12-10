@@ -18,7 +18,10 @@
         <label>Subtitle <input ng-model="search.Subtitle" placeholder="Subtitle" /></label>
         <h3>Results</h3>
         <ul class="list-unstyled" ng-repeat="book in books | filter:search:false">
-            <li><h4>{{ book.Title }} <small> {{ book.Subtitle }}</small></h4></li>
+            <li>
+                <h4>{{ book.Title }} <small> {{ book.Subtitle }}</small></h4>
+                <p> {{ book.LastName }}, {{ book.FirstName }} </p>
+                </li>
         </ul>
     </div>
 
