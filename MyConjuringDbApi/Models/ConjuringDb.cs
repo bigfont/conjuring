@@ -9,5 +9,6 @@ namespace MyConjuringDbApi.Models
     public class ConjuringDb : DbContext
     {
         public DbSet<Book> Books { get; set; }
+        public DbSet<Authors> Authors { get; set; }        
     }
 }

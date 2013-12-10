@@ -7,20 +7,12 @@ namespace MyConjuringDbApi.Migrations
     {
         public override void Up()
         {
-            CreateTable(
-                "dbo.Books",
-                c => new
-                    {
-                        ID = c.Int(nullable: false, identity: true),
-                        Title = c.String(),
-                    })
-                .PrimaryKey(t => t.ID);
             
         }
         
         public override void Down()
         {
-            DropTable("dbo.Books");
+
         }
     }
 }

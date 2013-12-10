@@ -36,3 +36,5 @@ C:\Users\Shaun\Documents\GitHub\conjuring\MyConjuringDbApi\obj\Debug\MyConjuring
 C:\Users\Shaun\Documents\GitHub\conjuring\MyConjuringDbApi\obj\Debug\MyConjuringDbApi.Migrations.InitialCreate.resources
 C:\Users\Shaun\Documents\GitHub\conjuring\MyConjuringDbApi\obj\Debug\MyConjuringDbApi.csproj.GenerateResource.Cache
 C:\Users\Shaun\Documents\GitHub\conjuring\MyConjuringDbApi\obj\Debug\MyConjuringDbApi.Migrations.AddSubtitle.resources
+C:\Users\Shaun\Documents\GitHub\conjuring\MyConjuringDbApi\obj\Debug\MyConjuringDbApi.Migrations.AuthorClass.resources
+C:\Users\Shaun\Documents\GitHub\conjuring\MyConjuringDbApi\obj\Debug\MyConjuringDbApi.Migrations.AddAuthorID.resources
