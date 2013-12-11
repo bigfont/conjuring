@@ -81,6 +81,7 @@
     <Content Include="app.js" />
     <Content Include="Global.asax" />
     <Content Include="index.html" />
+    <Content Include="Txt\db-migration.txt" />
     <Content Include="Txt\purgeFromGit.txt" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -90,6 +91,11 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201312110048507_PruneModels.cs" />
+    <Compile Include="Migrations\201312110048507_PruneModels.Designer.cs">
+      <DependentUpon>201312110048507_PruneModels.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Authors.cs" />
     <Compile Include="Models\Book.cs" />
     <Compile Include="Models\ConjuringDb.cs" />
@@ -107,6 +113,11 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201312110048507_PruneModels.resx">
+      <DependentUpon>201312110048507_PruneModels.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
