@@ -13,24 +13,31 @@
 
     <h1>Salt Spring Conjuring Club</h1>
 
-    <div ng-controller="BookCtrl">
-        <h2>Books</h2>
-        <h3>Search</h3>
+    <div class="row" ng-controller="BookCtrl">
 
-        <!--TODO Write the labels programmatically to keep the [for], [id], [text] and [placeholder] strings DRY--> 
-        <label for="General">General <input class="form-control" id="General" ng-model="search.$" placeholder="General" /></label>
-        <label for="Title">Title <input class="form-control" id="Title" ng-model="search.Title" placeholder="Title" /></label>
-        <label for="Last">Author Last Name <input class="form-control" id="Last" ng-model="search.LastName" placeholder="Last Name" /></label>
-        <label for="First">Author First Name <input class="form-control" id="First" ng-model="search.FirstName" placeholder="First Name" /></label>
+        <div class="col-lg-12 well">
 
-        <h3>Results</h3>
-        <ul class="list-group">
-            <li class="list-group-item" ng-repeat="book in books | filter:search:false | orderBy:'Title'">
-                <strong>{{ book.Title }}</strong>
-                <span ng-show="book.LastName && !book.FirstName">{{ book.LastName }}</span>
-                <span ng-show="book.LastName && book.FirstName">{{ book.LastName + ", " + book.FirstName }}</span>
-            </li>
-        </ul>
+            <h2>Books</h2>
+
+            <div class="row">
+                <div class="col-lg-6">
+                    <p><input class="form-control" id="Search" ng-model="search.$" placeholder="Search by title or author." /></p>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-12">
+                    <ul class="list-group">
+                        <li class="list-group-item" ng-repeat="book in books | filter:search:bookAndCompare | orderBy:'Title'">
+                            <strong>{{ book.Title }}</strong>
+                            <span ng-show="book.LastName && !book.FirstName">{{ book.LastName }}</span>
+                            <span ng-show="book.LastName && book.FirstName">{{ book.LastName + ", " + book.FirstName }}</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
 
     </div>
 
