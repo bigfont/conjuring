@@ -25,8 +25,7 @@ namespace MyConjuringDbApi.Migrations
             ////            Title = c.String(),
             ////            AuthorID = c.Int(nullable: false),
             ////        })
-            ////    .PrimaryKey(t => t.ID);
-            
+            ////    .PrimaryKey(t => t.ID);            
         }
         
         public override void Down()
