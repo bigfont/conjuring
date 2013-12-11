@@ -23,9 +23,8 @@
 
         <h3>Results</h3>
         <ul class="list-group" ng-repeat="book in books | filter:search:false | orderBy:'Title'">
-            <li class="list-group-item">
-                <h4>{{ book.Title }} <small> {{ book.Subtitle }}</small></h4>
-                <p> {{ book.LastName }}, {{ book.FirstName }} </p>
+            <li class="list-group-item">                
+                <span>{{ book.Title }}</span><span>{{ book.LastName }}</span><span>{{ book.FirstName }}</span>
                 </li>
         </ul>
     </div>
