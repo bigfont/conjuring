@@ -32,7 +32,6 @@ namespace MyConjuringDbApi.Controllers
             foreach (System.Collections.DictionaryEntry dictEntry_loopVariable in Environment.GetEnvironmentVariables())
             {
                 books.Add(new BookDetails() { Title = dictEntry_loopVariable.Key.ToString(), Subtitle = dictEntry_loopVariable.Value.ToString() });
-    
             }
 
             System.Configuration.ConnectionStringSettingsCollection connections = System.Configuration.ConfigurationManager.ConnectionStrings;
@@ -44,6 +43,8 @@ namespace MyConjuringDbApi.Controllers
                     books.Add(new BookDetails() { Title = connection.Name, Subtitle = connection.ConnectionString });
                 }
             }
+
+            books.Add(new BookDetails() { Environment.GetEnvironmentVariable("SQLAZURECONNSTR_ConjuringDb") });
 
             return books;
         }
