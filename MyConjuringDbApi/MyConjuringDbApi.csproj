@@ -78,6 +78,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="app.css" />
     <Content Include="app.js" />
     <Content Include="Global.asax" />
     <Content Include="index.html" />
@@ -113,6 +114,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Content\" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201312110048507_PruneModels.resx">
