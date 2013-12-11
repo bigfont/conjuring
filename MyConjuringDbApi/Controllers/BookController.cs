@@ -17,6 +17,7 @@ namespace MyConjuringDbApi.Controllers
             List<BookDetails> books = new List<BookDetails>();
 
             ConjuringDb db = new ConjuringDb();
+            db.Database.Connection.ConnectionString = Environment.GetEnvironmentVariable("SQLAZURECONNSTR_ConjuringDb");
 
             try
             {
