@@ -27,10 +27,22 @@ namespace MyConjuringDbApi.Controllers
 
             ////return query.AsEnumerable<BookDetails>();
 
-            string connString = Environment.GetEnvironmentVariable("SQLCONNSTR_ConjuringDb");
-            BookDetails deet = new BookDetails() { Title = connString };
+            List<BookDetails> books = new List<BookDetails>();
 
-            return new List<BookDetails>() { deet };
-        }        
+            string connString = Environment.GetEnvironmentVariable("SQLCONNSTR_ConjuringDb");
+            books.Add(new BookDetails() { Title = connString });
+
+            System.Configuration.ConnectionStringSettingsCollection connections = System.Configuration.ConfigurationManager.ConnectionStrings;
+
+            if (connections.Count != 0)
+            {
+                foreach (System.Configuration.ConnectionStringSettings connection in connections)
+                {
+                    books.Add(new BookDetails() { Title = connection.Name, Subtitle = connection.ConnectionString });
+                }
+            }
+
+            return books;
+        }
     }
 }
