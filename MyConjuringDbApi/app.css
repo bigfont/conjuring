@@ -1,5 +1,11 @@
-﻿li:nth-child(odd) {
+﻿li.even-child {
 
-    background-color:silver;
+    background-color:#29f7f7;
+
+}
+
+li.odd-child {
+
+    background-color:white;
 
 }
