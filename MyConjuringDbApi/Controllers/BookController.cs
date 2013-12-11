@@ -44,7 +44,7 @@ namespace MyConjuringDbApi.Controllers
                 }
             }
 
-            books.Add(new BookDetails() { Environment.GetEnvironmentVariable("SQLAZURECONNSTR_ConjuringDb") });
+            books.Add(new BookDetails() { Title = Environment.GetEnvironmentVariable("SQLAZURECONNSTR_ConjuringDb") });
 
             return books;
         }
