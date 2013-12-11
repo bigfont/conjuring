@@ -22,10 +22,10 @@
         <label for="First">Author First Name <input class="form-control" id="First" ng-model="search.FirstName" placeholder="First Name" /></label>
 
         <h3>Results</h3>
-        <ul class="list-group" ng-repeat="book in books | filter:search:false | orderBy:'Title'">
-            <li class="list-group-item">                
+        <ul class="list-group">
+            <li class="list-group-item" ng-repeat="book in books | filter:search:false | orderBy:'Title'">
                 <span>{{ book.Title }}</span><span>{{ book.LastName }}</span><span>{{ book.FirstName }}</span>
-                </li>
+            </li>
         </ul>
     </div>
 
