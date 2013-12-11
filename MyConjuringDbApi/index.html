@@ -17,10 +17,6 @@
         <h2>Books</h2>
         <h3>Search</h3>
 
-        <ul>
-            <li ng-repeat="(key,val) in books[0].book">{{key}}: {{val}}</li>
-        </ul>
-
         <!--TODO Write the labels programmatically to keep the [for], [id], [text] and [placeholder] strings DRY--> 
         <label for="General">General <input class="form-control" id="General" ng-model="search.$" placeholder="General" /></label>
         <label for="Title">Title <input class="form-control" id="Title" ng-model="search.Title" placeholder="Title" /></label>
