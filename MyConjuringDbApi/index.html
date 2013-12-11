@@ -28,7 +28,8 @@
         <ul class="list-group">
             <li class="list-group-item row" ng-repeat="book in books | filter:search:false | orderBy:'Title'">
                 <h4>{{ book.Title }}</h4>
-                <span ng-show="book.LastName">{{ book.LastName + ', ' + book.FirstName }}</span>
+                <span ng-show="book.LastName">{{ book.LastName }}</span>
+                <span ng-show="book.LastName && book.FirstName">{{ ", " + book.FirstName }}</span>
             </li>
         </ul>
 
