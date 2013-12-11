@@ -14,22 +14,34 @@ namespace MyConjuringDbApi.Controllers
         // GET api/<controller>
         public IEnumerable<BookDetails> Get()
         {
-            ConjuringDb db = new ConjuringDb();
+            List<BookDetails> books = new List<BookDetails>();
 
-            var query = from b in db.Books
-                        join au in db.Authors on b.AuthorID equals au.ID
-                        select new BookDetails()
-                        {
-                            Title = b.Title,
-                            FirstName = au.FirstName,
-                            LastName = au.LastName
-                        };
+            try
+            {
+                ConjuringDb db = new ConjuringDb();
 
-            ////return query.AsEnumerable<BookDetails>();
+                var query = from b in db.Books
+                            join au in db.Authors on b.AuthorID equals au.ID
+                            select new BookDetails()
+                            {
+                                Title = b.Title,
+                                FirstName = au.FirstName,
+                                LastName = au.LastName
+                            };
 
-            List<BookDetails> books = new List<BookDetails>();           
+                books.AddRange(query.ToList<BookDetails>());
+            }
+            catch(Exception e)
+            { 
+                books.Add(new BookDetails() { Title = e.Message });
+            }
 
             books.Add(new BookDetails() { Title = Environment.GetEnvironmentVariable("SQLAZURECONNSTR_ConjuringDb") });
+
+            foreach (System.Configuration.ConnectionStringSettings s in System.Configuration.ConfigurationManager.ConnectionStrings)
+            {
+                books.Add(new BookDetails() { Title = s.Name, FirstName = s.ConnectionString });
+            }
 
             return books;
         }
