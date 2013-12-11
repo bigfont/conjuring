@@ -16,8 +16,7 @@ namespace MyConjuringDbApi.Controllers
         {
             List<BookDetails> books = new List<BookDetails>();
 
-                ConjuringDb db = new ConjuringDb();
-
+            ConjuringDb db = new ConjuringDb();
 
             try
             {
@@ -33,8 +32,8 @@ namespace MyConjuringDbApi.Controllers
 
                 books.AddRange(query.ToList<BookDetails>());
             }
-            catch(Exception e)
-            { 
+            catch (Exception e)
+            {
                 books.Add(new BookDetails() { Title = e.Message, FirstName = db.Database.Connection.ConnectionString });
             }
 

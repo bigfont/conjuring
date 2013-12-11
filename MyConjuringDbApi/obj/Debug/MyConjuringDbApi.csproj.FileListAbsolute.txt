@@ -33,3 +33,4 @@ C:\Users\Shaun\Documents\GitHub\conjuring\MyConjuringDbApi\bin\System.Web.Http.x
 C:\Users\Shaun\Documents\GitHub\conjuring\MyConjuringDbApi\bin\System.Web.Http.WebHost.xml
 C:\Users\Shaun\Documents\GitHub\conjuring\MyConjuringDbApi\obj\Debug\MyConjuringDbApi.dll
 C:\Users\Shaun\Documents\GitHub\conjuring\MyConjuringDbApi\obj\Debug\MyConjuringDbApi.pdb
+C:\Users\Shaun\Documents\GitHub\conjuring\MyConjuringDbApi\obj\Debug\MyConjuringDbApi.csprojResolveAssemblyReference.cache
