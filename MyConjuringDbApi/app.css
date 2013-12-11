@@ -1,2 +1,5 @@
-﻿body {
+﻿li:nth-child(odd) {
+
+    background-color:silver;
+
 }
