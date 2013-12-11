@@ -1,11 +1,24 @@
-﻿li.even-child {
+﻿div {
+    border-color:#FF5A00 !important;
+}
+strong {
+    color:#FF5A00;
 
-    background-color:#29f7f7;
+}
+
+li.even-child {
+
+    background-color:#EEEEEE;
 
 }
 
 li.odd-child {
 
-    background-color:white;
+
+}
+
+#book-ctrl div.input-group {
+
+    margin-bottom:20px;
 
 }
