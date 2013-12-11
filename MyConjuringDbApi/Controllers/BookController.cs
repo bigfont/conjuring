@@ -16,9 +16,11 @@ namespace MyConjuringDbApi.Controllers
         {
             List<BookDetails> books = new List<BookDetails>();
 
+                ConjuringDb db = new ConjuringDb();
+
+
             try
             {
-                ConjuringDb db = new ConjuringDb();
 
                 var query = from b in db.Books
                             join au in db.Authors on b.AuthorID equals au.ID
@@ -33,7 +35,7 @@ namespace MyConjuringDbApi.Controllers
             }
             catch(Exception e)
             { 
-                books.Add(new BookDetails() { Title = e.Message });
+                books.Add(new BookDetails() { Title = e.Message, FirstName = db.Database.Connection.ConnectionString });
             }
 
             books.Add(new BookDetails() { Title = Environment.GetEnvironmentVariable("SQLAZURECONNSTR_ConjuringDb") });
