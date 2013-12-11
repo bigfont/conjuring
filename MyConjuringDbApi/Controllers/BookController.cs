@@ -25,8 +25,7 @@ namespace MyConjuringDbApi.Controllers
                             LastName = au.LastName
                         };
 
-
-            return query.AsEnumerable<BookDetails>();
+            ////return query.AsEnumerable<BookDetails>();
 
             List<BookDetails> books = new List<BookDetails>();           
 
