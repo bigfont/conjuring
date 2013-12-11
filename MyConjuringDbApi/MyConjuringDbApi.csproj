@@ -104,6 +104,10 @@
     <Compile Include="Migrations\201312112339104_AddMorePublisher.Designer.cs">
       <DependentUpon>201312112339104_AddMorePublisher.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201312112347200_AddSubtitle.cs" />
+    <Compile Include="Migrations\201312112347200_AddSubtitle.Designer.cs">
+      <DependentUpon>201312112347200_AddSubtitle.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Authors.cs" />
     <Compile Include="Models\Book.cs" />
@@ -134,6 +138,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201312112339104_AddMorePublisher.resx">
       <DependentUpon>201312112339104_AddMorePublisher.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201312112347200_AddSubtitle.resx">
+      <DependentUpon>201312112347200_AddSubtitle.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
