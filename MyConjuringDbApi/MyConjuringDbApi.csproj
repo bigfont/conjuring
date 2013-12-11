@@ -100,6 +100,7 @@
     <Compile Include="Models\Authors.cs" />
     <Compile Include="Models\Book.cs" />
     <Compile Include="Models\ConjuringDb.cs" />
+    <Compile Include="Models\Publishers.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ViewModels\BookDetails.cs" />
   </ItemGroup>
