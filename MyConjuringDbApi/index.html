@@ -5,6 +5,9 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css">
+
+    <link href="app.css" rel="stylesheet" />
+
 </head>
 <body class="container">
 
@@ -23,10 +26,12 @@
 
         <h3>Results</h3>
         <ul class="list-group">
-            <li class="list-group-item" ng-repeat="book in books | filter:search:false | orderBy:'Title'">
-                <span>{{ book.Title }}</span><span>{{ book.LastName }}</span><span>{{ book.FirstName }}</span>
+            <li class="list-group-item row" ng-repeat="book in books | filter:search:false | orderBy:'Title'">
+                <h4>{{ book.Title }}</h4>
+                <span>{{ book.LastName + ', ' + book.FirstName }}</span>
             </li>
         </ul>
+
     </div>
 
     <!-- Angular JS -->
