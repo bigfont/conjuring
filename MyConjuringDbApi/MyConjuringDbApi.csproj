@@ -96,6 +96,14 @@
     <Compile Include="Migrations\201312110048507_PruneModels.Designer.cs">
       <DependentUpon>201312110048507_PruneModels.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201312112258158_AddPublisher.cs" />
+    <Compile Include="Migrations\201312112258158_AddPublisher.Designer.cs">
+      <DependentUpon>201312112258158_AddPublisher.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201312112339104_AddMorePublisher.cs" />
+    <Compile Include="Migrations\201312112339104_AddMorePublisher.Designer.cs">
+      <DependentUpon>201312112339104_AddMorePublisher.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Authors.cs" />
     <Compile Include="Models\Book.cs" />
@@ -120,6 +128,12 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201312110048507_PruneModels.resx">
       <DependentUpon>201312110048507_PruneModels.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201312112258158_AddPublisher.resx">
+      <DependentUpon>201312112258158_AddPublisher.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201312112339104_AddMorePublisher.resx">
+      <DependentUpon>201312112339104_AddMorePublisher.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

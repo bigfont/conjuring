@@ -21,11 +21,15 @@ namespace MyConjuringDbApi.Controllers
 
             var query = from b in db.Books
                         join au in db.Authors on b.AuthorID equals au.ID
+                        join p in db.Publishers on b.PublisherID equals p.ID
                         select new BookDetails()
                         {
                             Title = b.Title,
+                            PublishYear = b.PublishYear,
                             FirstName = au.FirstName,
-                            LastName = au.LastName
+                            LastName = au.LastName,
+                            Publisher = p.Name,
+                            PublishLocation = p.Location
                         };
 
             books.AddRange(query.ToList<BookDetails>());
