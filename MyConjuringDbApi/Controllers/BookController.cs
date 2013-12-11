@@ -19,31 +19,16 @@ namespace MyConjuringDbApi.Controllers
             ConjuringDb db = new ConjuringDb();
             db.Database.Connection.ConnectionString = Environment.GetEnvironmentVariable("SQLAZURECONNSTR_ConjuringDb");
 
-            try
-            {
+            var query = from b in db.Books
+                        join au in db.Authors on b.AuthorID equals au.ID
+                        select new BookDetails()
+                        {
+                            Title = b.Title,
+                            FirstName = au.FirstName,
+                            LastName = au.LastName
+                        };
 
-                var query = from b in db.Books
-                            join au in db.Authors on b.AuthorID equals au.ID
-                            select new BookDetails()
-                            {
-                                Title = b.Title,
-                                FirstName = au.FirstName,
-                                LastName = au.LastName
-                            };
-
-                books.AddRange(query.ToList<BookDetails>());
-            }
-            catch (Exception e)
-            {
-                books.Add(new BookDetails() { Title = e.Message, FirstName = db.Database.Connection.ConnectionString });
-            }
-
-            books.Add(new BookDetails() { Title = Environment.GetEnvironmentVariable("SQLAZURECONNSTR_ConjuringDb") });
-
-            foreach (System.Configuration.ConnectionStringSettings s in System.Configuration.ConfigurationManager.ConnectionStrings)
-            {
-                books.Add(new BookDetails() { Title = s.Name, FirstName = s.ConnectionString });
-            }
+            books.AddRange(query.ToList<BookDetails>());
 
             return books;
         }
