@@ -10,11 +10,11 @@ namespace MyConjuringDbApi.Models
     {
         public DbSet<Book> Books { get; set; }
         public DbSet<Authors> Authors { get; set; }
+        public DbSet<Publishers> Publishers { get; set; }
 
         public ConjuringDb()
         {
-            string connString = Environment.GetEnvironmentVariable("SQLCONNSTR_ConjuringDb");
-            Database.Connection.ConnectionString = connString;
+
         }
     }
 }
