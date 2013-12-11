@@ -14,35 +14,21 @@ namespace MyConjuringDbApi.Controllers
         // GET api/<controller>
         public IEnumerable<BookDetails> Get()
         {
-            ////ConjuringDb db = new ConjuringDb();
+            ConjuringDb db = new ConjuringDb();
 
-            ////var query = from b in db.Books
-            ////            join au in db.Authors on b.AuthorID equals au.ID
-            ////            select new BookDetails() { 
-            ////                Title = b.Title, 
-            ////                FirstName = au.FirstName, 
-            ////                LastName = au.LastName 
-            ////            };
+            var query = from b in db.Books
+                        join au in db.Authors on b.AuthorID equals au.ID
+                        select new BookDetails()
+                        {
+                            Title = b.Title,
+                            FirstName = au.FirstName,
+                            LastName = au.LastName
+                        };
 
 
-            ////return query.AsEnumerable<BookDetails>();
+            return query.AsEnumerable<BookDetails>();
 
-            List<BookDetails> books = new List<BookDetails>();
-
-            foreach (System.Collections.DictionaryEntry dictEntry_loopVariable in Environment.GetEnvironmentVariables())
-            {
-                books.Add(new BookDetails() { Title = dictEntry_loopVariable.Key.ToString(), Subtitle = dictEntry_loopVariable.Value.ToString() });
-            }
-
-            System.Configuration.ConnectionStringSettingsCollection connections = System.Configuration.ConfigurationManager.ConnectionStrings;
-
-            if (connections.Count != 0)
-            {
-                foreach (System.Configuration.ConnectionStringSettings connection in connections)
-                {
-                    books.Add(new BookDetails() { Title = connection.Name, Subtitle = connection.ConnectionString });
-                }
-            }
+            List<BookDetails> books = new List<BookDetails>();           
 
             books.Add(new BookDetails() { Title = Environment.GetEnvironmentVariable("SQLAZURECONNSTR_ConjuringDb") });
 
