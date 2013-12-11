@@ -1,24 +1,20 @@
-﻿div {
-    border-color:#FF5A00 !important;
-}
-strong {
-    color:#FF5A00;
-
+﻿div, 
+.page-header {
+    border-color:#FF5A00;
 }
 
 li.even-child {
-
     background-color:#EEEEEE;
-
 }
 
 li.odd-child {
-
-
+    /*do something*/
 }
 
 #book-ctrl div.input-group {
-
     margin-bottom:20px;
+}
 
+.accent {
+    color:#990000;
 }
