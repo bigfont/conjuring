@@ -17,7 +17,6 @@ namespace MyConjuringDbApi.Controllers
             List<BookDetails> books = new List<BookDetails>();
 
             ConjuringDb db = new ConjuringDb();
-            db.Database.Connection.ConnectionString = Environment.GetEnvironmentVariable("SQLAZURECONNSTR_ConjuringDb");            
 
             var query = from b in db.Books
                         join au in db.Authors on b.AuthorID equals au.ID
