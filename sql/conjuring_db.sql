@@ -5,6 +5,7 @@ DROP TABLE [dbo].[Books]
 DROP TABLE [dbo].[Authors]
 DROP TABLE [dbo].[Publishers]
 DROP FUNCTION [dbo].[udf_TitleCase]
+DROP FUNCTION dbo.udf_computeLocation
 DROP PROC spInsertBook
 GO
 
@@ -45,12 +46,38 @@ CREATE FUNCTION udf_TitleCase (@InputString VARCHAR(4000) )
 
 GO
 
+CREATE FUNCTION [dbo].[udf_computeLocation] (@City varchar(100), @StateOrProvince varchar(100))
+	returns VARCHAR(100)
+	BEGIN
+		DECLARE @Location VARCHAR(100);
+
+		SET @Location = @City;
+
+		IF(@StateOrProvince IS NOT NULL)
+		BEGIN
+			SET @Location += ': ' + @StateOrProvince;
+		END
+		ELSE IF(@Country IS NOT NULL)
+		BEGIN
+			SET @Location += ': ' + @Country;
+		END
+
+		RETURN @Location;
+	END
+
+GO
+
 CREATE TABLE [dbo].[Publishers]
 (
 	[ID] [int] IDENTITY(0,1) NOT NULL,
 	[Name] [varchar](100) NULL,
-	[City] [varchar](100) NULL
+	[City] [varchar](100) NULL,
+	[StateOrProvince] [varchar](100) NULL,
+	[Country] [varchar](100) NULL,
 )
+
+ALTER TABLE [dbo].[Publishers] ADD [Location] AS dbo.udf_computeLocation(City, StateOrProvince)
+
 
 ALTER TABLE [dbo].[Publishers] ADD CONSTRAINT pk_PublisherID PRIMARY KEY (ID)
 
