@@ -29,8 +29,11 @@ namespace MyConjuringDbApi.Controllers
 
             List<BookDetails> books = new List<BookDetails>();
 
-            string connString = Environment.GetEnvironmentVariable("SQLCONNSTR_ConjuringDb");
-            books.Add(new BookDetails() { Title = connString });
+            foreach (System.Collections.DictionaryEntry dictEntry_loopVariable in Environment.GetEnvironmentVariables())
+            {
+                books.Add(new BookDetails() { Title = dictEntry_loopVariable.Key.ToString(), Subtitle = dictEntry_loopVariable.Value.ToString() });
+    
+            }
 
             System.Configuration.ConnectionStringSettingsCollection connections = System.Configuration.ConfigurationManager.ConnectionStrings;
 
