@@ -49,6 +49,7 @@
                         <i class="accent" ng-show="book.Title && book.Subtitle">{{ book.Title + ": " + book.Subtitle + "." }}</i>
 
                         <!--publisher-->
+                        <span ng-show="!book.PublishLocation && book.Publisher">{{ book.Publisher + "." }}</span>
                         <span ng-show="book.PublishLocation && book.Publisher">{{ book.PublishLocation + ": " + book.Publisher + "." }}</span>
 
                     </li>

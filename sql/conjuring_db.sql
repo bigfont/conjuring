@@ -197,13 +197,15 @@ EXEC spInsertBook 1950, 'The Magic Wand and Magical Review', '', '', 'The Magic 
 EXEC spInsertBook 0, 'Tricks of the Television Stars', 'Harry', 'Stanley', 'H. Clarke & Co', 'London', '','England'
 EXEC spInsertBook 0, 'At Home with McComb', 'Billy', 'McComb', '', '', '',''
 EXEC spInsertBook 1985, 'For Close-Up Magicians'' Eyes Only', 'Ben', 'Harris', 'Micky Hades International', '', '',''
-
-
-
-
-
-
-
+EXEC spInsertBook 1981, 'Lessons in Dishonesty', 'Laurie', 'Ireland', 'Magic Inc', 'Chicago', 'Il','United State of America'
+EXEC spInsertBook 1983, 'Tommy Wonder Entertains', 'Jos', 'Bema', 'Jeff Busby Magic', 'Oakland', 'CA','United State of America'
+EXEC spInsertBook 1989, 'The Happy Birthday Business', 'Frances', 'Marshall', 'Magic Inc', 'Chicago', 'IL','United State of America'
+EXEC spInsertBook 0, 'The Ostrich Factor', 'Gerald', 'Edmondson', '', '', '',''
+EXEC spInsertBook 1982, 'The Silver Passage', 'Gary', 'Ouellet', 'Camirand Academy of Magic', '', '','Canada'
+EXEC spInsertBook 0, 'Ovation: A Professional Act in Lecture Form by Martin A. Nash', 'Stephen', 'Minch', '', '', '',''
+EXEC spInsertBook 0, 'Jacks or Better: A Professional Act in Lecture Form by Martin A. Nash', 'Stephen', 'Minch', '', '', '',''
+EXEC spInsertBook 1996, 'Workers Number Five', 'Michael', 'Close', 'Michael Close', 'Carmel', 'IN','United State of America'
+EXEC spInsertBook 1976, 'The Worlds Greatest Magic', 'Hyla', 'Clark', 'Crown Publishers', '', '',''
 
 UPDATE [dbo].[Books] SET 
 	[Title] = [dbo].[udf_TitleCase]([Title])
