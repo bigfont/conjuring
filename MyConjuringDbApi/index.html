@@ -44,7 +44,7 @@
                         <span ng-show="book.LastName && book.FirstName">{{ book.LastName + ", " + book.FirstName.substring(0,1) + "." }}</span>
 
                         <!--year-->
-                        <span ng-show="book.PublishYear">({{ book.PublishYear + "." }})</span>
+                        <span ng-show="book.PublishYear">{{ "(" + book.PublishYear + ")." }}</span>
 
                         <!--title-->
                         <i class="accent" ng-show="book.Title">{{ book.Title + "." }}</i>
