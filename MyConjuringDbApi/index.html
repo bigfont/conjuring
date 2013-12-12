@@ -22,9 +22,11 @@
         <div class="row">
             <div class="col-lg-6">
                 <div class="input-group">
-                    <input class="form-control" id="Search" ng-model="search.$" placeholder="Search books." />
+
+                    <input class="form-control" id="Search" ng-model="search.$" placeholder="Search books." />                    
+
                     <span class="input-group-addon">
-                        {{ "Displaying " + (books | filter:search:bookAndCompare).length + " of " + books.length + " books." }}
+                        {{ "Displaying " + (books | filter:search:bookSearchComparitor).length + " of " + books.length + " books." }}
                     </span>
                 </div>
             </div>
@@ -33,11 +35,7 @@
         <div class="row">
             <div class="col-lg-12">
                 <ul class="list-group">
-                    <!--APA
-                    Author, A. A. (Year of publication). Title of work: Capital letter also for subtitle. Location: Publisher.
-                    See https://owl.english.purdue.edu/owl/resource/560/08/ -->
-
-                    <li class="list-group-item {{ $odd ? 'odd-child' : 'even-child' }}" ng-repeat="book in books | filter:search:bookAndCompare | orderBy:'Title'">
+                    <li class="list-group-item {{ $odd ? 'odd-child' : 'even-child' }}" ng-repeat="book in books | filter:search:bookSearchComparitor | orderBy:'Title'">
 
                         <!--author-->
                         <span ng-show="book.LastName && !book.FirstName">{{ book.LastName }}</span>
@@ -51,7 +49,7 @@
                         <i class="accent" ng-show="book.Title && book.Subtitle">{{ book.Title + ": " + book.Subtitle + "." }}</i>
 
                         <!--publisher-->
-                        <span ng-show="book.PublishLocation && book.Publisher">{{ book.PublishLocation + ": " + book.Publisher + "." }}</span>                        
+                        <span ng-show="book.PublishLocation && book.Publisher">{{ book.PublishLocation + ": " + book.Publisher + "." }}</span>
 
                     </li>
                 </ul>
