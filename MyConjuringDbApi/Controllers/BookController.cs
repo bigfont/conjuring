@@ -18,6 +18,10 @@ namespace MyConjuringDbApi.Controllers
 
             ConjuringDb db = new ConjuringDb();
 
+            // TODO Determine if it's necessary to get the connString from an environmental variable.
+            db.Database.Connection.ConnectionString = Environment.GetEnvironmentVariable("SQLAZURECONNSTR_ConjuringDb");            
+
+
             var query = from b in db.Books
                         join au in db.Authors on b.AuthorID equals au.ID
                         join p in db.Publishers on b.PublisherID equals p.ID
