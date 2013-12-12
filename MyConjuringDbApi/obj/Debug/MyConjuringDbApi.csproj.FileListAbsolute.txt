@@ -38,3 +38,4 @@ C:\Users\Shaun\Documents\GitHub\conjuring\MyConjuringDbApi\obj\Debug\MyConjuring
 C:\Users\Shaun\Documents\GitHub\conjuring\MyConjuringDbApi\obj\Debug\MyConjuringDbApi.Migrations.AddPublisher.resources
 C:\Users\Shaun\Documents\GitHub\conjuring\MyConjuringDbApi\obj\Debug\MyConjuringDbApi.Migrations.AddMorePublisher.resources
 C:\Users\Shaun\Documents\GitHub\conjuring\MyConjuringDbApi\obj\Debug\MyConjuringDbApi.Migrations.AddSubtitle.resources
+C:\Users\Shaun\Documents\GitHub\conjuring\MyConjuringDbApi\obj\Debug\MyConjuringDbApi.csprojResolveAssemblyReference.cache
