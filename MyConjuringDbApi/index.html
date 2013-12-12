@@ -41,16 +41,17 @@
 
                         <!--author-->
                         <span ng-show="book.LastName && !book.FirstName">{{ book.LastName }}</span>
-                        <span ng-show="book.LastName && book.FirstName">{{ book.LastName + ", " + book.FirstName.substring(0,1) }}</span>
+                        <span ng-show="book.LastName && book.FirstName">{{ book.LastName + ", " + book.FirstName.substring(0,1) + "." }}</span>
 
                         <!--year-->
-                        <span ng-show="book.PublishYear">({{ book.PublishYear }})</span>
+                        <span ng-show="book.PublishYear">({{ book.PublishYear + "." }})</span>
 
                         <!--title-->
-                        <i class="accent" ng-show="book.Title">{{ book.Title }}</i>
+                        <i class="accent" ng-show="book.Title">{{ book.Title + "." }}</i>
+                        <i class="accent" ng-show="book.Title && book.Subtitle">{{ book.Title + ": " + book.Subtitle + "." }}</i>
 
                         <!--publisher-->
-                        <span ng-show="book.PublishLocation && book.Publisher">{{ book.PublishLocation + ": " + book.Publisher }}</span>                        
+                        <span ng-show="book.PublishLocation && book.Publisher">{{ book.PublishLocation + ": " + book.Publisher + "." }}</span>                        
 
                     </li>
                 </ul>
