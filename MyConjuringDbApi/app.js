@@ -30,8 +30,44 @@ myApp.controller('BookCtrl', ['$scope', '$http', '$window', 'webApiConst', funct
         });
 }]);
 
-function createBookSearchObj(bookObj)
-{
+myApp.controller('ConductCtrl', ['$scope', function ($scope) {
+
+    $scope.aspirations = [
+        {
+            Notion: 'Arrive on time',
+            Example: 'If the club starts at 3:30 pm, we intend arrive within 5 minutes of 3:30 pm.'
+        },
+        {
+            Notion: 'Finish on time',
+            Example: 'If the club ends at 5 pm, we intend to be out by 5 pm.'
+        },
+        {
+            Notion: 'Be supportive',
+            Example: 'If we know how something works, we intend to say, "You performed that well" not "I know how you did that."'
+        },
+        {
+            Notion: 'Speak cleanly',
+            Example: 'If we are frustrated, we intend to say, "Wow, this is hard" not "@#$^%, this is hard."'
+        },
+
+    ];
+
+}]);
+
+myApp.controller('LevelCtrl', ['$scope', function ($scope) {
+
+    $scope.criteria = [
+        { Skill: 'Dealing', Standard: 'Deal 52 cards, one at a time, from a dealers grip in one minute.' },
+        { Skill: 'Shuffling', Standard: 'Run 52 cards, one at a time, from an overhand shuffle grip in one minute.' },
+        { Skill: 'Spreading', Standard: 'Spread the cards from the left to the right hand.' },
+        { Skill: 'Cutting', Standard: 'Cut the cards in the hands from dealers grip using the specified technique.' }
+    ];
+
+}]);
+
+
+
+function createBookSearchObj(bookObj) {
     var searchObj;
 
     searchObj = {};
@@ -47,8 +83,7 @@ function bookSearchComparitor(expected, actual) {
     var containsAll;
     var actualSplit;
 
-    if (actual.length === 0)
-    {
+    if (actual.length === 0) {
         return true;
     }
 
@@ -64,10 +99,8 @@ function bookSearchComparitor(expected, actual) {
     return containsAll;
 };
 
-function makeString(input)
-{
-    if (typeof (input) !== 'string')
-    {
+function makeString(input) {
+    if (typeof (input) !== 'string') {
         input = '' + input;
     }
     return input;
