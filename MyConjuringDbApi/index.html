@@ -2,28 +2,64 @@
 <html ng-app="conjuringApp">
 <head>
     <title>Salt Spring Conjuring Club</title>
-
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css">
-
     <link href="app.css" rel="stylesheet" />
-
 </head>
-
-
 <body class="container">
-
+    <!--Header-->
     <div class="page-header">
-        <h1>Salt Spring Conjuring Club <small>Earn Privileged Knowledge</small></h1>
+        <h1>
+            <span>
+                Salt Spring
+            </span>
+            <span>
+                Conjuring Club
+            </span>
+            <small>
+                Imagine Mastering Illusion
+            </small>
+        </h1>
     </div>
-
-    <div id="book-ctrl" ng-controller="BookCtrl">
-
+    <!--End Header-->
+    <!--Conduct-->
+    <section id="conduct" ng-controller="ConductCtrl">
+        <div class="row">
+            <div class="col-lg-12">
+                <h1>Code of Engagement</h1>
+                <ul class="list-unstyled">
+                    <li ng-repeat="aspiration in aspirations"><strong>{{ aspiration.Notion }}</strong> <span>{{ aspiration.Example }}</span></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <!--End Conduct-->
+    <!--Levels-->
+    <article id="levels" ng-controller="LevelCtrl">
+        <h1>Guarded Knowledge</h1>
+        <p>Learning magic means learning secrets one level at a time. As we develop greater skill, we earn access to further levels.</p>
+        <h2>Level One <small>Learn the territory.</small></h2>
+        <ul class="list-unstyled">
+            <li ng-repeat="criterion in criteria"><strong>{{ criterion.Skill }}</strong> <span>{{ criterion.Standard }}</span></li>
+        </ul>
+        <h2>Level Two</h2>
+        <p>Coming soon.</p>
+        <h2>Level Three</h2>
+        <p>Coming soon.</p>
+    </article>
+    <!--End Levels-->
+    <!--Books-->
+    <section id="books" ng-controller="BookCtrl">
+        <div class="row">
+            <div class="col-lg-12">
+                <h1>Books</h1>
+            </div>
+        </div>
         <div class="row">
             <div class="col-lg-6">
                 <div class="input-group">
 
-                    <input class="form-control" id="Search" ng-model="search.$" placeholder="Search books." />                    
+                    <input class="form-control" id="Search" ng-model="search.$" placeholder="Search for knowledge." />
 
                     <span class="input-group-addon">
                         {{ "Displaying " + (books | filter:search:bookSearchComparitor).length + " of " + books.length + " books." }}
@@ -31,37 +67,29 @@
                 </div>
             </div>
         </div>
-
         <div class="row">
             <div class="col-lg-12">
                 <ul class="list-group">
                     <li class="list-group-item {{ $odd ? 'odd-child' : 'even-child' }}" ng-repeat="book in books | filter:search:bookSearchComparitor | orderBy:'Title'">
-
                         <!--author-->
                         <span ng-show="book.LastName && !book.FirstName">{{ book.LastName }}</span>
                         <span ng-show="book.LastName && book.FirstName">{{ book.LastName + ", " + book.FirstName.substring(0,1) + "." }}</span>
-
                         <!--year-->
                         <span ng-show="book.PublishYear">{{ "(" + book.PublishYear + ")." }}</span>
-
                         <!--title-->
                         <i class="accent" ng-show="book.Title">{{ book.Title + "." }}</i>
                         <i class="accent" ng-show="book.Title && book.Subtitle">{{ book.Title + ": " + book.Subtitle + "." }}</i>
-
                         <!--publisher-->
                         <span ng-show="!book.PublishLocation && book.Publisher">{{ book.Publisher + "." }}</span>
                         <span ng-show="book.PublishLocation && book.Publisher">{{ book.PublishLocation + ": " + book.Publisher + "." }}</span>
-
                     </li>
                 </ul>
             </div>
         </div>
-
-    </div>
-
-    <!-- Angular JS -->
+    </section>
+    <!--End Books-->
+    <!-- JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.4/angular.js"></script>
     <script src="app.js"></script>
-
 </body>
 </html>
