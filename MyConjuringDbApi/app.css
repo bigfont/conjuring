@@ -1,4 +1,8 @@
-﻿div,
+﻿body {
+    padding-bottom:20px;
+}
+
+div,
 .page-header {
     border-color: #FF5A00;
 }
