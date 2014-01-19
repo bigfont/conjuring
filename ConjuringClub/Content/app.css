@@ -1,0 +1,29 @@
+﻿body {
+    padding-bottom:20px;
+}
+
+div,
+.page-header {
+    border-color: #FF5A00;
+}
+
+li.even-child {
+    background-color: #f6f9fb;
+}
+
+li.odd-child {
+    /*do something*/
+}
+
+#books div.input-group {
+    margin-bottom: 20px;
+}
+
+strong,
+.accent {
+    color: #990000;
+}
+
+small {
+    display: inline-block;
+}
