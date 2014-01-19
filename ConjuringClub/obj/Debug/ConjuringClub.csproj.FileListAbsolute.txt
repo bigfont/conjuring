@@ -61,3 +61,8 @@ C:\Users\Shaun\Documents\GitHub\conjuring\ConjuringClub\bin\System.Web.Http.Owin
 C:\Users\Shaun\Documents\GitHub\conjuring\ConjuringClub\obj\Debug\ConjuringClub.csprojResolveAssemblyReference.cache
 C:\Users\Shaun\Documents\GitHub\conjuring\ConjuringClub\obj\Debug\ConjuringClub.dll
 C:\Users\Shaun\Documents\GitHub\conjuring\ConjuringClub\obj\Debug\ConjuringClub.pdb
+C:\Users\Shaun\Documents\GitHub\conjuring\ConjuringClub\obj\Debug\MyConjuringDbApi.Migrations.PruneModels.resources
+C:\Users\Shaun\Documents\GitHub\conjuring\ConjuringClub\obj\Debug\MyConjuringDbApi.Migrations.AddPublisher.resources
+C:\Users\Shaun\Documents\GitHub\conjuring\ConjuringClub\obj\Debug\MyConjuringDbApi.Migrations.AddMorePublisher.resources
+C:\Users\Shaun\Documents\GitHub\conjuring\ConjuringClub\obj\Debug\MyConjuringDbApi.Migrations.AddSubtitle.resources
+C:\Users\Shaun\Documents\GitHub\conjuring\ConjuringClub\obj\Debug\ConjuringClub.csproj.GenerateResource.Cache
