@@ -58,7 +58,6 @@ C:\Users\Shaun\Documents\GitHub\conjuring\ConjuringClub\bin\Microsoft.Owin.Secur
 C:\Users\Shaun\Documents\GitHub\conjuring\ConjuringClub\bin\Microsoft.Owin.Security.Twitter.xml
 C:\Users\Shaun\Documents\GitHub\conjuring\ConjuringClub\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
 C:\Users\Shaun\Documents\GitHub\conjuring\ConjuringClub\bin\System.Web.Http.Owin.xml
-C:\Users\Shaun\Documents\GitHub\conjuring\ConjuringClub\obj\Debug\ConjuringClub.csprojResolveAssemblyReference.cache
 C:\Users\Shaun\Documents\GitHub\conjuring\ConjuringClub\obj\Debug\ConjuringClub.dll
 C:\Users\Shaun\Documents\GitHub\conjuring\ConjuringClub\obj\Debug\ConjuringClub.pdb
 C:\Users\Shaun\Documents\GitHub\conjuring\ConjuringClub\obj\Debug\MyConjuringDbApi.Migrations.PruneModels.resources
