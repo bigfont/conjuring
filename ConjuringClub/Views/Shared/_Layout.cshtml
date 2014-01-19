@@ -1,10 +1,9 @@
 ﻿<!DOCTYPE html>
 <html ng-app="conjuringApp">
 <head>
-    <title>Salt Spring Conjuring Club</title>
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css">
-    <link href="app.css" rel="stylesheet" />
+    <title>Salt Spring Conjuring Club</title>        
+    
+    @Styles.Render("~/bundles/css")
 
     <!--GoogleAnalyticsObject-->
     <script>
@@ -117,7 +116,10 @@
 
         <!--End Books-->
         <!-- JS -->
-        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.4/angular.js"></script>
-        <script src="app.js"></script>
+
+
+        @Scripts.Render("~/cdn/angular")
+        @Scripts.Render("~/bundles/javascript")
+
     </body>
 </html>
