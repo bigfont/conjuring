@@ -1,5 +1,5 @@
 ﻿body {
-    padding-bottom:20px;
+    padding-bottom: 20px;
 }
 
 div,
@@ -27,3 +27,13 @@ strong,
 small {
     display: inline-block;
 }
+
+
+
+dl > dt {
+    margin-top: 10px;
+}
+
+    dl > dt:first-child {
+        margin-top: 0px;
+    }

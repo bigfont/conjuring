@@ -65,3 +65,4 @@ C:\Users\Shaun\Documents\GitHub\conjuring\ConjuringClub\obj\Debug\MyConjuringDbA
 C:\Users\Shaun\Documents\GitHub\conjuring\ConjuringClub\obj\Debug\MyConjuringDbApi.Migrations.AddMorePublisher.resources
 C:\Users\Shaun\Documents\GitHub\conjuring\ConjuringClub\obj\Debug\MyConjuringDbApi.Migrations.AddSubtitle.resources
 C:\Users\Shaun\Documents\GitHub\conjuring\ConjuringClub\obj\Debug\ConjuringClub.csproj.GenerateResource.Cache
+C:\Users\Shaun\Documents\GitHub\conjuring\ConjuringClub\obj\Debug\ConjuringClub.csprojResolveAssemblyReference.cache
