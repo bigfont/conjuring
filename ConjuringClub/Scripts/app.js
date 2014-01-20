@@ -65,7 +65,21 @@ myApp.controller('LevelCtrl', ['$scope', function ($scope) {
 
 }]);
 
+myApp.controller('RegisterCtrl', ['$scope', '$http', 'webApiConst', function ($scope, $http, webApiConst) {
 
+    $http({ method: 'POST', url: webApiConst + 'account/register', data: { UserName: 'Alice', Password: 'password123', ConfirmPassword: 'password123' } }).
+        success(function (data, status, headers, config) {
+
+            $scope.result = "success";
+
+        }).
+        error(function (data, status, headers, config) {
+
+            $scope.result = "error";
+
+        });
+
+}]);
 
 function createBookSearchObj(bookObj) {
     var searchObj;
