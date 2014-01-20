@@ -1,0 +1,39 @@
+﻿<!--Books-->
+<section id="books" ng-controller="BookCtrl">
+    <div class="row">
+        <div class="col-lg-12">
+            <h1>Books</h1>
+            <p>We are donating many of our books to the Salt Spring Island Public Library. The list is below, but you have to search their <a href="http://bgsi.bc.catalogue.libraries.coop/eg/opac/advanced?physical_loc=18">catalog</a> for availability.</p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-6">
+            <div class="input-group">
+                <input class="form-control" id="Search" ng-model="search.$" placeholder="Search for knowledge." />
+                <span class="input-group-addon">
+                    {{ "Displaying " + (books | filter:search:bookSearchComparitor).length + " of " + books.length + " books." }}
+                </span>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-12">
+            <ul class="list-group">
+                <li class="list-group-item {{ $odd ? 'odd-child' : 'even-child' }}" ng-repeat="book in books | filter:search:bookSearchComparitor | orderBy:'Title'">
+                    <!--author-->
+                    <span ng-show="book.LastName && !book.FirstName">{{ book.LastName }}</span>
+                    <span ng-show="book.LastName && book.FirstName">{{ book.LastName + ", " + book.FirstName.substring(0,1) + "." }}</span>
+                    <!--year-->
+                    <span ng-show="book.PublishYear">{{ "(" + book.PublishYear + ")." }}</span>
+                    <!--title-->
+                    <i class="accent" ng-show="book.Title">{{ book.Title + "." }}</i>
+                    <i class="accent" ng-show="book.Title && book.Subtitle">{{ book.Title + ": " + book.Subtitle + "." }}</i>
+                    <!--publisher-->
+                    <span ng-show="!book.PublishLocation && book.Publisher">{{ book.Publisher + "." }}</span>
+                    <span ng-show="book.PublishLocation && book.Publisher">{{ book.PublishLocation + ": " + book.Publisher + "." }}</span>
+                </li>
+            </ul>
+        </div>
+    </div>
+</section>
+<!--End Books--> 

@@ -19,6 +19,7 @@ namespace ConjuringClub
                 "~/Scripts/angular.js"));
             
             bundles.Add(new ScriptBundle("~/bundles/javascript").Include(
+                "~/Scripts/google-analytics-object.js",
                 "~/Scripts/app.js"));
             
             bundles.Add(new StyleBundle("~/bundles/css").Include(

@@ -83,10 +83,11 @@ myApp.controller('RegisterCtrl', ['$scope', '$http', function ($scope, $http) {
 
 // 
 // Test user authentication
+// It doesn't suppport JSON at this time so we must use a query string.
 //
 myApp.controller('LoginCtrl', ['$scope', '$http', function ($scope, $http) {
 
-    $http({ method: 'POST', url: 'token', data: { UserName: 'Alice', Password: 'password123', ConfirmPassword: 'password123' } }).
+    $http({ method: 'POST', url: 'token', data: "grant_type=password&username=Alice&password=password123" }).
         success(function (data, status, headers, config) {
 
             $scope.result = "success";
