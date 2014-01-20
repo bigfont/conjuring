@@ -534,6 +534,9 @@
   <ItemGroup>
     <Content Include="Views\Home\_Header.cshtml" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Home\_Schedule.cshtml" />
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
