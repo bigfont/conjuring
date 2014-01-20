@@ -3,13 +3,13 @@
     <div class="row">
         <div class="col-lg-12">
             <h1>Books</h1>
-            <p>We are donating many of our books to the Salt Spring Island Public Library. The list is below, but you have to search their <a href="http://bgsi.bc.catalogue.libraries.coop/eg/opac/advanced?physical_loc=18">catalog</a> for availability.</p>
+            <p>The following books are available at the Salt Spring Island Public Library. Please see their <a href="http://bgsi.bc.catalogue.libraries.coop/eg/opac/advanced?physical_loc=18">catalog</a> for availability.</p>
         </div>
     </div>
     <div class="row">
         <div class="col-lg-6">
             <div class="input-group">
-                <input class="form-control" id="Search" ng-model="search.$" placeholder="Search for knowledge." />
+                <input class="form-control" id="Search" ng-model="search.$" placeholder="Search" />
                 <span class="input-group-addon">
                     {{ "Displaying " + (books | filter:search:bookSearchComparitor).length + " of " + books.length + " books." }}
                 </span>
