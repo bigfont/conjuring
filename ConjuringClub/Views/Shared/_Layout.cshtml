@@ -5,128 +5,22 @@
     
     @Styles.Render("~/bundles/css")
 
-    <!--GoogleAnalyticsObject-->
-    <script>
-        (function (i, s, o, g, r, a, m) {
-            i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
-                (i[r].q = i[r].q || []).push(arguments)
-            }, i[r].l = 1 * new Date(); a = s.createElement(o),
-            m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
-        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
-
-        ga('create', 'UA-46462536-1', '1in52.ca');
-        ga('send', 'pageview');
-
-    </script>
-
 </head>
     <body class="container">
         
         @RenderBody()
-
-        <!--Header-->
-        <div class="page-header">
-            <h1>
-                <span>
-                    Salt Spring
-                </span>
-                <span>
-                    Conjuring Club
-                </span>
-                <small>
-                    Imagine Mastering Illusion
-                </small>
-            </h1>
-        </div>
-        <!--End Header-->
         
-        <section id="register" ng-controller="RegisterCtrl">
+        @Html.Partial("_Header")
 
-            <p>{{ result }}</p>
-
-        </section>
-
-        <!--Conduct-->
-        <section id="conduct" ng-controller="ConductCtrl">
-            <div class="row">
-                <div class="col-lg-12">
-                    <h1>Code of Engagement</h1>
-                    <ul class="list-unstyled">
-                        <li ng-repeat="aspiration in aspirations"><strong>{{ aspiration.Notion }}</strong> <span>{{ aspiration.Example }}</span></li>
-                    </ul>
-                    <p><span class="label label-warning">Warning</span> If you break the code of engagement, it isn't the end of the world. You will, though, have to endure one of the following outcomes:</p>
-                    <ul>
-                        <li>wear the blindfold for 15-minutes,</li>
-                        <li>donate $0.10 to the library for every minute that you're late, or</li>
-                        <li>not attend for the day.</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-        <!--End Conduct-->
-
-        <!--Levels-->
-        <article id="levels" ng-controller="LevelCtrl">
-            <h1>Secret Knowledge</h1>
-            <p>Learning magic means learning secrets one level at a time. As we develop greater skill, we earn access to further levels.</p>
-            <h2>Level One <small>Learn the territory.</small></h2>
-            <ul class="list-unstyled">
-                <li ng-repeat="criterion in criteria"><strong>{{ criterion.Skill }}</strong> <span>{{ criterion.Standard }}</span></li>
-            </ul>
-            <h2>Level Two</h2>
-            <p>Coming soon.</p>
-            <h2>Level Three</h2>
-            <p>Coming soon.</p>
-        </article>
-        <!--End Levels-->
-
-        <!--Books-->
-        <section id="books" ng-controller="BookCtrl">
-            <div class="row">
-                <div class="col-lg-12">
-                    <h1>Books</h1>
-                    <p>We are donating many of our books to the Salt Spring Island Public Library. The list is below, but you have to search their <a href="http://bgsi.bc.catalogue.libraries.coop/eg/opac/advanced?physical_loc=18">catalog</a> for availability.</p>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-6">
-                    <div class="input-group">
-                        <input class="form-control" id="Search" ng-model="search.$" placeholder="Search for knowledge." />
-                        <span class="input-group-addon">
-                            {{ "Displaying " + (books | filter:search:bookSearchComparitor).length + " of " + books.length + " books." }}
-                        </span>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-12">
-                    <ul class="list-group">
-                        <li class="list-group-item {{ $odd ? 'odd-child' : 'even-child' }}" ng-repeat="book in books | filter:search:bookSearchComparitor | orderBy:'Title'">
-                            <!--author-->
-                            <span ng-show="book.LastName && !book.FirstName">{{ book.LastName }}</span>
-                            <span ng-show="book.LastName && book.FirstName">{{ book.LastName + ", " + book.FirstName.substring(0,1) + "." }}</span>
-                            <!--year-->
-                            <span ng-show="book.PublishYear">{{ "(" + book.PublishYear + ")." }}</span>
-                            <!--title-->
-                            <i class="accent" ng-show="book.Title">{{ book.Title + "." }}</i>
-                            <i class="accent" ng-show="book.Title && book.Subtitle">{{ book.Title + ": " + book.Subtitle + "." }}</i>
-                            <!--publisher-->
-                            <span ng-show="!book.PublishLocation && book.Publisher">{{ book.Publisher + "." }}</span>
-                            <span ng-show="book.PublishLocation && book.Publisher">{{ book.PublishLocation + ": " + book.Publisher + "." }}</span>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-        <!--End Books-->       
-
-        <footer>
-            Website by <a href="http://www.bigfont.ca">BigFont</a>.
-        </footer>
-
+        @Html.Partial("_Identity")
         
-        <!-- JS -->
+        @Html.Partial("_Conduct")
+        
+        @Html.Partial("_Levels")
 
+        @Html.Partial("_Books")
+        
+        @Html.Partial("_Footer")                      
 
         @Scripts.Render("~/cdn/angular")
         @Scripts.Render("~/bundles/javascript")
