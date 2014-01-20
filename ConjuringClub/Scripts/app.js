@@ -1,15 +1,12 @@
 ﻿//app
 var myApp = angular.module('conjuringApp', []);
 
-//constants
-myApp.constant('webApiConst', '/api/');
-
 //controllers
-myApp.controller('BookCtrl', ['$scope', '$http', '$window', 'webApiConst', function ($scope, $http, $window, webApiConst) {
+myApp.controller('BookCtrl', ['$scope', '$http', '$window', function ($scope, $http, $window) {
 
     $scope.bookSearchComparitor = bookSearchComparitor;
 
-    $http.get(webApiConst + 'book/get').
+    $http.get('/api/book/get').
         success(function (data, status, headers, config) {
             $scope.books = data;
             $scope.search = createBookSearchObj($scope.books[0]);
@@ -65,9 +62,31 @@ myApp.controller('LevelCtrl', ['$scope', function ($scope) {
 
 }]);
 
-myApp.controller('RegisterCtrl', ['$scope', '$http', 'webApiConst', function ($scope, $http, webApiConst) {
+//
+// Test user registration. 
+//
+myApp.controller('RegisterCtrl', ['$scope', '$http', function ($scope, $http) {
+    
+    $http({ method: 'POST', url: 'api/account/register', data: { UserName: 'Alice', Password: 'password123', ConfirmPassword: 'password123' } }).
+        success(function (data, status, headers, config) {
 
-    $http({ method: 'POST', url: webApiConst + 'account/register', data: { UserName: 'Alice', Password: 'password123', ConfirmPassword: 'password123' } }).
+            $scope.result = "success";
+
+        }).
+        error(function (data, status, headers, config) {
+
+            $scope.result = "error";
+
+        });
+
+}]);
+
+// 
+// Test user authentication
+//
+myApp.controller('LoginCtrl', ['$scope', '$http', function ($scope, $http) {
+
+    $http({ method: 'POST', url: 'token', data: { UserName: 'Alice', Password: 'password123', ConfirmPassword: 'password123' } }).
         success(function (data, status, headers, config) {
 
             $scope.result = "success";
