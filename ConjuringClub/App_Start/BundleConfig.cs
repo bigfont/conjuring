@@ -11,7 +11,7 @@ namespace ConjuringClub
             // Files will be minified and bundled iff EnableOptimizations is true OR compilation.debug is false.
             // EnableOptimizations overrides compilation.debug attribute.
             // 
-            BundleTable.EnableOptimizations = true;
+            BundleTable.EnableOptimizations = false;
             bundles.UseCdn = true;                
             
             const string angularCdn = "https://ajax.googleapis.com/ajax/libs/angularjs/1.2.4/angular.js";
