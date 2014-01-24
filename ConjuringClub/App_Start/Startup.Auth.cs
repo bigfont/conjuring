@@ -6,6 +6,7 @@ using Microsoft.AspNet.Identity.EntityFramework;
 using Microsoft.Owin;
 using Microsoft.Owin.Security.Cookies;
 using Microsoft.Owin.Security.OAuth;
+using MyConjuringDbApi.Models;
 using Owin;
 using ConjuringClub.Providers;
 
@@ -17,7 +18,19 @@ namespace ConjuringClub
         {
             PublicClientId = "self";
 
-            UserManagerFactory = () => new UserManager<IdentityUser>(new UserStore<IdentityUser>());
+            // The UserStore class exposes a *very basic* user management api.
+            // In the following code, we configure it to store user data
+            // as type IdentityUser in the ConjuringDb data store.             
+            var userStore = new UserStore<IdentityUser>(new ConjuringDb());            
+
+            // The UserManager class exposes a higher level user management api, 
+            // that automatically saves changes to the UserStore. 
+            // In the following code, we configure it to use the UserStore that we just created.            
+            var userManager = new UserManager<IdentityUser>(userStore);
+
+            // The UserManagerFactory implement the factory pattern
+            // in order to get one instance of UserManager per request for the application.
+            UserManagerFactory = () => userManager;
 
             OAuthOptions = new OAuthAuthorizationServerOptions
             {
