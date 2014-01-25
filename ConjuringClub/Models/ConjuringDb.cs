@@ -12,7 +12,7 @@ namespace MyConjuringDbApi.Models
         public DbSet<Authors> Authors { get; set; }
         public DbSet<Publishers> Publishers { get; set; }
 
-        public ConjuringDb()
+        public ConjuringDb() : base("ConjuringDb")
         {
 
         }
