@@ -189,6 +189,10 @@
     <Compile Include="Migrations\201312112347200_AddSubtitle.Designer.cs">
       <DependentUpon>201312112347200_AddSubtitle.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201401250336454_IdentityDbContext.cs" />
+    <Compile Include="Migrations\201401250336454_IdentityDbContext.Designer.cs">
+      <DependentUpon>201401250336454_IdentityDbContext.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountBindingModels.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -514,6 +518,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201312112347200_AddSubtitle.resx">
       <DependentUpon>201312112347200_AddSubtitle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201401250336454_IdentityDbContext.resx">
+      <DependentUpon>201401250336454_IdentityDbContext.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
