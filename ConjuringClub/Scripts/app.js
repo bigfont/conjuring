@@ -66,7 +66,7 @@ myApp.controller('LevelCtrl', ['$scope', function ($scope) {
 // Test user registration. 
 //
 myApp.controller('RegisterCtrl', ['$scope', '$http', function ($scope, $http) {
-    
+
     $http({ method: 'POST', url: 'api/account/register', data: { UserName: 'Alice', Password: 'password123', ConfirmPassword: 'password123' } }).
         success(function (data, status, headers, config) {
 
@@ -87,17 +87,23 @@ myApp.controller('RegisterCtrl', ['$scope', '$http', function ($scope, $http) {
 //
 myApp.controller('LoginCtrl', ['$scope', '$http', function ($scope, $http) {
 
-    $http({ method: 'POST', url: 'token', data: "grant_type=password&username=Alice&password=password123" }).
-        success(function (data, status, headers, config) {
+    function loginWithAspNetIdentity(username, password) {
+        $http({ method: 'POST', url: 'token', data: "grant_type=password&username=" + username + "&password=" + password }).
+            success(function (data, status, headers, config) {
 
-            $scope.result = "success";
+                $scope.result = "success";
 
-        }).
-        error(function (data, status, headers, config) {
+            }).
+            error(function (data, status, headers, config) {
 
-            $scope.result = "error";
+                $scope.result = "error";
 
-        });
+            });
+    }
+
+    $scope.login = function () {
+        loginWithAspNetIdentity($scope.username, $scope.password);
+    }
 
 }]);
 
