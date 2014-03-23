@@ -106,7 +106,7 @@ myApp.controller('LoginCtrl', ['$scope', '$http', function ($scope, $http) {
                 _issued = data[".issued"];
                 _expired = data[".expires"];
 
-                if ($scope.rememberMe == true) {
+                if ($scope.rememberMe === true) {
                     storage = localStorage;
                 }
                 else {

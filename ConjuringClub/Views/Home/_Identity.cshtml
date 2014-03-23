@@ -4,7 +4,7 @@
 <div>
     
     <header>
-        <h1>Login <small>Under Construction</small></h1>
+        <h1>Login</h1>
     </header>
 
     <section id="login" ng-controller="LoginCtrl">
@@ -12,11 +12,11 @@
         <form name="loginForm" role="form" ng-submit="login()">
             <div class="form-group">
                 <label for="inputEmail">Email address</label>
-                <input class="form-control" id="inputEmail" placeholder="Enter email" ng-model="username">
+                <input class="form-control col-lg-6" id="inputEmail" placeholder="Enter email" ng-model="username">
             </div>
             <div class="form-group">
                 <label for="inputPassword">Password</label>
-                <input type="password" class="form-control" id="inputPassword" placeholder="Password" ng-model="password">
+                <input type="password" class="form-control col-lg-6" id="inputPassword" placeholder="Password" ng-model="password">
             </div>
             <div class="checkbox">
                 {{ rememberMe }}
