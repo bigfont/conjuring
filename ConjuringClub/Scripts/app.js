@@ -105,6 +105,13 @@ myApp.controller('LoginCtrl', ['$scope', '$http', function ($scope, $http) {
                 _issued = data[".issued"];
                 _expired = data[".expires"];
 
+                localStorage.setItem("access_token", access_token);
+                localStorage.setItem("token_type", token_type);
+                localStorage.setItem("expires_in", expires_in);
+                localStorage.setItem("userName", userName);
+                localStorage.setItem("_issued", _issued);
+                localStorage.setItem("_expires", _expires);
+
                 $scope.result = data;
 
             }).
