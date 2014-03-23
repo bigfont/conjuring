@@ -1,31 +1,39 @@
 ﻿<!DOCTYPE html>
 <html ng-app="conjuringApp">
 <head>
-    <title>Salt Spring Conjuring Club</title>        
-    
+    <title>Salt Spring Conjuring Club</title>
+
     @Styles.Render("~/bundles/css")
 
 </head>
-    <body class="container">
-        
-        @RenderBody()
-        
-        @Html.Partial("_Header")
-        
-        @Html.Partial("_Schedule")
+<body class="container">
 
-        @Html.Partial("_Identity")
-        
-        @Html.Partial("_Conduct")
-        
-        @Html.Partial("_Levels")
+    <div class="row">
 
-        @Html.Partial("_Books")
-        
-        @Html.Partial("_Footer")                      
+        <div class="col-md-12">
 
-        @Scripts.Render("~/cdn/angular")
-        @Scripts.Render("~/bundles/javascript")
+            @RenderBody()
 
-    </body>
+            @Html.Partial("_Header")
+
+            @Html.Partial("_Schedule")
+
+            @Html.Partial("_Identity")
+
+            @Html.Partial("_Conduct")
+
+            @Html.Partial("_Levels")
+
+            @Html.Partial("_Books")
+
+            @Html.Partial("_Footer")
+
+        </div>
+
+    </div>
+
+    @Scripts.Render("~/cdn/angular")
+    @Scripts.Render("~/bundles/javascript")
+
+</body>
 </html>
