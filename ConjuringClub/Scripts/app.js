@@ -1,5 +1,5 @@
 ﻿//app
-var myApp = angular.module('conjuringApp', []);
+var myApp = angular.module('conjuringApp', ['identityModule']);
 
 //controllers
 myApp.controller('BookCtrl', ['$scope', '$http', '$window', function ($scope, $http, $window) {
@@ -59,80 +59,6 @@ myApp.controller('LevelCtrl', ['$scope', function ($scope) {
         { Skill: 'Spreading', Standard: 'Spread the cards from the left to the right hand.' },
         { Skill: 'Cutting', Standard: 'Cut the cards in the hands from dealers grip using the specified technique.' }
     ];
-
-}]);
-
-//
-// Test user registration. 
-//
-myApp.controller('RegisterCtrl', ['$scope', '$http', function ($scope, $http) {
-
-    $http({ method: 'POST', url: 'api/account/register', data: { UserName: 'Alice', Password: 'password123', ConfirmPassword: 'password123' } }).
-        success(function (data, status, headers, config) {
-
-            $scope.result = "success";
-
-        }).
-        error(function (data, status, headers, config) {
-
-            $scope.result = "error";
-
-        });
-
-}]);
-
-// 
-// Test user authentication
-// It doesn't suppport JSON at this time so we must use a query string.
-//
-myApp.controller('LoginCtrl', ['$scope', '$http', function ($scope, $http) {
-
-    function loginWithAspNetIdentity(username, password) {
-        $http({ method: 'POST', url: 'token', data: "grant_type=password&username=" + username + "&password=" + password }).
-            success(function (data, status, headers, config) {
-
-                var access_token,
-                    token_type,
-                    expires_in,
-                    userName,
-                    _issued,
-                    _expires,
-                    storage;
-
-                access_token = data.access_token;
-                token_type = data.token_type;
-                expires_in = data.expires_in;
-                userName = data.userName;
-                _issued = data[".issued"];
-                _expired = data[".expires"];
-
-                if ($scope.rememberMe === true) {
-                    storage = localStorage;
-                }
-                else {
-                    storage = sessionStorage;
-                }
-
-                storage.setItem("access_token", access_token);
-                storage.setItem("token_type", token_type);
-                storage.setItem("expires_in", expires_in);
-                storage.setItem("userName", userName);
-                storage.setItem("_issued", _issued);
-                storage.setItem("_expires", _expires);
-
-                $scope.result = data;
-
-            }).
-            error(function (data, status, headers, config) {
-
-                $scope.result = data;
-
-            });
-    }
-
-    $scope.login = function () {
-        loginWithAspNetIdentity($scope.username, $scope.password);
-    }
 
 }]);
 
