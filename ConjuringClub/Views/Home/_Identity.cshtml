@@ -9,7 +9,7 @@
 
     <section id="login" ng-controller="LoginCtrl">
 
-        <p>Login:{{ result }}</p>
+        <p>Login:{{ result | json }}</p>
 
         <form name="loginForm" role="form" ng-submit="login()">
             <div class="form-group">

@@ -91,12 +91,12 @@ myApp.controller('LoginCtrl', ['$scope', '$http', function ($scope, $http) {
         $http({ method: 'POST', url: 'token', data: "grant_type=password&username=" + username + "&password=" + password }).
             success(function (data, status, headers, config) {
 
-                $scope.result = "success";
+                $scope.result = data;
 
             }).
             error(function (data, status, headers, config) {
 
-                $scope.result = "error";
+                $scope.result = data;
 
             });
     }
