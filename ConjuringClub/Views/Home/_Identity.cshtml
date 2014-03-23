@@ -10,21 +10,41 @@
     <section id="login" ng-controller="LoginCtrl">
 
         <form name="loginForm" role="form" ng-submit="login()">
-            <div class="form-group">
-                <label for="inputEmail">Email address</label>
-                <input class="form-control col-lg-6" id="inputEmail" placeholder="Enter email" ng-model="username">
+            @*Row*@
+            <div class="row">
+                <div class="col-3">
+                    <div class="form-group">
+                        <label for="inputEmail">Email address</label>
+                        <input class="form-control col-lg-6" id="inputEmail" placeholder="Enter email" ng-model="username">
+                    </div>
+                </div>
             </div>
-            <div class="form-group">
-                <label for="inputPassword">Password</label>
-                <input type="password" class="form-control col-lg-6" id="inputPassword" placeholder="Password" ng-model="password">
+            @*Row*@
+            <div class="row">
+                <div class="col-3">
+                    <div class="form-group">
+                        <label for="inputPassword">Password</label>
+                        <input type="password" class="form-control col-lg-6" id="inputPassword" placeholder="Password" ng-model="password">
+                    </div>
+                </div>
             </div>
-            <div class="checkbox">
-                {{ rememberMe }}
-                <label>
-                    <input type="checkbox" ng-model="rememberMe"> Remember me
-                </label>
+            @*Row*@
+            <div class="row">
+                <div class="col-3">
+                    <div class="checkbox">
+                        {{ rememberMe }}
+                        <label>
+                            <input type="checkbox" ng-model="rememberMe"> Remember me
+                        </label>
+                    </div>
+                </div>
             </div>
-            <button type="submit" class="btn btn-default">Submit</button>
+            @*Row*@
+            <div class="row">
+                <div class="col-3">
+                    <button type="submit" class="btn btn-default">Submit</button>
+                </div>
+            </div>
         </form>
 
     </section>
