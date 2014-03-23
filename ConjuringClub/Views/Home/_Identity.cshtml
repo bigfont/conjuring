@@ -9,10 +9,14 @@
 
     <section id="login" ng-controller="LoginCtrl">
 
+        @{
+            string colWidth = "col-sm-4";
+        }
+
         <form name="loginForm" role="form" ng-submit="login()">
             @*Row*@
             <div class="row">
-                <div class="col-sm-3">
+                <div class="@colWidth">
                     <div class="form-group">
                         <label for="inputEmail">Email address</label>
                         <input class="form-control" id="inputEmail" placeholder="Enter email" ng-model="username">
@@ -21,7 +25,7 @@
             </div>
             @*Row*@
             <div class="row">
-                <div class="col-sm-3">
+                <div class="@colWidth">
                     <div class="form-group">
                         <label for="inputPassword">Password</label>
                         <input type="password" class="form-control" id="inputPassword" placeholder="Password" ng-model="password">
@@ -30,7 +34,7 @@
             </div>
             @*Row*@
             <div class="row">
-                <div class="col-sm-3">
+                <div class="@colWidth">
                     <div class="checkbox">
                         <label>
                             <input type="checkbox" ng-model="rememberMe"> Remember me
@@ -40,7 +44,7 @@
             </div>
             @*Row*@
             <div class="row">
-                <div class="col-sm-3">
+                <div class="@colWidth">
                     <button type="submit" class="btn btn-default">Submit</button>
                 </div>
             </div>
