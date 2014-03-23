@@ -91,6 +91,20 @@ myApp.controller('LoginCtrl', ['$scope', '$http', function ($scope, $http) {
         $http({ method: 'POST', url: 'token', data: "grant_type=password&username=" + username + "&password=" + password }).
             success(function (data, status, headers, config) {
 
+                var access_token,
+                    token_type,
+                    expires_in,
+                    userName,
+                    _issued,
+                    _expires;
+
+                access_token = data.access_token;
+                token_type = data.token_type;
+                expires_in = data.expires_in;
+                userName = data.userName;
+                _issued = data[".issued"];
+                _expired = data[".expires"];
+
                 $scope.result = data;
 
             }).
