@@ -96,7 +96,8 @@ myApp.controller('LoginCtrl', ['$scope', '$http', function ($scope, $http) {
                     expires_in,
                     userName,
                     _issued,
-                    _expires;
+                    _expires,
+                    storage;
 
                 access_token = data.access_token;
                 token_type = data.token_type;
@@ -105,12 +106,19 @@ myApp.controller('LoginCtrl', ['$scope', '$http', function ($scope, $http) {
                 _issued = data[".issued"];
                 _expired = data[".expires"];
 
-                localStorage.setItem("access_token", access_token);
-                localStorage.setItem("token_type", token_type);
-                localStorage.setItem("expires_in", expires_in);
-                localStorage.setItem("userName", userName);
-                localStorage.setItem("_issued", _issued);
-                localStorage.setItem("_expires", _expires);
+                if ($scope.rememberMe == true) {
+                    storage = localStorage;
+                }
+                else {
+                    storage = sessionStorage;
+                }
+
+                storage.setItem("access_token", access_token);
+                storage.setItem("token_type", token_type);
+                storage.setItem("expires_in", expires_in);
+                storage.setItem("userName", userName);
+                storage.setItem("_issued", _issued);
+                storage.setItem("_expires", _expires);
 
                 $scope.result = data;
 
