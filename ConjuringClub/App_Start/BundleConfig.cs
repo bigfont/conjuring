@@ -16,7 +16,7 @@ namespace ConjuringClub
             
             const string angularCdn = "https://ajax.googleapis.com/ajax/libs/angularjs/1.2.4/angular.js";
             bundles.Add(new ScriptBundle("~/cdn/angular", angularCdn).Include(
-                "~/Scripts/angular.js"));
+                "~/Scripts/angular/angular.js"));
             
             bundles.Add(new ScriptBundle("~/bundles/javascript").Include(
                 "~/Scripts/google-analytics-object.js",
