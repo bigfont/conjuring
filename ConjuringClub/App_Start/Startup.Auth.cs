@@ -30,6 +30,8 @@ namespace ConjuringClub
             // in order to get one instance of UserManager per request for the application.
             UserManagerFactory = () => new UserManager<IdentityUser>(new UserStore<IdentityUser>(new ConjuringDb()));
 
+            RoleManagerFactory = () => new RoleManager<IdentityRole>(new RoleStore<IdentityRole>(new ConjuringDb()));
+
             OAuthOptions = new OAuthAuthorizationServerOptions
             {
                 TokenEndpointPath = new PathString("/Token"),
@@ -43,6 +45,8 @@ namespace ConjuringClub
         public static OAuthAuthorizationServerOptions OAuthOptions { get; private set; }
 
         public static Func<UserManager<IdentityUser>> UserManagerFactory { get; set; }
+
+        public static Func<RoleManager<IdentityRole>> RoleManagerFactory { get; set; }
 
         public static string PublicClientId { get; private set; }
 
