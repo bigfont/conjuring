@@ -1,55 +1,51 @@
 ﻿<!-- ASP.NET Identity -->
 <!-- See also http://www.asp.net/vnext/overview/authentication/individual-accounts-in-aspnet-web-api -->
 
-<div>
-    
+<section id="login" ng-controller="LoginCtrl">
+
     <header>
         <h1>Login</h1>
     </header>
 
-    <section id="login" ng-controller="LoginCtrl">
+    @{
+        string colWidth = "col-sm-4";
+    }
 
-        @{
-            string colWidth = "col-sm-4";
-        }
-
-        <form name="loginForm" role="form" ng-submit="login()">
-            @*Row*@
-            <div class="row">
-                <div class="@colWidth">
-                    <div class="form-group">
-                        <label for="inputEmail">Email address</label>
-                        <input class="form-control" id="inputEmail" placeholder="Enter email" ng-model="username">
-                    </div>
+    <form name="loginForm" role="form" ng-submit="login()">
+        @*Row*@
+        <div class="row">
+            <div class="@colWidth">
+                <div class="form-group">
+                    <label for="inputEmail">Email address</label>
+                    <input class="form-control" id="inputEmail" placeholder="Enter email" ng-model="username">
                 </div>
             </div>
-            @*Row*@
-            <div class="row">
-                <div class="@colWidth">
-                    <div class="form-group">
-                        <label for="inputPassword">Password</label>
-                        <input type="password" class="form-control" id="inputPassword" placeholder="Password" ng-model="password">
-                    </div>
+        </div>
+        @*Row*@
+        <div class="row">
+            <div class="@colWidth">
+                <div class="form-group">
+                    <label for="inputPassword">Password</label>
+                    <input type="password" class="form-control" id="inputPassword" placeholder="Password" ng-model="password">
                 </div>
             </div>
-            @*Row*@
-            <div class="row">
-                <div class="@colWidth">
-                    <div class="checkbox">
-                        <label>
-                            <input type="checkbox" ng-model="rememberMe"> Remember me
-                        </label>
-                    </div>
+        </div>
+        @*Row*@
+        <div class="row">
+            <div class="@colWidth">
+                <div class="checkbox">
+                    <label>
+                        <input type="checkbox" ng-model="rememberMe"> Remember me
+                    </label>
                 </div>
             </div>
-            @*Row*@
-            <div class="row">
-                <div class="@colWidth">
-                    <button type="submit" class="btn btn-default">Submit</button>
-                </div>
+        </div>
+        @*Row*@
+        <div class="row">
+            <div class="@colWidth">
+                <button type="submit" class="btn btn-default">Submit</button>
             </div>
-        </form>
+        </div>
+    </form>
 
-    </section>
-
-</div>
+</section>
