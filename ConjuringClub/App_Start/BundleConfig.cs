@@ -22,10 +22,12 @@ namespace ConjuringClub
                 "~/Scripts/google-analytics-object.js",
                 "~/Scripts/controllers/*.js",
                 "~/Scripts/app.js"));
-            
-            bundles.Add(new StyleBundle("~/bundles/css").Include(
-                "~/Content/bootstrap.css",
-                "~/Content/app.css"));
+
+            const string bootstrapCdn = "http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css";
+            bundles.Add(new StyleBundle("~/bundles/bootstrap", bootstrapCdn).Include(
+                "~/Content/bootstrap.css"));
+
+            bundles.Add(new StyleBundle("~/bundles/app").Include("~/Content/app.css"));
         }
     }
 }

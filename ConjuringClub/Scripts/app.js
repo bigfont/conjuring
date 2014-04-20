@@ -53,12 +53,27 @@ myApp.controller('ConductCtrl', ['$scope', function ($scope) {
 
 myApp.controller('LevelCtrl', ['$scope', function ($scope) {
 
-    $scope.criteria = [
+    $scope.level1 = [
         { Skill: 'Dealing', Standard: 'Deal 52 cards, one at a time, from a dealers grip in one minute.' },
         { Skill: 'Shuffling', Standard: 'Run 52 cards, one at a time, from an overhand shuffle grip in one minute.' },
         { Skill: 'Spreading', Standard: 'Spread the cards from the left to the right hand.' },
         { Skill: 'Cutting', Standard: 'Cut the cards in the hands from dealers grip using the specified technique.' }
     ];
+
+    $scope.level2 = [
+        { Skill: 'Dealing', Standard: '...' },
+        { Skill: 'Shuffling', Standard: '...' },
+        { Skill: 'Spreading', Standard: '...' },
+        { Skill: 'Cutting', Standard: '...' }
+    ];
+
+    $scope.level3 = [
+        { Skill: 'Dealing', Standard: '...' },
+        { Skill: 'Shuffling', Standard: '...' },
+        { Skill: 'Spreading', Standard: '...' },
+        { Skill: 'Cutting', Standard: '...' }
+    ];
+
 
 }]);
 
