@@ -214,7 +214,7 @@
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <None Include="Private\admin-login.json" />
-    <Content Include="Images\MagicShow_Small_005.jpg" />
+    <Content Include="Images\MagicShow_Small_005_360x540.jpg" />
     <Content Include="Images\MagicShow_Small_019.jpg" />
     <Content Include="Images\MagicShow_Small_028_360x540.jpg" />
     <Content Include="Private\connection-strings.txt" />
