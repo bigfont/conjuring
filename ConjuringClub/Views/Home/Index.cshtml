@@ -2,16 +2,42 @@
 
     @Html.Partial("_Header")
 
-    @Html.Partial("_Schedule")
+    <div class="row">
 
-    @Html.Partial("_Login")
+        <div class="col-sm-4">
 
-    @Html.Partial("_Conduct")
+            @Html.Partial("_AsideImage")
 
-    @Html.Partial("_Levels")
+        </div>
 
-    @Html.Partial("_Books")
+        <div class="col-sm-8">
 
-    @Html.Partial("_Footer")
+            @*@Html.Partial("_Login")*@
+
+            @Html.Partial("_Schedule")
+
+            @Html.Partial("_Conduct")
+
+        </div>
+
+    </div>
+
+    <div class="row">
+
+        <div class="col-sm-12">
+
+            @Html.Partial("_Levels")
+
+            @Html.Partial("_Books")
+
+            @Html.Partial("_Footer")
+
+        </div>
+
+    </div>
+
+    <hr />
+
+
 
 </article>

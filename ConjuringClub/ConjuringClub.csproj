@@ -214,6 +214,9 @@
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <None Include="Private\admin-login.json" />
+    <Content Include="Images\MagicShow_Small_005.jpg" />
+    <Content Include="Images\MagicShow_Small_019.jpg" />
+    <Content Include="Images\MagicShow_Small_028_360x540.jpg" />
     <Content Include="Private\connection-strings.txt" />
     <Content Include="Scripts\angular\angular-animate.js" />
     <Content Include="Scripts\angular\angular-animate.min.js" />
@@ -495,6 +498,7 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Home\_AsideImage.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
