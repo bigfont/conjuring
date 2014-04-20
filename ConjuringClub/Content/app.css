@@ -2,18 +2,9 @@
     padding-bottom: 20px;
 }
 
-div,
-.page-header {
-    border-color: #FF5A00;
-}
 
 #books div.input-group {
     margin-bottom: 20px;
-}
-
-strong,
-.accent {
-    color: #990000;
 }
 
 small {
@@ -30,26 +21,24 @@ dl > dt {
         margin-top: 0px;
     }
 
-li.even-child {
-    background-color: #f6f9fb;
-}
-
 /*#endregion*/
 
-figcaption {
+figcaption {        
+    line-height:40px;
+    margin-left:10px;
     margin-top:20px;
-    margin-bottom:10px;
 }
 
-/*#region headings*/
+/*#region accented items*/
 
-h1 {
+h1,
+.accented {
     color:#990000;
 }
 
-h2 {
+div,
+.page-header {
+    border-color: #990000;
 }
 
 /*#endregion*/
-
-
