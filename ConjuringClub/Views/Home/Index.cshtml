@@ -6,11 +6,11 @@
 
         <div class="col-sm-4">
 
-            @Html.Partial("_AsideImage")
+            @Html.Partial("_AsideImage", "/Images/MagicShow_Small_028_360x540.jpg")
 
         </div>
 
-        <div class="col-sm-7">
+        <div class="col-sm-6">
 
             @*@Html.Partial("_Login")*@
 
@@ -22,7 +22,21 @@
 
     </div>
 
-    @Html.Partial("_Levels")
+    <div class="row">
+
+        <div class="col-sm-6">
+
+            @Html.Partial("_Levels")
+
+        </div>
+
+        <div class="col-sm-4">
+
+            @Html.Partial("_AsideImage", "/Images/MagicShow_Small_005_360x540.jpg")
+
+        </div>
+
+    </div>
 
     @Html.Partial("_Books")
 
