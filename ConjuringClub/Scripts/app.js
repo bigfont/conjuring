@@ -61,17 +61,17 @@ myApp.controller('LevelCtrl', ['$scope', function ($scope) {
     ];
 
     $scope.level2 = [
-        { Skill: 'Dealing', Standard: '...' },
-        { Skill: 'Shuffling', Standard: '...' },
-        { Skill: 'Spreading', Standard: '...' },
-        { Skill: 'Cutting', Standard: '...' }
+        { Skill: 'Dealing', Standard: 'Coming soon.' },
+        { Skill: 'Shuffling', Standard: 'Coming soon.' },
+        { Skill: 'Spreading', Standard: 'Coming soon.' },
+        { Skill: 'Cutting', Standard: 'Coming soon.' }
     ];
 
     $scope.level3 = [
-        { Skill: 'Dealing', Standard: '...' },
-        { Skill: 'Shuffling', Standard: '...' },
-        { Skill: 'Spreading', Standard: '...' },
-        { Skill: 'Cutting', Standard: '...' }
+        { Skill: 'Dealing', Standard: 'Coming soon.' },
+        { Skill: 'Shuffling', Standard: 'Coming soon.' },
+        { Skill: 'Spreading', Standard: 'Coming soon.' },
+        { Skill: 'Cutting', Standard: 'Coming soon.' }
     ];
 
 
