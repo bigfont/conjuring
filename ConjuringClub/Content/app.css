@@ -7,14 +7,6 @@ div,
     border-color: #FF5A00;
 }
 
-li.even-child {
-    background-color: #f6f9fb;
-}
-
-li.odd-child {
-    /*do something*/
-}
-
 #books div.input-group {
     margin-bottom: 20px;
 }
@@ -28,7 +20,7 @@ small {
     display: inline-block;
 }
 
-
+/*#region lists*/
 
 dl > dt {
     margin-top: 10px;
@@ -37,3 +29,27 @@ dl > dt {
     dl > dt:first-child {
         margin-top: 0px;
     }
+
+li.even-child {
+    background-color: #f6f9fb;
+}
+
+/*#endregion*/
+
+figcaption {
+    margin-top:20px;
+    margin-bottom:10px;
+}
+
+/*#region headings*/
+
+h1 {
+    color:#990000;
+}
+
+h2 {
+}
+
+/*#endregion*/
+
+
