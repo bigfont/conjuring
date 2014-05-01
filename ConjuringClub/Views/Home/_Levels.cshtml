@@ -1,9 +1,9 @@
 ﻿<!--Levels-->
 <section id="levels" ng-controller="LevelCtrl">
-
-    <h1>Secret Knowledge</h1>
+    <div class="page-header">
+        <h1>Secret Knowledge</h1>
+    </div>
     <p>Learning magic means learning secrets one level at a time. As we develop greater skill, we earn access to further levels.</p>
-
 
         <div>
             <h2>Level One <small>Learn the territory.</small></h2>
@@ -11,21 +11,6 @@
                 <li ng-repeat="criterion in level1"><strong>{{ criterion.Skill }}</strong> <p>{{ criterion.Standard }}</p></li>
             </ul>
         </div>
-
-        <div>
-            <h2>Level Two</h2>
-            <ul>
-                <li ng-repeat="criterion in level2"><strong>{{ criterion.Skill }}</strong> <p>{{ criterion.Standard }}</p></li>
-            </ul>
-        </div>
-
-        <div>
-            <h2>Level Three</h2>
-            <ul>
-                <li ng-repeat="criterion in level3"><strong>{{ criterion.Skill }}</strong> <p>{{ criterion.Standard }}</p></li>
-            </ul>
-        </div>
-
 
 </section>
 <!--End Levels-->

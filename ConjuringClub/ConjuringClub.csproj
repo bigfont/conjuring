@@ -207,6 +207,7 @@
     <Compile Include="Providers\ApplicationOAuthProvider.cs" />
     <Compile Include="Results\ChallengeResult.cs" />
     <Compile Include="Startup.cs" />
+    <Compile Include="ViewModels\AsideImageViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\app.css" />
@@ -554,6 +555,12 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\Home\_Schedule.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Home\_Video.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Home\_Videos.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

@@ -60,21 +60,6 @@ myApp.controller('LevelCtrl', ['$scope', function ($scope) {
         { Skill: 'Cutting', Standard: 'Cut the cards in the hands from dealers grip using the specified technique.' }
     ];
 
-    $scope.level2 = [
-        { Skill: 'Dealing', Standard: 'Coming soon.' },
-        { Skill: 'Shuffling', Standard: 'Coming soon.' },
-        { Skill: 'Spreading', Standard: 'Coming soon.' },
-        { Skill: 'Cutting', Standard: 'Coming soon.' }
-    ];
-
-    $scope.level3 = [
-        { Skill: 'Dealing', Standard: 'Coming soon.' },
-        { Skill: 'Shuffling', Standard: 'Coming soon.' },
-        { Skill: 'Spreading', Standard: 'Coming soon.' },
-        { Skill: 'Cutting', Standard: 'Coming soon.' }
-    ];
-
-
 }]);
 
 function createBookSearchObj(bookObj) {
