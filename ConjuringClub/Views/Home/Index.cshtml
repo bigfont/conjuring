@@ -1,4 +1,6 @@
-﻿<article>
+﻿@using ConjuringClub.ViewModels
+
+<article>
 
     @Html.Partial("_Header")
 
@@ -6,7 +8,7 @@
 
         <div class="col-sm-4">
 
-            @Html.Partial("_AsideImage", "/Images/MagicShow_Small_028_360x540.jpg")
+            @Html.Partial("_AsideImage", new AsideImageViewModel("/Images/MagicShow_Small_028_360x540.jpg", "Skill takes practice."))
 
         </div>
 
@@ -22,6 +24,8 @@
 
     </div>
 
+    @Html.Partial("_Videos", new string[] { "4sDDW8c4_sc", "6esexn7Sy3c" })
+
     <div class="row">
 
         <div class="col-sm-6">
@@ -32,7 +36,7 @@
 
         <div class="col-sm-4">
 
-            @Html.Partial("_AsideImage", "/Images/MagicShow_Small_005_360x540.jpg")
+            @Html.Partial("_AsideImage", new AsideImageViewModel("/Images/MagicShow_Small_005_360x540.jpg", "Practice makes permanent."))
 
         </div>
 

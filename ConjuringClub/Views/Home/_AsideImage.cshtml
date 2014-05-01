@@ -1,8 +1,8 @@
-﻿@model string
+﻿@model ConjuringClub.ViewModels.AsideImageViewModel
 
 <figure>
     <figcaption>
-        <strong>Skill takes practice.</strong>        
+        <strong>@Model.FigCaption</strong>        
     </figcaption>
-    <img class="img-thumbnail img-responsive" src="@Model" alt="" />
+    <img class="img-thumbnail img-responsive" src="@Model.Src" alt="" />
 </figure>

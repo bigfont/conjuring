@@ -2,7 +2,6 @@
     padding-bottom: 20px;
 }
 
-
 #books div.input-group {
     margin-bottom: 20px;
 }
@@ -23,22 +22,66 @@ dl > dt {
 
 /*#endregion*/
 
-figcaption {        
-    line-height:40px;
-    margin-left:10px;
-    margin-top:20px;
+figure {            
+    text-align:center;
+}
+
+figure figcaption
+{                
+    background:#990000;
+    color:white;
+    line-height:50px;
+    opacity:0.75;    
+    position:relative;
+    text-align:center;    
+    top:80px;        
+    z-index:1;
+    border-radius:4px;   
+}
+figure img
+{        
+    margin:auto !important;    
 }
 
 /*#region accented items*/
 
 h1,
+figcaption,
 .accented {
-    color:#990000;
+    color: #990000;
 }
 
 div,
 .page-header {
     border-color: #990000;
 }
+
+/*#region responsive iframes*/
+
+.hframe-wrapper {
+    /*youtube aspect ratio is 3:4*/
+    height: 75%;
+    margin:0 auto;
+    margin-bottom:20px;
+    width: 100%;
+}
+
+.hframe {
+    position: relative;
+}
+
+    .hframe .ratio {
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+
+    .hframe iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;        
+    }
 
 /*#endregion*/
