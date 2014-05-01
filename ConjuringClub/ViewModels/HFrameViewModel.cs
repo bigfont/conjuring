@@ -9,6 +9,6 @@ namespace ConjuringClub.ViewModels
     {
         public string Src { get; set; }
         public string FigCaption { get; set; }
-
+        public string AspectRatioWxH { get; set; }
     }
 }
