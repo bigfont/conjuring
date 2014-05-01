@@ -208,6 +208,8 @@
     <Compile Include="Results\ChallengeResult.cs" />
     <Compile Include="Startup.cs" />
     <Compile Include="ViewModels\AsideImageViewModel.cs" />
+    <Compile Include="ViewModels\HFrameViewModel.cs" />
+    <Compile Include="ViewModels\OneDriveDocumentViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\app.css" />
@@ -557,10 +559,19 @@
     <Content Include="Views\Home\_Schedule.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\Home\_Video.cshtml" />
+    <Content Include="Views\Home\_YouTubeVideo.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\Home\_Videos.cshtml" />
+    <Content Include="Views\Home\_YouTubeVideos.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Home\_OneDriveDocument.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Home\_hFrame.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Home\_OneDriveDocuments.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
