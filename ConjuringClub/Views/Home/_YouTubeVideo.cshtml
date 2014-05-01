@@ -1,0 +1,11 @@
+﻿@model string
+
+@{
+    ConjuringClub.ViewModels.HFrameViewModel hFrame = new ConjuringClub.ViewModels.HFrameViewModel();
+
+    hFrame.Src = "//www.youtube.com/embed/" + Model + "?rel=0";
+
+    hFrame.FigCaption = "YouTube Video";
+}
+
+@Html.Partial("_hFrame", hFrame)
