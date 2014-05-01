@@ -1,16 +1,20 @@
 ﻿@model ConjuringClub.ViewModels.OneDriveDocumentViewModel[]
 
-<div class="page-header">
-    <h1>Documents</h1>
-</div>
+<section id="documents">
 
-<div class="row">
+    <div class="page-header">
+        <h1>Documents</h1>
+    </div>
 
-    @for (var i = 0; i < Model.Length; ++i)
-    {
-        <div class="col-md-6">
-            @Html.Partial("_OneDriveDocument", Model[i])
-        </div>
-    }
+    <div class="row">
 
-</div>
+        @for (var i = 0; i < Model.Length; ++i)
+        {
+            <div class="col-md-6">
+                @Html.Partial("_OneDriveDocument", Model[i])
+            </div>
+        }
+
+    </div>
+
+</section>
