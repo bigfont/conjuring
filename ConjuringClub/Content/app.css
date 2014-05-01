@@ -59,11 +59,17 @@ div,
 /*#region responsive iframes*/
 
 .hframe-wrapper {
-    /*youtube aspect ratio is 3:4*/
-    height: 75%;
     margin:0 auto;
     margin-bottom:20px;
     width: 100%;
+}
+
+#videos .hframe-wrapper {
+    /*youtube aspect ratio is 3:4*/
+}
+
+#documents .hframe-wrapper {
+    /*onedrive aspect ratio is 1:6*/
 }
 
 .hframe {
