@@ -1,0 +1,16 @@
+﻿@model ConjuringClub.ViewModels.OneDriveDocumentViewModel
+
+@{
+    ConjuringClub.ViewModels.HFrameViewModel hFrame = new ConjuringClub.ViewModels.HFrameViewModel();
+
+    hFrame.Src = string.Format(
+        "https://onedrive.live.com/embed?cid={0}&resid={1}&authkey={2}", 
+        Model.CId, 
+        Model.ResId, 
+        Model.AuthKey);
+
+    hFrame.FigCaption = Model.Title;
+    
+}
+
+@Html.Partial("_hFrame", hFrame)

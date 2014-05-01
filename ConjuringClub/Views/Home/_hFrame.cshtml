@@ -1,0 +1,13 @@
+﻿@model ConjuringClub.ViewModels.HFrameViewModel
+
+<h3>@Model.FigCaption</h3>
+<div class="hframe-wrapper img-thumbnail">
+    <div class="hframe">
+        <!-- a transparent image is preferable -->
+        <img class="ratio" src="http://placehold.it/16x9" />
+        <iframe src="@Model.Src"
+                frameborder="0"
+                allowfullscreen
+                scrolling="no"></iframe>
+    </div>
+</div>
