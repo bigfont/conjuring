@@ -1,4 +1,18 @@
-﻿body {
+﻿/*
+    See also: http://hexcolortool.com/
+
+    Darker
+    #990000
+    #CC3333
+    #FF6666
+    #FF9999
+    #FFCCCC
+    Lighter
+
+*/
+
+
+body {
     padding-bottom: 20px;
 }
 
@@ -10,11 +24,9 @@ small {
     display: inline-block;
 }
 
-
-
 #subnav
 {
-    border-left:thin solid #B34040;
+    border-left:thin solid #FFCCCC;
 }
 
 
@@ -72,12 +84,13 @@ figcaption,
 
 div,
 .page-header {
-    border-color: #990000;
+    border-color: #FFCCCC;
 }
 
 /*#endregion #/
 
 /*#region responsive iframes*/
+
 
 
 
