@@ -10,6 +10,15 @@ small {
     display: inline-block;
 }
 
+
+
+#subnav
+{
+    border-left:thin solid #B34040;
+}
+
+
+
 /*#region lists*/
 
 dl > dt {
@@ -21,6 +30,11 @@ dl > dt {
     }
 
 /*#endregion*/
+
+
+
+
+/*#region figures */
 
 figure {            
     text-align:center;
@@ -43,6 +57,11 @@ figure img
     margin:auto !important;    
 }
 
+/*#endregion */
+
+
+
+
 /*#region accented items*/
 
 h1,
@@ -56,7 +75,13 @@ div,
     border-color: #990000;
 }
 
+/*#endregion #/
+
 /*#region responsive iframes*/
+
+
+
+/*#region iframes */
 
 .hframe-wrapper {
     margin:0 auto;
