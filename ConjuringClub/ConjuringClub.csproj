@@ -219,12 +219,16 @@
     <Content Include="Images\3x4.jpg" />
     <Content Include="Images\4x3.jpg" />
     <Content Include="Images\keith.jpg" />
-    <Content Include="Images\keith_1.jpg" />
     <Content Include="Images\keith_2.jpg" />
     <Content Include="Images\keith_3.jpg" />
+    <Content Include="Images\keith_4.jpg" />
     <Content Include="Images\MagicShow_Small_005_360x540.jpg" />
     <Content Include="Images\MagicShow_Small_019.jpg" />
     <Content Include="Images\MagicShow_Small_028_360x540.jpg" />
+    <Content Include="Images\shaun.jpg" />
+    <Content Include="Images\shaun_2.jpg" />
+    <Content Include="Images\shaun_3.jpg" />
+    <Content Include="Images\shaun_4.jpg" />
     <Content Include="Scripts\angular\angular-animate.js" />
     <Content Include="Scripts\angular\angular-animate.min.js" />
     <Content Include="Scripts\angular\angular-cookies.js" />
