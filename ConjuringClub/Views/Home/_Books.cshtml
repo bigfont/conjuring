@@ -6,12 +6,14 @@
     </div>
     <div class="row">
         <div class="col-lg-6">
-            <div class="input-group">
-                <input class="form-control" id="Search" ng-model="search.$" placeholder="Search" />
-                <span class="input-group-addon">
-                    {{ "Displaying " + (books | filter:search:bookSearchComparitor).length + " of " + books.length + " books." }}
-                </span>
-            </div>
+            <p>
+                <div class="input-group">
+                    <input class="form-control" id="Search" ng-model="search.$" placeholder="Search" />
+                    <span class="input-group-addon">
+                        {{ "Displaying " + (books | filter:search:bookSearchComparitor).length + " of " + books.length + " books." }}
+                    </span>
+                </div>
+            </p>
         </div>
     </div>
     <div class="row">
