@@ -20,6 +20,11 @@ body {
     margin-bottom: 20px;
 }
 
+img
+{
+    margin-bottom:20px;
+}
+
 small {
     display: inline-block;
 }
