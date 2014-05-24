@@ -1,0 +1,50 @@
+﻿@using ConjuringClub.ViewModels
+
+<section>
+
+    <div class="page-header">
+        <h1 id="members">Members</h1>
+    </div>
+
+    <div class="row">
+
+        <div class="col-sm-6">
+            @Html.Partial("_Member",
+            new MemberViewModel("Images/members/anjali-sm.png",
+                "Anjali",
+                "Anjali is full of confidence and wonder. She will be performing the Salt Shaker, Elastic Bands, and a mystery to be anounced."))
+        </div>
+        <div class="col-sm-6">
+            @Html.Partial("_Member",
+            new MemberViewModel("Images/members/jaysen-sm.png",
+                "Jaysen",
+                "Jaysen is the king of cards. He will be demonstration card throwing, the magic clock, and Ace in the Hole."))
+        </div>
+
+    </div>
+    <div class="row">
+        <div class="col-sm-6">
+            @Html.Partial("_Member",
+            new MemberViewModel("Images/members/marley-sm.png",
+                "Marley",
+                "Marley is a seasoned performer you may have seen at the Saturday Market. He will present a Poker demonstration, Triumph, and some wonderous body tricks."))
+        </div>
+        <div class="col-sm-6">
+            @Html.Partial("_Member",
+            new MemberViewModel("Images/members/noah-sm.png",
+                "Noah",
+                "Noah is the brain of the bunch. From him expect a psychological mystery, a card cypher, and perhaps some sticks and strings."))
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-sm-6">
+            @Html.Partial("_Member",
+            new MemberViewModel("Images/members/theo-sm.png",
+                "Theo",
+                "Theo is the youngest of the bunch. From him expect dazzling effects with a wine glass, some aces, and a mystery to be anounced."))
+        </div>
+
+    </div>
+
+</section>
