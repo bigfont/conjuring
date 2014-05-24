@@ -207,8 +207,9 @@
     <Compile Include="Providers\ApplicationOAuthProvider.cs" />
     <Compile Include="Results\ChallengeResult.cs" />
     <Compile Include="Startup.cs" />
-    <Compile Include="ViewModels\AsideImageViewModel.cs" />
+    <Compile Include="ViewModels\FigureViewModel.cs" />
     <Compile Include="ViewModels\HFrameViewModel.cs" />
+    <Compile Include="ViewModels\MemberViewModel.cs" />
     <Compile Include="ViewModels\OneDriveDocumentViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -226,9 +227,20 @@
     <Content Include="Images\keith_2.jpg" />
     <Content Include="Images\keith_3.jpg" />
     <Content Include="Images\keith_4.jpg" />
+    <Content Include="Images\logo_dev_01.jpg" />
     <Content Include="Images\MagicShow_Small_005_360x540.jpg" />
     <Content Include="Images\MagicShow_Small_019.jpg" />
     <Content Include="Images\MagicShow_Small_028_360x540.jpg" />
+    <Content Include="Images\members\anjali-sm.png" />
+    <Content Include="Images\members\anjali.png" />
+    <Content Include="Images\members\jaysen-sm.png" />
+    <Content Include="Images\members\jaysen.png" />
+    <Content Include="Images\members\marley-sm.png" />
+    <Content Include="Images\members\marley.png" />
+    <Content Include="Images\members\noah-sm.png" />
+    <Content Include="Images\members\noah.png" />
+    <Content Include="Images\members\theo-sm.png" />
+    <Content Include="Images\members\theo.png" />
     <Content Include="Images\shaun.jpg" />
     <Content Include="Images\shaun_2.jpg" />
     <Content Include="Images\shaun_3.jpg" />
@@ -517,7 +529,7 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
-    <Content Include="Views\Home\_AsideImage.cshtml" />
+    <Content Include="Views\Home\_FigureAside.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -614,6 +626,12 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap.css.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Home\_Members.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Home\_Member.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

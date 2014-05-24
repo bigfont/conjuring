@@ -53,11 +53,15 @@ dl > dt {
 
 /*#region figures */
 
-figure {            
+figure.figure-member {
+
+}
+
+figure.figure-aside {            
     text-align:center;
 }
 
-figure figcaption
+figure.figure-aside figcaption
 {                
     background:#990000;
     color:white;
@@ -69,7 +73,7 @@ figure figcaption
     z-index:1;
     border-radius:4px;   
 }
-figure img
+figure.figure-aside img
 {        
     margin:auto !important;    
 }
@@ -132,5 +136,17 @@ div,
         width: 100%;
         height: 100%;        
     }
+
+/*#endregion*/
+
+
+
+
+/*#region Images*/
+
+img.img-member {
+
+
+}
 
 /*#endregion*/
