@@ -30,6 +30,9 @@ small {
 #subnav {
     border-left: thin solid;
 }
+#subnav.affix {
+    top:30px;
+}
 
 
 
