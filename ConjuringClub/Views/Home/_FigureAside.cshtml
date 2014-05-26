@@ -1,8 +1,10 @@
 ﻿@model ConjuringClub.ViewModels.FigureAsideViewModel
 
-<figure class="figure-aside">
-    <figcaption>
-        @Model.FigCaption
-    </figcaption>
-    <img class="img-thumbnail img-responsive" src="@Model.Src" alt="" />
-</figure>
+<div class="figure-aside-wrapper">
+    <figure class="figure-aside">
+        <figcaption>
+            @Model.FigCaption
+        </figcaption>
+        <img class="img-thumbnail img-responsive" src="@Model.Src" alt="" />
+    </figure>
+</div>

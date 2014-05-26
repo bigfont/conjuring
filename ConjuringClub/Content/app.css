@@ -52,15 +52,18 @@ dl > dt {
 
 /*#region figures */
 
-figure.figure-aside {            
+div.figure-aside-wrapper {
+    text-align:center;      
+}
+figure.figure-aside
+{
     position:relative;
-    margin:20px auto;
     display:inline-block;
     max-width:100%;
 }
 
 figure.figure-aside figcaption
-{                
+{
     position:absolute;
     bottom:0;
     background:white;
@@ -68,21 +71,12 @@ figure.figure-aside figcaption
     right:0;
     padding:0 5px;
 }
-
 figure.figure-aside img
 {        
     margin:auto;    
 }
 
 /*#endregion */
-
-
-
-
-
-
-/*#region responsive iframes*/
-
 
 
 
@@ -125,13 +119,18 @@ figure.figure-aside img
 
 
 
+/*#region Page Title */
+
+
 .page-title {
     border-bottom:1px solid;
+    margin-bottom:20px;
 }
 .page-title,
 .page-title img
 {
-    margin:0 auto;
+    margin-right:auto;
+    margin-left:auto;
     text-align:center;
 }
 .page-title img
@@ -145,7 +144,7 @@ figure.figure-aside img
     display:block;
 }
 
-
+/*#endregion */
 
 
 
