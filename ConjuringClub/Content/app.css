@@ -32,7 +32,6 @@ small {
 /*#region affix*/
 
 #subnav.affix {
-    display:none;
     visibility:hidden;
 }
 
@@ -45,7 +44,6 @@ small {
 
         #subnav.affix {
             top: 30px;
-            display:block;
             visibility:visible;
         }
 }
