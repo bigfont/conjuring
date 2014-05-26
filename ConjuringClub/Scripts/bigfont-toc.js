@@ -25,9 +25,26 @@
     // </section>
     //
 
+    function createTocItem(ul, sectionId, sectionTitle)
+    {
+        var li, a, i;
+
+        // create the li and a
+        li = $('<li/>');
+
+        a = $('<a />', {
+            href: '#' + sectionId,
+            text: sectionTitle
+        });
+
+        // append to the ul
+        a.appendTo(li);
+        li.appendTo(ul);
+    }
+
     function createToc(ulSelector, iconClass) {
 
-        var sectionId, sectionTitle, h, ul, li, a, i;
+        var sectionId, sectionTitle, h, ul;
 
         // get the ul
         ul = $(ulSelector);
@@ -50,24 +67,11 @@
                     .firstChild
                     .textContent;
 
-                // create the li, a, and i
-                li = $('<li/>');
-
-                a = $('<a />', {
-                    href: '#' + sectionId,
-                    text: sectionTitle
-                });
-
-                i = $('<i/>', {
-                    'class': iconClass
-                });
-
-                // mush them together and append to the ul
-                i.prependTo(a);
-                a.appendTo(li);
-                li.appendTo(ul);
+                createTocItem(ul, sectionId, sectionTitle);
             }
         });
+
+        createTocItem(ul, "top", "Top");
     }
 
     $(document).ready(function () {
