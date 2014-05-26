@@ -1,0 +1,11 @@
+﻿/* TEAM */
+	Chef: Shaun Luttin
+	Contact: http://bigfont.ca
+	From: Salt Spring Island, BC Canada
+
+	Logo: Andrea 
+	Contact: http://andreapalframan.com/
+	From: Salt Spring Island, BC Canada
+
+/* SEE ALSO */
+	http://humanstxt.org/
