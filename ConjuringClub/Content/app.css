@@ -27,12 +27,31 @@ small {
     display: inline-block;
 }
 
-#subnav {
-    border-left: thin solid;
-}
+
+
+/*#region affix*/
+
 #subnav.affix {
-    top:30px;
+    display:none;
+    visibility:hidden;
 }
+
+
+@media (min-width: 992px) {
+
+    #subnav {
+        border-left: thin solid;
+    }
+
+        #subnav.affix {
+            top: 30px;
+            display:block;
+            visibility:visible;
+        }
+}
+
+/*#endregion */
+
 
 
 
@@ -117,7 +136,7 @@ figure.figure-aside {
     }
 
     .hframe img {
-        margin:0;
+        margin: 0;
     }
 
 /*#endregion*/
