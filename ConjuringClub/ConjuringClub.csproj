@@ -222,6 +222,7 @@
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
+    <Content Include="googledb001f6cc804d1ed.html" />
     <Content Include="humans.txt" />
     <Content Include="Images\3x4.jpg" />
     <Content Include="Images\4x3.jpg" />
