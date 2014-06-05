@@ -19,10 +19,6 @@ body {
     margin-bottom: 20px;
 }
 
-img {
-    margin-bottom: 20px;
-}
-
 small {
     display: inline-block;
 }
@@ -188,3 +184,13 @@ div,
 }
 
 /*#endregion */
+
+
+
+/*#region images*/
+
+.img-stacked {
+    margin-bottom:20px;
+}
+
+/*#endregion*/
