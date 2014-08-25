@@ -35,12 +35,19 @@
     @Html.Partial("_OneDriveDocuments", new OneDriveDocumentViewModel[] {
         new OneDriveDocumentViewModel { Title = "Media & Press Consent Form", CId = "DB5DB99F7F8F6191", ResId = "DB5DB99F7F8F6191%212694", AuthKey = "AA0tb1MaX6HlWS4" },
         new OneDriveDocumentViewModel { Title = "Kit Order Form", CId = "DB5DB99F7F8F6191", ResId = "DB5DB99F7F8F6191%212919", AuthKey = "AMk7vys2PTVi-TU" },
-        new OneDriveDocumentViewModel { Title = "Press Release - 2014 Aug", CId = "DB5DB99F7F8F6191", ResId = "DB5DB99F7F8F6191%214790", AuthKey = "AMpMKNs5VyoJnl4" },        
+        new OneDriveDocumentViewModel { Title = "Press Release - 2014 Aug", CId = "DB5DB99F7F8F6191", ResId = "DB5DB99F7F8F6191%214790", AuthKey = "AMpMKNs5VyoJnl4" },
         new OneDriveDocumentViewModel { Title = "Driftwood Article - 2014 Mar", CId = "DB5DB99F7F8F6191", ResId = "DB5DB99F7F8F6191%212284", AuthKey = "AO2IOs98Md8YlYI" },
         new OneDriveDocumentViewModel { Title = "Driftwood Article - 2013 Nov", CId = "DB5DB99F7F8F6191", ResId = "DB5DB99F7F8F6191%211127", AuthKey = "AAis77ikS-APt1k" },
-        new OneDriveDocumentViewModel { Title = "Marketing Poster - 2013", CId = "DB5DB99F7F8F6191", ResId = "DB5DB99F7F8F6191%212945", AuthKey = "ACaclo58Q6Bd0o0" }        
+        new OneDriveDocumentViewModel { Title = "Marketing Poster - 2013", CId = "DB5DB99F7F8F6191", ResId = "DB5DB99F7F8F6191%212945", AuthKey = "ACaclo58Q6Bd0o0" }
     })
 
+    @*
+        In YouTube, keep it simple:
+        - add a title
+        - tag each video with [salt-spring-conjuring-club]
+        - set privacy as unlisted
+        - keep everything else default, for now (e.g. no playlist, no description)
+    *@
     @Html.Partial("_YouTubeVideos", new string[] {
         "dxqZgbYE8eE", @* 4, 3, 2, 1in52.com *@
         "4sDDW8c4_sc", @* Shaun does magic in the coffee shop *@
@@ -51,7 +58,8 @@
         "49IyCnIl_Ok", @* Theo four aces *@
         "oEi3FZ_ZWbc", @* Noah equivoke *@
         "Kzi8_zXYEMs", @* Noah monte *@
-        "Dyxts0syTBY", @* Shaun yeast card *@
+        "Dyxts0syTBY", @* Shaun yeast card *@        
+        "fHfDtsDd34I", @* ---Start--- Party in the Park *@    
         "7A6vSAW0BEs", @* Dealt teaser *@
         "Ngmcu9-xRSk" @* Lance Burton Dove Act *@
         })
