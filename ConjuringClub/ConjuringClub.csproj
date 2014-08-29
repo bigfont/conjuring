@@ -172,6 +172,7 @@
     <Compile Include="Controllers\BookController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ValuesController.cs" />
+    <Compile Include="Controllers\YouTubeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -197,10 +198,10 @@
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountBindingModels.cs" />
-    <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="ViewModels\AccountViewModels.cs" />
     <Compile Include="Models\Authors.cs" />
     <Compile Include="Models\Book.cs" />
-    <Compile Include="Models\BookDetailsViewModel.cs" />
+    <Compile Include="ViewModels\BookDetailsViewModel.cs" />
     <Compile Include="Models\ConjuringDb.cs" />
     <Compile Include="Models\Publishers.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
