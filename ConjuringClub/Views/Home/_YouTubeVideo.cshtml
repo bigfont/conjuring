@@ -1,12 +1,11 @@
-﻿@model string
+﻿@using ConjuringClub.ViewModels;
+
+@model YouTubeVideoViewModel
 
 @{
     ConjuringClub.ViewModels.HFrameViewModel hFrame = new ConjuringClub.ViewModels.HFrameViewModel();
-
-    hFrame.Src = "//www.youtube.com/embed/" + Model + "?rel=0";
-
-    hFrame.FigCaption = "YouTube Video";
-
+    hFrame.Src = "//www.youtube.com/embed/" + Model.VideoId + "?rel=0";
+    hFrame.FigCaption = Model.VideoTitle;
     hFrame.AspectRatioWxH = "16x9";
 }
 
