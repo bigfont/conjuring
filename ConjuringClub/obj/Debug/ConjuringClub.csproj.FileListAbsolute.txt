@@ -135,3 +135,4 @@ C:\Users\BigFont\Documents\_GitHub\conjuring\ConjuringClub\obj\Debug\MyConjuring
 C:\Users\BigFont\Documents\_GitHub\conjuring\ConjuringClub\obj\Debug\ConjuringClub.csproj.GenerateResource.Cache
 C:\Users\BigFont\Documents\_GitHub\conjuring\ConjuringClub\obj\Debug\ConjuringClub.dll
 C:\Users\BigFont\Documents\_GitHub\conjuring\ConjuringClub\obj\Debug\ConjuringClub.pdb
+C:\Users\BigFont\Documents\_GitHub\conjuring\ConjuringClub\obj\Debug\ConjuringClub.csprojResolveAssemblyReference.cache
