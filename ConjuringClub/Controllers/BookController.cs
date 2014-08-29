@@ -12,9 +12,9 @@ namespace MyConjuringDbApi.Controllers
     public class BookController : ApiController
     {
         // GET api/<controller>
-        public IEnumerable<BookDetails> Get()
+        public IEnumerable<BookDetailsViewModel> Get()
         {
-            List<BookDetails> books = new List<BookDetails>();
+            List<BookDetailsViewModel> books = new List<BookDetailsViewModel>();
 
             ConjuringDb db = new ConjuringDb();
 
@@ -24,7 +24,7 @@ namespace MyConjuringDbApi.Controllers
             var query = from b in db.Books
                         join au in db.Authors on b.AuthorID equals au.ID
                         join p in db.Publishers on b.PublisherID equals p.ID
-                        select new BookDetails()
+                        select new BookDetailsViewModel()
                         {
                             Title = b.Title,
                             PublishYear = b.PublishYear,
@@ -34,7 +34,7 @@ namespace MyConjuringDbApi.Controllers
                             PublishLocation = p.Location
                         };
 
-            books.AddRange(query.ToList<BookDetails>());
+            books.AddRange(query.ToList<BookDetailsViewModel>());
 
             return books;
         }

@@ -5,7 +5,7 @@ using System.Web;
 
 namespace MyConjuringDbApi.ViewModels
 {
-    public class BookDetails
+    public class BookDetailsViewModel
     {
         public string Title { get; set; }
         public string FirstName { get; set; }
