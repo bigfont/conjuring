@@ -25,7 +25,7 @@ namespace ConjuringClub.Controllers
 
         public ActionResult YouTubeAuth()
         {            
-            // implement this myself, with WebHttpRequests. 
+            // implement this myself, with WebHttpRequests, or something like those.
             // see https://developers.google.com/youtube/v3/guides/authentication?hl=de
             // avoid using the .NET client libraries, because they don't work!
 
