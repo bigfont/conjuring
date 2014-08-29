@@ -2,21 +2,35 @@
 
 @model YouTubeVideoViewModel[]
 
-<section>
-
+<section ng-controller="YouTubeCtrl">
     <div class="page-header">
         <h1 id="videos">Videos</h1>
     </div>
-
-    <div class="row">
-
-        @for (var i = 0; i < Model.Length; ++i)
-        {
-            <div class="col-sm-6">
-                @Html.Partial("_YouTubeVideo", Model[i])
-            </div>
-        }
-
-    </div>
+    <ul>
+        <li class="list-group-item {{ $odd ? 'odd-child' : 'even-child' }}" ng-repeat="video in videos">
+            <!--author-->
+            <span>{{ video.Title }}</span>            
+        </li>
+    </ul>
 
 </section>
+
+@*<section>
+
+        <div class="page-header">
+            <h1 id="videos">Videos</h1>
+        </div>
+
+        <div class="row">
+
+            @for (var i = 0; i < Model.Length; ++i)
+            {
+                <div class="col-sm-6">
+                    @Html.Partial("_YouTubeVideo", Model[i])
+                </div>
+            }
+
+        </div>
+
+    </section>*@
+
