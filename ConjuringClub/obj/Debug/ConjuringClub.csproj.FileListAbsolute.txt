@@ -127,7 +127,6 @@ C:\Users\BigFont\Documents\_GitHub\conjuring\ConjuringClub\bin\Microsoft.Owin.Se
 C:\Users\BigFont\Documents\_GitHub\conjuring\ConjuringClub\bin\Microsoft.Owin.Security.Twitter.xml
 C:\Users\BigFont\Documents\_GitHub\conjuring\ConjuringClub\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
 C:\Users\BigFont\Documents\_GitHub\conjuring\ConjuringClub\bin\System.Web.Http.Owin.xml
-C:\Users\BigFont\Documents\_GitHub\conjuring\ConjuringClub\obj\Debug\ConjuringClub.csprojResolveAssemblyReference.cache
 C:\Users\BigFont\Documents\_GitHub\conjuring\ConjuringClub\obj\Debug\MyConjuringDbApi.Migrations.PruneModels.resources
 C:\Users\BigFont\Documents\_GitHub\conjuring\ConjuringClub\obj\Debug\MyConjuringDbApi.Migrations.AddPublisher.resources
 C:\Users\BigFont\Documents\_GitHub\conjuring\ConjuringClub\obj\Debug\MyConjuringDbApi.Migrations.AddMorePublisher.resources
