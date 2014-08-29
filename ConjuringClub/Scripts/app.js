@@ -4,6 +4,45 @@ var myApp = angular.module('conjuringApp', ['identityModule']);
 //controllers
 myApp.controller('BookCtrl', ['$scope', '$http', '$window', function ($scope, $http, $window) {
 
+    function createBookSearchObj(bookObj) {
+        var searchObj;
+
+        searchObj = {};
+        for (var key in bookObj) {
+            if (bookObj.hasOwnProperty(key)) {
+                searchObj[key] = "";
+            }
+        }
+    }
+
+    function bookSearchComparitor(expected, actual) {
+
+        var containsAll;
+        var actualSplit;
+
+        if (actual.length === 0) {
+            return true;
+        }
+
+        actual = makeString(actual).toLowerCase();
+        expected = makeString(expected).toLowerCase();
+
+        actualSplit = actual.split(" ");
+        for (var i = 0; i < actualSplit.length; ++i) {
+
+            containsAll = expected.indexOf(actualSplit[i]) !== -1;
+
+        }
+        return containsAll;
+    };
+
+    function makeString(input) {
+        if (typeof (input) !== 'string') {
+            input = '' + input;
+        }
+        return input;
+    }
+
     $scope.bookSearchComparitor = bookSearchComparitor;
 
     $http.get('/api/book/get').
@@ -61,42 +100,3 @@ myApp.controller('LevelCtrl', ['$scope', function ($scope) {
     ];
 
 }]);
-
-function createBookSearchObj(bookObj) {
-    var searchObj;
-
-    searchObj = {};
-    for (var key in bookObj) {
-        if (bookObj.hasOwnProperty(key)) {
-            searchObj[key] = "";
-        }
-    }
-}
-
-function bookSearchComparitor(expected, actual) {
-
-    var containsAll;
-    var actualSplit;
-
-    if (actual.length === 0) {
-        return true;
-    }
-
-    actual = makeString(actual).toLowerCase();
-    expected = makeString(expected).toLowerCase();
-
-    actualSplit = actual.split(" ");
-    for (var i = 0; i < actualSplit.length; ++i) {
-
-        containsAll = expected.indexOf(actualSplit[i]) !== -1;
-
-    }
-    return containsAll;
-};
-
-function makeString(input) {
-    if (typeof (input) !== 'string') {
-        input = '' + input;
-    }
-    return input;
-}
