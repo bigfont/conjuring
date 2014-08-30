@@ -315,6 +315,7 @@
     <Content Include="Scripts\angular\angular-touch.min.js" />
     <Content Include="Scripts\angular\angular.js" />
     <Content Include="Scripts\angular\angular.min.js" />
+    <Content Include="Scripts\angular\ui-bootstrap-tpls-0.11.0.min.js" />
     <Content Include="Scripts\app.js" />
     <Content Include="Scripts\bigfont-toc.js" />
     <Content Include="Scripts\bootstrap\bootstrap.js" />
