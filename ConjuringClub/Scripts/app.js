@@ -84,16 +84,14 @@ myApp.controller('YouTubeCtrl', ['$scope', '$http', '$window', '$modal', '$log',
         { "Id": "Ngmcu9-xRSk", "Title": "Lance Burton Dove Act"}
     ];
          
-    $scope.open = function (videoId) {
-
-        var videoUrl = "http://www.youtube.com/embed/" + videoId + "?rel=0";
+    $scope.open = function (video) {        
 
         var modalInstance = $modal.open({
             templateUrl: 'myModalContent.html',
             controller: 'ModalInstanceCtrl',
             resolve: {
-                videoUrl: function () {
-                    return videoUrl;
+                video: function () {
+                    return video;
                 }
             }
         });
@@ -107,9 +105,11 @@ myApp.controller('YouTubeCtrl', ['$scope', '$http', '$window', '$modal', '$log',
 
 }]);
 
-myApp.controller('ModalInstanceCtrl', ['$scope', '$modalInstance', '$sce', 'videoUrl', function ($scope, $modalInstance, $sce, videoUrl) {
+myApp.controller('ModalInstanceCtrl', ['$scope', '$modalInstance', '$sce', 'video', function ($scope, $modalInstance, $sce, video) {
 
+    var videoUrl = "http://www.youtube.com/embed/" + video.Id + "?rel=0"
     $scope.videoUrl = $sce.trustAsResourceUrl(videoUrl);
+    $scope.videoTitle = video.Title;
 
     $scope.ok = function () {
         $modalInstance.close();
