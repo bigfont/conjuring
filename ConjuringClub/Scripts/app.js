@@ -69,7 +69,19 @@ myApp.controller('BookCtrl', ['$scope', '$http', '$window', function ($scope, $h
 myApp.controller('YouTubeCtrl', ['$scope', '$http', '$window', '$modal', '$log', '$sce', function ($scope, $http, $window, $modal, $log, $sce) {
 
     $scope.videos = [
-        { "Id": "dxqZgbYE8eE", "Title": "Coming Soon" }
+        { "Id": "dxqZgbYE8eE", "Title": "4, 3, 2, 1in52.com" },
+        { "Id": "4sDDW8c4_sc", "Title": "Shaun does magic in the coffee shop"}, 
+        { "Id": "6esexn7Sy3c", "Title": "Magic man Shaun's amazing card trick"}, 
+        { "Id": "kUNO1J4r5KQ", "Title": "Card to match book on dark deck with Scott"}, 
+        { "Id": "jfexPoZzwjQ", "Title": "Blind shuffles, Erdnase System Of"}, 
+        { "Id": "s5a4u_bukBk", "Title": "Blind riffles and cuts, Erdnase System Of"}, 
+        { "Id": "49IyCnIl_Ok", "Title": "Theo four aces"}, 
+        { "Id": "oEi3FZ_ZWbc", "Title": "Noah equivoke"}, 
+        { "Id": "Kzi8_zXYEMs", "Title": "Noah monte"},         
+        { "Id": "Dyxts0syTBY", "Title": "Shaun yeast card"},         
+        { "Id": "fHfDtsDd34I", "Title": "Party in the Park"},         
+        { "Id": "7A6vSAW0BEs", "Title": "Dealt teaser"},   
+        { "Id": "Ngmcu9-xRSk", "Title": "Lance Burton Dove Act"}
     ];
          
     $scope.open = function (videoId) {
