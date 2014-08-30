@@ -1,38 +1,65 @@
 ﻿@using ConjuringClub.ViewModels;
 
-@model YouTubeVideoViewModel[]
+@*@model YouTubeVideoViewModel[]
 
-<section>
+    <section>
 
-    <div class="page-header">
-        <h1 id="videos">Videos</h1>
-    </div>
-
-    <div class="row">
-
-        @for (var i = 0; i < Model.Length; ++i)
-        {
-            <div class="col-sm-6">
-                @Html.Partial("_YouTubeVideo", Model[i])
-            </div>
-        }
-
-    </div>
-
-</section>
-
-@*
-    <section ng-controller="YouTubeCtrl">
         <div class="page-header">
             <h1 id="videos">Videos</h1>
         </div>
-        <ul>
-            <li class="list-group-item {{ $odd ? 'odd-child' : 'even-child' }}" ng-repeat="video in videos">
-                <!--author-->
-                <span>{{ video.Title }}</span>
-            </li>
-        </ul>
 
-    </section>
-*@
+        <div class="row">
 
+            @for (var i = 0; i < Model.Length; ++i)
+            {
+                <div class="col-sm-6">
+                    @Html.Partial("_YouTubeVideo", Model[i])
+                </div>
+            }
+
+        </div>
+
+    </section>*@
+
+<section ng-controller="YouTubeCtrl">
+    <div class="page-header">
+        <h1 id="videos">Videos</h1>
+    </div>
+    <ul class="list-group">
+        <li class="list-group-item {{ $odd ? 'odd-child' : 'even-child' }}" ng-repeat="video in videos">
+            <div class="row">
+                <div class="col-md-4">
+                    <img class="img-responsive" ng-src="http://img.youtube.com/vi/{{ video.Id }}/0.jpg" alt="{{ video.Title }}" ng-click="open(video.Id)">
+                </div>
+                <div class="col-md-8">
+                    <h4>{{ video.Title }}</h4>
+                </div>
+            </div>
+        </li>
+    </ul>
+
+
+    <script type="text/ng-template" id="myModalContent.html">
+        <div class="modal-header">
+            <h3 class="modal-title">{{ videoUrl }}</h3>
+        </div>
+        <div class="modal-body">
+            @* hFrame: This was a copy and paste from the _hFrame partial view. *@
+            <div class="hframe-wrapper img-thumbnail">
+                <div class="hframe">
+                    <!-- a transparent image is preferable -->
+                    <img class="ratio" src="http://placehold.it/16x9" />
+                    <iframe ng-src="{{ videoUrl }}"
+                            frameborder=" 0"
+                            allowfullscreen
+                            scrolling="no"></iframe>
+                </div>
+            </div>
+            @* End hFrame  *@
+        </div>
+        <div class="modal-footer">
+            <button class="btn btn-primary" ng-click="ok()">OK</button>
+            <button class="btn btn-warning" ng-click="cancel()">Cancel</button>
+        </div>
+    </script>
+</section>
