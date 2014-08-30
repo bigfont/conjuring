@@ -1,5 +1,5 @@
 ﻿//app
-var myApp = angular.module('conjuringApp', ['identityModule']);
+var myApp = angular.module('conjuringApp', ['identityModule', 'ui.bootstrap']);
 
 //controllers
 myApp.controller('BookCtrl', ['$scope', '$http', '$window', function ($scope, $http, $window) {
@@ -66,20 +66,46 @@ myApp.controller('BookCtrl', ['$scope', '$http', '$window', function ($scope, $h
         });
 }]);
 
-myApp.controller('YouTubeCtrl', ['$scope', '$http', '$window', function ($scope, $http, $window) {    
-
-    $http.get('/api/youtube/get').
-    success(function (data, status, headers, config) {
-        $scope.books = data;
-    }).
-    error(function (data, status, headers, config) {
-
-    });
+myApp.controller('YouTubeCtrl', ['$scope', '$http', '$window', '$modal', '$log', '$sce', function ($scope, $http, $window, $modal, $log, $sce) {
 
     $scope.videos = [
-        { "Title": "Coming Soon" }
+        { "Id": "dxqZgbYE8eE", "Title": "Coming Soon" }
     ];
+         
+    $scope.open = function (videoId) {
 
+        var videoUrl = "http://www.youtube.com/embed/" + videoId + "?rel=0";
+
+        var modalInstance = $modal.open({
+            templateUrl: 'myModalContent.html',
+            controller: 'ModalInstanceCtrl',
+            resolve: {
+                videoUrl: function () {
+                    return videoUrl;
+                }
+            }
+        });
+
+        modalInstance.result.then(function (selectedItem) {
+            $scope.selected = selectedItem;
+        }, function () {
+            $log.info('Modal dismissed at: ' + new Date());
+        });
+    };
+
+}]);
+
+myApp.controller('ModalInstanceCtrl', ['$scope', '$modalInstance', '$sce', 'videoUrl', function ($scope, $modalInstance, $sce, videoUrl) {
+
+    $scope.videoUrl = $sce.trustAsResourceUrl(videoUrl);
+
+    $scope.ok = function () {
+        $modalInstance.close();
+    };
+
+    $scope.cancel = function () {
+        $modalInstance.dismiss('cancel');
+    };
 }]);
 
 myApp.controller('ConductCtrl', ['$scope', function ($scope) {
