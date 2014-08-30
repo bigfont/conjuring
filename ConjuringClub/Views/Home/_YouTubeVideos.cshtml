@@ -1,25 +1,10 @@
-﻿@using ConjuringClub.ViewModels;
-
-@*@model YouTubeVideoViewModel[]
-
-    <section>
-
-        <div class="page-header">
-            <h1 id="videos">Videos</h1>
-        </div>
-
-        <div class="row">
-
-            @for (var i = 0; i < Model.Length; ++i)
-            {
-                <div class="col-sm-6">
-                    @Html.Partial("_YouTubeVideo", Model[i])
-                </div>
-            }
-
-        </div>
-
-    </section>*@
+﻿@*
+    In YouTube, keep it simple:
+    - add a title
+    - tag each video with [salt-spring-conjuring-club]
+    - set privacy as unlisted
+    - keep everything else default, for now (e.g. no playlist, no description)
+*@
 
 <section ng-controller="YouTubeCtrl">
     <div class="page-header">
@@ -37,7 +22,6 @@
             </div>
         </li>
     </ul>
-
 
     <script type="text/ng-template" id="myModalContent.html">
         <div class="modal-header">
@@ -58,8 +42,7 @@
             @* End hFrame  *@
         </div>
         <div class="modal-footer">
-            <button class="btn btn-primary" ng-click="ok()">OK</button>
-            <button class="btn btn-warning" ng-click="cancel()">Cancel</button>
+            <button class="btn btn-primary" ng-click="ok()">Close</button>            
         </div>
     </script>
 </section>

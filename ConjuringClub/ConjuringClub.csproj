@@ -643,9 +643,6 @@
     <Content Include="Views\Home\_Schedule.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\Home\_YouTubeVideo.cshtml" />
-  </ItemGroup>
-  <ItemGroup>
     <Content Include="Views\Home\_YouTubeVideos.cshtml" />
   </ItemGroup>
   <ItemGroup>
