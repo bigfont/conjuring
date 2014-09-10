@@ -95,49 +95,6 @@ figure.figure-aside {
 
 
 
-/*#region iframes */
-
-.hframe-wrapper {
-    margin: 0 auto;
-    margin-bottom: 20px;
-    width: 100%;
-}
-
-#videos .hframe-wrapper {
-    /*youtube aspect ratio is 3:4*/
-}
-
-#documents .hframe-wrapper {
-    /*onedrive aspect ratio is 1:6*/
-}
-
-.hframe {
-    position: relative;
-}
-
-    .hframe .ratio {
-        display: block;
-        width: 100%;
-        height: auto;
-    }
-
-    .hframe iframe {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-    }
-
-    .hframe img {
-        margin: 0;
-    }
-
-/*#endregion*/
-
-
-
-
 /*#region Page Title */
 
 

@@ -66,58 +66,56 @@ myApp.controller('BookCtrl', ['$scope', '$http', '$window', function ($scope, $h
         });
 }]);
 
-myApp.controller('YouTubeCtrl', ['$scope', '$http', '$window', '$modal', '$log', '$sce', function ($scope, $http, $window, $modal, $log, $sce) {
+myApp.controller('OneDriveCtrl', ['$scope', '$http', '$window', '$modal', '$log', '$sce', function ($scope, $http, $window, $modal, $log, $sce) {
 
-    $scope.videos = [
-        { "Id": "dxqZgbYE8eE", "Title": "4, 3, 2, 1in52.com" },
-        { "Id": "4sDDW8c4_sc", "Title": "Shaun does magic in the coffee shop"}, 
-        { "Id": "6esexn7Sy3c", "Title": "Magic man Shaun's amazing card trick"}, 
-        { "Id": "kUNO1J4r5KQ", "Title": "Card to match book on dark deck with Scott"}, 
-        { "Id": "jfexPoZzwjQ", "Title": "Blind shuffles, Erdnase System Of"}, 
-        { "Id": "s5a4u_bukBk", "Title": "Blind riffles and cuts, Erdnase System Of"}, 
-        { "Id": "49IyCnIl_Ok", "Title": "Theo four aces"}, 
-        { "Id": "oEi3FZ_ZWbc", "Title": "Noah equivoke"}, 
-        { "Id": "Kzi8_zXYEMs", "Title": "Noah monte"},         
-        { "Id": "Dyxts0syTBY", "Title": "Shaun yeast card"},         
-        { "Id": "fHfDtsDd34I", "Title": "Party in the Park"},         
-        { "Id": "7A6vSAW0BEs", "Title": "Dealt teaser"},   
-        { "Id": "Ngmcu9-xRSk", "Title": "Lance Burton Dove Act"}
+    $scope.documents = [
+        { Title: "Media & Press Consent Form", CId: "DB5DB99F7F8F6191", ResId: "DB5DB99F7F8F6191%212694", AuthKey: "AA0tb1MaX6HlWS4" },
+        { Title: "Kit Order Form", CId: "DB5DB99F7F8F6191", ResId: "DB5DB99F7F8F6191%212919", AuthKey: "AMk7vys2PTVi-TU" },
+        { Title: "Press Release - 2014 Aug", CId: "DB5DB99F7F8F6191", ResId: "DB5DB99F7F8F6191%214790", AuthKey: "AMpMKNs5VyoJnl4" },
+        { Title: "Driftwood Article - 2014 Mar", CId: "DB5DB99F7F8F6191", ResId: "DB5DB99F7F8F6191%212284", AuthKey: "AO2IOs98Md8YlYI" },
+        { Title: "Driftwood Article - 2013 Nov", CId: "DB5DB99F7F8F6191", ResId: "DB5DB99F7F8F6191%211127", AuthKey: "AAis77ikS-APt1k" },
+        { Title: "Marketing Poster - 2013", CId: "DB5DB99F7F8F6191", ResId: "DB5DB99F7F8F6191%212945", AuthKey: "ACaclo58Q6Bd0o0" }
     ];
-         
-    $scope.open = function (video) {        
 
-        var modalInstance = $modal.open({
-            templateUrl: 'myModalContent.html',
-            controller: 'ModalInstanceCtrl',
-            resolve: {
-                video: function () {
-                    return video;
-                }
-            }
-        });
+    $scope.open = function (document) {
 
-        modalInstance.result.then(function (selectedItem) {
-            $scope.selected = selectedItem;
-        }, function () {
-            $log.info('Modal dismissed at: ' + new Date());
-        });
+        var url = "https://onedrive.live.com/embed?" +
+            "cid=" + document.CId +
+            "&resid=" + document.ResId +
+            "&authkey=" + document.AuthKey +
+            "&em=2";
+
+        document.iframeSrc = $sce.trustAsResourceUrl(url);
+
     };
 
 }]);
 
-myApp.controller('ModalInstanceCtrl', ['$scope', '$modalInstance', '$sce', 'video', function ($scope, $modalInstance, $sce, video) {
+myApp.controller('YouTubeCtrl', ['$scope', '$http', '$window', '$modal', '$log', '$sce', function ($scope, $http, $window, $modal, $log, $sce) {
 
-    var videoUrl = "http://www.youtube.com/embed/" + video.Id + "?rel=0"
-    $scope.videoUrl = $sce.trustAsResourceUrl(videoUrl);
-    $scope.videoTitle = video.Title;
+    $scope.videos = [
+        { "Id": "dxqZgbYE8eE", "Title": "4, 3, 2, 1in52.com" },
+        { "Id": "4sDDW8c4_sc", "Title": "Shaun does magic in the coffee shop" },
+        { "Id": "6esexn7Sy3c", "Title": "Magic man Shaun's amazing card trick" },
+        { "Id": "kUNO1J4r5KQ", "Title": "Card to match book on dark deck with Scott" },
+        { "Id": "jfexPoZzwjQ", "Title": "Blind shuffles, Erdnase System Of" },
+        { "Id": "s5a4u_bukBk", "Title": "Blind riffles and cuts, Erdnase System Of" },
+        { "Id": "49IyCnIl_Ok", "Title": "Theo four aces" },
+        { "Id": "oEi3FZ_ZWbc", "Title": "Noah equivoke" },
+        { "Id": "Kzi8_zXYEMs", "Title": "Noah monte" },
+        { "Id": "Dyxts0syTBY", "Title": "Shaun yeast card" },
+        { "Id": "fHfDtsDd34I", "Title": "Party in the Park" },
+        { "Id": "7A6vSAW0BEs", "Title": "Dealt teaser" },
+        { "Id": "Ngmcu9-xRSk", "Title": "Lance Burton Dove Act" }
+    ];
 
-    $scope.ok = function () {
-        $modalInstance.close();
+    $scope.open = function (video) {
+
+        var url = "http://www.youtube.com/embed/" + video.Id + "?rel=0"
+        video.iframeSrc = $sce.trustAsResourceUrl(url);
+
     };
 
-    $scope.cancel = function () {
-        $modalInstance.dismiss('cancel');
-    };
 }]);
 
 myApp.controller('ConductCtrl', ['$scope', function ($scope) {
