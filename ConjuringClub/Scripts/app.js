@@ -79,7 +79,7 @@ myApp.controller('OneDriveCtrl', ['$scope', '$http', '$window', '$modal', '$log'
 
     $scope.open = function (document) {
 
-        var url = "https://onedrive.live.com/embed?" +
+        var url = "//onedrive.live.com/embed?" +
             "cid=" + document.CId +
             "&resid=" + document.ResId +
             "&authkey=" + document.AuthKey +
@@ -111,7 +111,7 @@ myApp.controller('YouTubeCtrl', ['$scope', '$http', '$window', '$modal', '$log',
 
     $scope.open = function (video) {
 
-        var url = "http://www.youtube.com/embed/" + video.Id + "?rel=0"
+        var url = "//www.youtube.com/embed/" + video.Id + "?rel=0"
         video.iframeSrc = $sce.trustAsResourceUrl(url);
 
     };
