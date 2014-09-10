@@ -14,7 +14,7 @@
         <li ng-repeat="video in videos">
             <h4>{{ video.Title }}</h4>
             <img class="img-responsive"
-                 ng-src="http://img.youtube.com/vi/{{ video.Id }}/0.jpg"
+                 ng-src="//img.youtube.com/vi/{{ video.Id }}/0.jpg"
                  ng-show="video.iframeSrc == null"
                  alt="{{ video.Title }}"
                  ng-click="open(video)">
