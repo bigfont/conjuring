@@ -256,8 +256,6 @@
     <Compile Include="ViewModels\FigureViewModel.cs" />
     <Compile Include="ViewModels\HFrameViewModel.cs" />
     <Compile Include="ViewModels\MemberViewModel.cs" />
-    <Compile Include="ViewModels\OneDriveDocumentViewModel.cs" />
-    <Compile Include="ViewModels\YouTubeVideoViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\app.css" />
