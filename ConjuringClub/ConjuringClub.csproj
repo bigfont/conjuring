@@ -683,7 +683,7 @@
     <Content Include="Views\Home\_Member.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\Home\_Events.cshtml" />
+    <Content Include="Views\Home\_Calendar.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\Home\_Supplies.cshtml" />
