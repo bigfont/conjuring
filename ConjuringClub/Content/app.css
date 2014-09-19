@@ -28,7 +28,7 @@ small {
 /*#region affix*/
 
 #subnav.affix {
-    visibility:hidden;
+    visibility: hidden;
 }
 
 
@@ -40,7 +40,7 @@ small {
 
         #subnav.affix {
             top: 30px;
-            visibility:visible;
+            visibility: visible;
         }
 }
 
@@ -147,7 +147,7 @@ div,
 /*#region images*/
 
 .img-stacked {
-    margin-bottom:20px;
+    margin-bottom: 20px;
 }
 
 /*#endregion*/

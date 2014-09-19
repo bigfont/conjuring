@@ -2,6 +2,46 @@
 var myApp = angular.module('conjuringApp', ['identityModule', 'ui.bootstrap']);
 
 //controllers
+
+myApp.controller('CalendarCtrl', ['$scope', '$sce', function ($scope, $sce) {
+
+
+
+    function createDatePST(date, time) {
+        var offsetPST = '-07:00';
+        var date = new Date(date.toString() + 'T' + time.toString() + offsetPST.toString());
+        console.log(date.toString());
+        return date;
+    }
+
+    $scope.events = [{
+        Name: 'Party in the Park',
+        StartDate: createDatePST('2014-08-24', '12:00'),
+        EndDate: createDatePST('2014-08-24', '15:00'),
+        Location: 'Centennial Park',
+        Description: $sce.trustAsHtml('Salt Spring Foundation\'s annual <a href="http://www.saltspringislandfoundation.org/pdf/SSIFParty_Driftwood_final.pdf">Party in the Park</a> is an opportunity for any Conjuring Club member to perform. It\'s at your own initiative. Just show up, pick a person, and show \'em a trick.')
+    }, {
+        Name: 'Movie Night!',
+        StartDate: createDatePST('2014-09-12', '15:30'),
+        EndDate: createDatePST('2014-09-12', '19:00'),
+        Location: 'Salt Spring Public Library Program Room',
+        Description: $sce.trustAsHtml('This is a special screening of the award-winning documentary <a href="http://www.makebelievefilm.com/index.html">Make Believe</a>. We will start right after the normal Conjuring Club meeting and run until the movie ends. Members and invited guests only.')
+    }, {
+        Name: 'Conjuring Club Public Show!',
+        StartDate: null,
+        EndDate: null,
+        Location: 'Salt Spring Public Library Program Room',
+        Description: $sce.trustAsHtml('Our members will present their most polished magic effects to a live public audience.')
+    }, {
+        Name: 'Terry Fox Run',
+        StartDate: createDatePST('2014-09-21', '10:00'),
+        EndDate: createDatePST('2014-09-21', '12:00'),
+        Location: 'Rainbow Road Pool',
+        Description: $sce.trustAsHtml('Another performance opportunity for Conjuring Club members. Pick a person and perform a trick for \'em. We\'ll have a table.')
+    }];
+
+}]);
+
 myApp.controller('BookCtrl', ['$scope', '$http', '$window', function ($scope, $http, $window) {
 
     function createBookSearchObj(bookObj) {
