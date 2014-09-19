@@ -11,6 +11,8 @@
 
 */
 
+
+
 body {
     padding-bottom: 20px;
 }
@@ -95,7 +97,7 @@ figure.figure-aside {
 
 
 
-/*#region Page Title */
+/*#region page title */
 
 
 .page-title {
@@ -144,6 +146,7 @@ div,
 
 
 
+
 /*#region images*/
 
 .img-stacked {
@@ -151,3 +154,14 @@ div,
 }
 
 /*#endregion*/
+
+
+
+
+/* #region Book Search */
+
+[ng-controller="BookCtrl"] ul.list-group {
+    min-height: 400px;
+}
+
+/*#endregion */
