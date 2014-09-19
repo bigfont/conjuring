@@ -5,8 +5,6 @@ var myApp = angular.module('conjuringApp', ['identityModule', 'ui.bootstrap']);
 
 myApp.controller('CalendarCtrl', ['$scope', '$sce', function ($scope, $sce) {
 
-
-
     function createDatePST(date, time) {
         var offsetPST = '-07:00';
         var date = new Date(date.toString() + 'T' + time.toString() + offsetPST.toString());
@@ -108,13 +106,15 @@ myApp.controller('BookCtrl', ['$scope', '$http', '$window', function ($scope, $h
 
 myApp.controller('OneDriveCtrl', ['$scope', '$http', '$window', '$modal', '$log', '$sce', function ($scope, $http, $window, $modal, $log, $sce) {
 
+    // One Drive > Right Click the Document > EMBDED > Generate > Then parse the iframe src into the following:
     $scope.documents = [
         { Title: "Media & Press Consent Form", CId: "DB5DB99F7F8F6191", ResId: "DB5DB99F7F8F6191%212694", AuthKey: "AA0tb1MaX6HlWS4" },
         { Title: "Kit Order Form", CId: "DB5DB99F7F8F6191", ResId: "DB5DB99F7F8F6191%212919", AuthKey: "AMk7vys2PTVi-TU" },
         { Title: "Press Release - 2014 Aug", CId: "DB5DB99F7F8F6191", ResId: "DB5DB99F7F8F6191%214790", AuthKey: "AMpMKNs5VyoJnl4" },
         { Title: "Driftwood Article - 2014 Mar", CId: "DB5DB99F7F8F6191", ResId: "DB5DB99F7F8F6191%212284", AuthKey: "AO2IOs98Md8YlYI" },
         { Title: "Driftwood Article - 2013 Nov", CId: "DB5DB99F7F8F6191", ResId: "DB5DB99F7F8F6191%211127", AuthKey: "AAis77ikS-APt1k" },
-        { Title: "Marketing Poster - 2013", CId: "DB5DB99F7F8F6191", ResId: "DB5DB99F7F8F6191%212945", AuthKey: "ACaclo58Q6Bd0o0" }
+        { Title: "Marketing Poster - 2013", CId: "DB5DB99F7F8F6191", ResId: "DB5DB99F7F8F6191%212945", AuthKey: "ACaclo58Q6Bd0o0" },
+        { Title: "Stage Plans", CId: "DB5DB99F7F8F6191", ResId: "DB5DB99F7F8F6191%215375", AuthKey: "AHyLufgVs6YtSr0" }
     ];
 
     $scope.open = function (document) {
