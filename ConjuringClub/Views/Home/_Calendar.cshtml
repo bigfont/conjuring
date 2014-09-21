@@ -5,7 +5,7 @@
     </div>
     <div ng-controller="CalendarCtrl">
         <ul class="list-unstyled">
-            <li ng-repeat="event in events | orderBy:'StartDate'" itemscope itemtype="http://data-vocabulary.org/Event">
+            <li ng-repeat="event in events | orderBy:'StartDate':true" itemscope itemtype="http://data-vocabulary.org/Event">
                 <h2 itemprop="name">{{ event.Name }}</h2>
                 <dl>
                     <dt>Date &amp; Time</dt>
