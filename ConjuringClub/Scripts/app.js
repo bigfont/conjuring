@@ -26,8 +26,8 @@ myApp.controller('CalendarCtrl', ['$scope', '$sce', function ($scope, $sce) {
         Description: $sce.trustAsHtml('This is a special screening of the award-winning documentary <a href="http://www.makebelievefilm.com/index.html">Make Believe</a>. We will start right after the normal Conjuring Club meeting and run until the movie ends. Members and invited guests only.')
     }, {
         Name: 'Conjuring Club Public Show!',
-        StartDate: null,
-        EndDate: null,
+        StartDate: createDatePST('2014-12-05','15:30'),
+        EndDate: createDatePST('2014-12-05','17:00'),
         Location: 'Salt Spring Public Library Program Room',
         Description: $sce.trustAsHtml('Our members will present their most polished magic effects to a live public audience.')
     }, {
