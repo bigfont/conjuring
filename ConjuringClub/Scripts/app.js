@@ -20,7 +20,7 @@ myApp.controller('CalendarCtrl', ['$scope', '$sce', function ($scope, $sce) {
     }
     
     function createDatePST(date, time) {
-        var offsetPST = '-08:00';
+        var offset = '-08:00';
         return createDate(date, time, offset);
     }
     // end date creation
