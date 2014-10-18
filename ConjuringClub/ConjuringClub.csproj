@@ -338,9 +338,6 @@
     <Content Include="Images\members\theo.png" />
     <Content Include="Images\placeholders\3x4.jpg" />
     <Content Include="Images\placeholders\4x3.jpg" />
-    <Content Include="Images\sidebars\MagicShow_Small_005_360x540.jpg" />
-    <Content Include="Images\sidebars\MagicShow_Small_019.jpg" />
-    <Content Include="Images\sidebars\MagicShow_Small_028_360x540.jpg" />
     <Content Include="Images\stage\IMG_0568.JPG" />
     <Content Include="Images\stage\IMG_0572.JPG" />
     <Content Include="Images\stage\IMG_0573.JPG" />
