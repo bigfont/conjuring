@@ -271,6 +271,9 @@
     <Content Include="Images\aboutUs\shaun.jpg" />
     <Content Include="Images\aboutUs\shaun_2.jpg" />
     <Content Include="Images\aboutUs\shaun_3.jpg" />
+    <Content Include="Images\asides\MagicShow_Small_005_360x540.jpg" />
+    <Content Include="Images\asides\MagicShow_Small_019.jpg" />
+    <Content Include="Images\asides\MagicShow_Small_028_360x540.jpg" />
     <Content Include="Images\books\library-book-collection-1.jpg" />
     <Content Include="Images\books\library-book-collection-2.jpg" />
     <Content Include="Images\books\library-book-collection-3.jpg" />
