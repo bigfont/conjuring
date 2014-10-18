@@ -1,0 +1,19 @@
+﻿@using ConjuringClub.ViewModels
+
+<section>
+
+    <div class="page-header">
+        <h1 id="books">Image Galleries</h1>
+    </div>
+
+    <h2>Building the Stage at Windsor Plywood</h2>
+    <p>Thank you to Windsor Plywood and Eric Jacobson for help in building the stage!</p>
+
+    @Html.Partial("_ImageGalleryFromFolder", new ImageGalleryFromFolderViewModel() { GalleryDirectory = "/stage" })
+
+    <h2>Coop Carnival 2014</h2>
+    <p>A few of us performed at the coop-op's annual carnival.</p>
+
+    @Html.Partial("_ImageGalleryFromFolder", new ImageGalleryFromFolderViewModel() { GalleryDirectory = "/coopCarnival2014" })
+  
+</section>
