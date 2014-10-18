@@ -1,6 +1,16 @@
 ﻿@using ConjuringClub.ViewModels
 
-<article>    
+<article>
+
+    <div class="row">
+
+        <div class="col-md-12">
+
+            @Html.Partial("_ImageGalleries")
+
+        </div>
+
+    </div>
 
     <div class="row">
 
@@ -13,6 +23,7 @@
         <div class="col-sm-8">
 
             @*@Html.Partial("_Login")*@
+
 
             @Html.Partial("_Schedule")
 
@@ -29,9 +40,9 @@
     @Html.Partial("_AboutUs")
 
     @*
-    Right click the document in OneDrive, choose embed, and generate the embed code.
-    The CId, ResId, and AuthKey will be within the iFrame embed code.
-    Note: These are loading slowly, so I have commented them out, for now.
+        Right click the document in OneDrive, choose embed, and generate the embed code.
+        The CId, ResId, and AuthKey will be within the iFrame embed code.
+        Note: These are loading slowly, so I have commented them out, for now.
 
     *@
 

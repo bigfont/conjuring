@@ -66,6 +66,9 @@
     <Reference Include="Google.Apis.YouTube.v3">
       <HintPath>..\packages\Google.Apis.YouTube.v3.1.8.1.1140\lib\portable-net4+sl4+wp71+win8\Google.Apis.YouTube.v3.dll</HintPath>
     </Reference>
+    <Reference Include="ImageProcessor">
+      <HintPath>..\packages\ImageProcessor.2.0.1.0\lib\net45\ImageProcessor.dll</HintPath>
+    </Reference>
     <Reference Include="log4net">
       <HintPath>..\packages\log4net.2.0.0\lib\net40-full\log4net.dll</HintPath>
     </Reference>
@@ -214,6 +217,8 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Classes\Fingerprint.cs" />
+    <Compile Include="Classes\ImageGallery.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\BookController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
@@ -255,6 +260,7 @@
     <Compile Include="Startup.cs" />
     <Compile Include="ViewModels\FigureViewModel.cs" />
     <Compile Include="ViewModels\HFrameViewModel.cs" />
+    <Compile Include="ViewModels\ImageGalleryFromFolder.cs" />
     <Compile Include="ViewModels\MemberViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -295,18 +301,18 @@
     <Content Include="Images\club\WP_20140718_019.jpg" />
     <Content Include="Images\club\WP_20140718_020.jpg" />
     <Content Include="Images\club\WP_20140718_021.jpg" />
-    <Content Include="Images\coop-carnival-2014\food.JPG" />
-    <Content Include="Images\coop-carnival-2014\jaysen-and-noah.jpg" />
-    <Content Include="Images\coop-carnival-2014\noah-2.JPG" />
-    <Content Include="Images\coop-carnival-2014\noah-3.JPG" />
-    <Content Include="Images\coop-carnival-2014\noah.JPG" />
-    <Content Include="Images\coop-carnival-2014\setting-up-2.JPG" />
-    <Content Include="Images\coop-carnival-2014\setting-up.JPG" />
-    <Content Include="Images\coop-carnival-2014\shaun-walking.JPG" />
-    <Content Include="Images\coop-carnival-2014\shaun.JPG" />
-    <Content Include="Images\coop-carnival-2014\throwing-2.JPG" />
-    <Content Include="Images\coop-carnival-2014\throwing-3.JPG" />
-    <Content Include="Images\coop-carnival-2014\throwing.JPG" />
+    <Content Include="Images\coopCarnival2014\food.JPG" />
+    <Content Include="Images\coopCarnival2014\jaysen-and-noah.jpg" />
+    <Content Include="Images\coopCarnival2014\noah-2.JPG" />
+    <Content Include="Images\coopCarnival2014\noah-3.JPG" />
+    <Content Include="Images\coopCarnival2014\noah.JPG" />
+    <Content Include="Images\coopCarnival2014\setting-up-2.JPG" />
+    <Content Include="Images\coopCarnival2014\setting-up.JPG" />
+    <Content Include="Images\coopCarnival2014\shaun-walking.JPG" />
+    <Content Include="Images\coopCarnival2014\shaun.JPG" />
+    <Content Include="Images\coopCarnival2014\throwing-2.JPG" />
+    <Content Include="Images\coopCarnival2014\throwing-3.JPG" />
+    <Content Include="Images\coopCarnival2014\throwing.JPG" />
     <Content Include="Images\logo.png" />
     <Content Include="Images\members\anjali-sm.png" />
     <Content Include="Images\members\anjali.png" />
@@ -323,7 +329,6 @@
     <Content Include="Images\sidebars\MagicShow_Small_005_360x540.jpg" />
     <Content Include="Images\sidebars\MagicShow_Small_019.jpg" />
     <Content Include="Images\sidebars\MagicShow_Small_028_360x540.jpg" />
-    <Content Include="Images\stage\IMG_0566.JPG" />
     <Content Include="Images\stage\IMG_0568.JPG" />
     <Content Include="Images\stage\IMG_0572.JPG" />
     <Content Include="Images\stage\IMG_0573.JPG" />
@@ -333,11 +338,22 @@
     <Content Include="Images\stage\noah_eric01.JPG" />
     <Content Include="Images\stage\noah_eric03.JPG" />
     <Content Include="Images\stage\noah_eric06.JPG" />
+    <Content Include="Images\stage\resized\IMG_0566.JPG" />
+    <Content Include="Images\stage\resized\IMG_0568.JPG" />
+    <Content Include="Images\stage\resized\IMG_0572.JPG" />
+    <Content Include="Images\stage\resized\IMG_0573.JPG" />
+    <Content Include="Images\stage\resized\IMG_0575.JPG" />
+    <Content Include="Images\stage\resized\IMG_0585.JPG" />
+    <Content Include="Images\stage\resized\IMG_0588.JPG" />
+    <Content Include="Images\stage\resized\noah_eric01.JPG" />
+    <Content Include="Images\stage\resized\noah_eric03.JPG" />
+    <Content Include="Images\stage\resized\noah_eric06.JPG" />
     <Content Include="Scripts\app.js" />
     <Content Include="Scripts\bigfont-toc.js" />
     <Content Include="Scripts\controllers\identityControllers.js" />
     <Content Include="Scripts\google-analytics-object.js" />
     <Content Include="Scripts\IE-10.js" />
+    <None Include="Views\Home\_ImageGalleries.cshtml" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -439,6 +455,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\Home\_Calendar.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Home\_ImageGalleryFromFolder.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
