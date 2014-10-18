@@ -362,7 +362,6 @@
     <Content Include="Scripts\controllers\identityControllers.js" />
     <Content Include="Scripts\google-analytics-object.js" />
     <Content Include="Scripts\IE-10.js" />
-    <None Include="Views\Home\_ImageGalleries.cshtml" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -377,6 +376,7 @@
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Home\_FigureAside.cshtml" />
+    <Content Include="Views\Home\_ImageGalleries.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
