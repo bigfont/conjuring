@@ -173,3 +173,4 @@ C:\Users\BigFont\Documents\_GitHub\conjuring\ConjuringClub\bin\Google.Apis.Auth.
 C:\Users\BigFont\Documents\_GitHub\conjuring\ConjuringClub\bin\Google.Apis.Auth.Mvc4.pdb
 C:\Users\BigFont\Documents\_GitHub\conjuring\ConjuringClub\bin\Google.Apis.Auth.Mvc4.xml
 C:\Users\BigFont\Documents\_GitHub\conjuring\ConjuringClub\obj\Debug\ConjuringClub.csprojResolveAssemblyReference.cache
+C:\Users\BigFont\Documents\_GitHub\conjuring\ConjuringClub\bin\ImageProcessor.dll

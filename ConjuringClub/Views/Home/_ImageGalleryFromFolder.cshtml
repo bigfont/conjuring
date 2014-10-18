@@ -1,0 +1,21 @@
+﻿@model ConjuringClub.ViewModels.ImageGalleryFromFolderViewModel
+
+<div class="row">
+
+    @foreach (var fileInfo in ImageGallery.GetGalleryImages(@Model.GalleryDirectory))
+    {
+        var imgSrcOriginal = ImageGallery.ImageSrc_Original(fileInfo.FullName);
+        var imgSrcResized = ImageGallery.ImageSrc_Resized(fileInfo, new System.Drawing.Size(300, 0));
+        var imgTitle = ImageGallery.ImgTitle(fileInfo);
+
+        <div class="col-md-4">
+
+            <a class="img-thumbnail" href="@imgSrcOriginal">
+                <img class="img-responsive" src="@imgSrcResized" />
+            </a>
+
+        </div>
+
+    }
+</div>
+
