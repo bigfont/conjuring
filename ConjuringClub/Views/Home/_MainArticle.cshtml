@@ -1,6 +1,6 @@
 ﻿@using ConjuringClub.ViewModels
 
-<article>    
+<article>
 
     <div class="row">
 
@@ -29,19 +29,25 @@
     @Html.Partial("_AboutUs")
 
     @*
-    Right click the document in OneDrive, choose embed, and generate the embed code.
-    The CId, ResId, and AuthKey will be within the iFrame embed code.
-    Note: These are loading slowly, so I have commented them out, for now.
-
+        Right click the document in OneDrive, choose embed, and generate the embed code.
+        The CId, ResId, and AuthKey will be within the iFrame embed code.
+        As of Nov 2014 these are location inside
+            Shaun's OneDrive (via shaunluttin@hotmail.com) > 
+            Documents > 
+            Work > 
+            Conjuring > 
+            Conjuring Club > 
+            OnWebsite
     *@
 
     @Html.Partial("_OneDriveDocuments", new OneDriveDocumentViewModel[] {
-        new OneDriveDocumentViewModel { Title = "Media & Press Consent Form", CId = "DB5DB99F7F8F6191", ResId = "DB5DB99F7F8F6191%212694", AuthKey = "AA0tb1MaX6HlWS4" },
-        new OneDriveDocumentViewModel { Title = "Kit Order Form", CId = "DB5DB99F7F8F6191", ResId = "DB5DB99F7F8F6191%212919", AuthKey = "AMk7vys2PTVi-TU" },
-        new OneDriveDocumentViewModel { Title = "Press Release - 2014 Aug", CId = "DB5DB99F7F8F6191", ResId = "DB5DB99F7F8F6191%214790", AuthKey = "AMpMKNs5VyoJnl4" },
-        new OneDriveDocumentViewModel { Title = "Driftwood Article - 2014 Mar", CId = "DB5DB99F7F8F6191", ResId = "DB5DB99F7F8F6191%212284", AuthKey = "AO2IOs98Md8YlYI" },
-        new OneDriveDocumentViewModel { Title = "Driftwood Article - 2013 Nov", CId = "DB5DB99F7F8F6191", ResId = "DB5DB99F7F8F6191%211127", AuthKey = "AAis77ikS-APt1k" },
-        new OneDriveDocumentViewModel { Title = "Marketing Poster - 2013", CId = "DB5DB99F7F8F6191", ResId = "DB5DB99F7F8F6191%212945", AuthKey = "ACaclo58Q6Bd0o0" }
+        new OneDriveDocumentViewModel { Title = "Media & Press Consent Form", CId = "3894840904335CBB", ResId = "3894840904335CBB%211046", AuthKey = "AKI6hSnt6q_RFRI" }, //
+        new OneDriveDocumentViewModel { Title = "Kit Order Form", CId = "3894840904335CBB", ResId = "3894840904335CBB%211048", AuthKey = "ALp9EuOZY8ry-2A" }, //
+        new OneDriveDocumentViewModel { Title = "Press Release - 2014 Aug", CId = "3894840904335CBB", ResId = "3894840904335CBB%211049", AuthKey = "ANpwCZWjQj7D5Bc" }, //
+        new OneDriveDocumentViewModel { Title = "Driftwood Article - 2014 Mar", CId = "3894840904335CBB", ResId = "3894840904335CBB%211050", AuthKey = "AET0sqbgVqpqwAM" },
+        new OneDriveDocumentViewModel { Title = "Driftwood Article - 2013 Nov", CId = "3894840904335CBB", ResId = "3894840904335CBB%211063", AuthKey = "AC8xd_PwnaJXT5Q" },
+        new OneDriveDocumentViewModel { Title = "Marketing Poster - 2013", CId = "3894840904335CBB", ResId = "3894840904335CBB%211103", AuthKey = "AIn-rAJSkqsgp_o" },
+        new OneDriveDocumentViewModel { Title = "Stage Construction Plans - 2014", CId = "3894840904335CBB", ResId = "3894840904335CBB%211051", AuthKey = "AMuHay2fvcmiJVM" }
     })
 
     @Html.Partial("_YouTubeVideos")
