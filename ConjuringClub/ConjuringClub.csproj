@@ -262,6 +262,7 @@
     <Compile Include="ViewModels\HFrameViewModel.cs" />
     <Compile Include="ViewModels\ImageGalleryFromFolder.cs" />
     <Compile Include="ViewModels\MemberViewModel.cs" />
+    <Compile Include="ViewModels\OneDriveDocumentViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\app.css" />
