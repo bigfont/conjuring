@@ -4,9 +4,19 @@
 
     <div class="row">
 
+        <div class="col-md-12">
+
+            @Html.Partial("_ImageGalleries")
+
+        </div>
+
+    </div>
+
+    <div class="row">
+
         <div class="col-sm-4">
 
-            @Html.Partial("_FigureAside", new FigureAsideViewModel("/Images/MagicShow_Small_028_360x540.jpg", "Skill takes practice."))
+            @Html.Partial("_FigureAside", new FigureAsideViewModel("/Images/asides/MagicShow_Small_028_360x540.jpg", "Skill takes practice."))
 
         </div>
 
@@ -14,9 +24,10 @@
 
             @*@Html.Partial("_Login")*@
 
+
             @Html.Partial("_Schedule")
 
-            @Html.Partial("_Events")
+            @Html.Partial("_Calendar")
 
             @Html.Partial("_Conduct")
 
@@ -60,15 +71,9 @@
 
         </div>
 
-        <div class="col-sm-8">
-
-            @Html.Partial("_Supplies")
-
-        </div>
-
         <div class="col-sm-4">
 
-            @Html.Partial("_FigureAside", new FigureAsideViewModel("/Images/MagicShow_Small_005_360x540.jpg", "Practice makes permanent."))
+            @Html.Partial("_FigureAside", new FigureAsideViewModel("/Images/asides/MagicShow_Small_005_360x540.jpg", "Practice makes permanent."))
 
         </div>
 
