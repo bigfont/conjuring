@@ -2,6 +2,57 @@
 var myApp = angular.module('conjuringApp', ['identityModule', 'ui.bootstrap']);
 
 //controllers
+
+myApp.controller('CalendarCtrl', ['$scope', '$sce', function ($scope, $sce) {
+
+    // date creation
+    // see also: http://www.timeanddate.com/time/zone/canada/vancouver
+    function createDate(date, time, offset)
+    {
+        var date = new Date(date.toString() + 'T' + time.toString() + offset.toString());
+        console.log(date.toString());
+        return date; 
+    }
+
+    function createDatePDT(date, time) {
+        var offset = '-07:00';
+        return createDate(date, time, offset);
+    }
+    
+    function createDatePST(date, time) {
+        var offset = '-08:00';
+        return createDate(date, time, offset);
+    }
+    // end date creation
+
+    $scope.events = [{
+        Name: 'Party in the Park',
+        StartDate: createDatePDT('2014-08-24', '12:00'),
+        EndDate: createDatePDT('2014-08-24', '15:00'),
+        Location: 'Centennial Park',
+        Description: $sce.trustAsHtml('Salt Spring Foundation\'s annual <a href="http://www.saltspringislandfoundation.org/pdf/SSIFParty_Driftwood_final.pdf">Party in the Park</a> is an opportunity for any Conjuring Club member to perform. It\'s at your own initiative. Just show up, pick a person, and show \'em a trick.')
+    }, {
+        Name: 'Movie Night!',
+        StartDate: createDatePDT('2014-09-12', '15:30'),
+        EndDate: createDatePDT('2014-09-12', '19:00'),
+        Location: 'Salt Spring Public Library Program Room',
+        Description: $sce.trustAsHtml('This is a special screening of the award-winning documentary <a href="http://www.makebelievefilm.com/index.html">Make Believe</a>. We will start right after the normal Conjuring Club meeting and run until the movie ends. Members and invited guests only.')
+    }, {
+        Name: 'Conjuring Club Public Show!',
+        StartDate: createDatePST('2014-12-12','17:00'),
+        EndDate: createDatePST('2014-12-12','18:00'),
+        Location: 'Salt Spring Public Library Program Room',
+        Description: $sce.trustAsHtml('Our members will present their most polished magic effects to a live public audience.')
+    }, {
+        Name: 'Terry Fox Run',
+        StartDate: createDatePDT('2014-09-21', '10:00'),
+        EndDate: createDatePDT('2014-09-21', '12:00'),
+        Location: 'Rainbow Road Pool',
+        Description: $sce.trustAsHtml('Another performance opportunity for Conjuring Club members. Pick a person and perform a trick for \'em. We\'ll have a table.')
+    }];
+
+}]);
+
 myApp.controller('BookCtrl', ['$scope', '$http', '$window', function ($scope, $http, $window) {
 
     function createBookSearchObj(bookObj) {
@@ -66,58 +117,58 @@ myApp.controller('BookCtrl', ['$scope', '$http', '$window', function ($scope, $h
         });
 }]);
 
-myApp.controller('YouTubeCtrl', ['$scope', '$http', '$window', '$modal', '$log', '$sce', function ($scope, $http, $window, $modal, $log, $sce) {
+myApp.controller('OneDriveCtrl', ['$scope', '$http', '$window', '$modal', '$log', '$sce', function ($scope, $http, $window, $modal, $log, $sce) {
 
-    $scope.videos = [
-        { "Id": "dxqZgbYE8eE", "Title": "4, 3, 2, 1in52.com" },
-        { "Id": "4sDDW8c4_sc", "Title": "Shaun does magic in the coffee shop"}, 
-        { "Id": "6esexn7Sy3c", "Title": "Magic man Shaun's amazing card trick"}, 
-        { "Id": "kUNO1J4r5KQ", "Title": "Card to match book on dark deck with Scott"}, 
-        { "Id": "jfexPoZzwjQ", "Title": "Blind shuffles, Erdnase System Of"}, 
-        { "Id": "s5a4u_bukBk", "Title": "Blind riffles and cuts, Erdnase System Of"}, 
-        { "Id": "49IyCnIl_Ok", "Title": "Theo four aces"}, 
-        { "Id": "oEi3FZ_ZWbc", "Title": "Noah equivoke"}, 
-        { "Id": "Kzi8_zXYEMs", "Title": "Noah monte"},         
-        { "Id": "Dyxts0syTBY", "Title": "Shaun yeast card"},         
-        { "Id": "fHfDtsDd34I", "Title": "Party in the Park"},         
-        { "Id": "7A6vSAW0BEs", "Title": "Dealt teaser"},   
-        { "Id": "Ngmcu9-xRSk", "Title": "Lance Burton Dove Act"}
+    // One Drive > Right Click the Document > EMBDED > Generate > Then parse the iframe src into the following:
+    $scope.documents = [
+        { Title: "Media & Press Consent Form", CId: "DB5DB99F7F8F6191", ResId: "DB5DB99F7F8F6191%212694", AuthKey: "AA0tb1MaX6HlWS4" },
+        { Title: "Kit Order Form", CId: "DB5DB99F7F8F6191", ResId: "DB5DB99F7F8F6191%212919", AuthKey: "AMk7vys2PTVi-TU" },
+        { Title: "Press Release - 2014 Aug", CId: "DB5DB99F7F8F6191", ResId: "DB5DB99F7F8F6191%214790", AuthKey: "AMpMKNs5VyoJnl4" },
+        { Title: "Driftwood Article - 2014 Mar", CId: "DB5DB99F7F8F6191", ResId: "DB5DB99F7F8F6191%212284", AuthKey: "AO2IOs98Md8YlYI" },
+        { Title: "Driftwood Article - 2013 Nov", CId: "DB5DB99F7F8F6191", ResId: "DB5DB99F7F8F6191%211127", AuthKey: "AAis77ikS-APt1k" },
+        { Title: "Marketing Poster - 2013", CId: "DB5DB99F7F8F6191", ResId: "DB5DB99F7F8F6191%212945", AuthKey: "ACaclo58Q6Bd0o0" },
+        { Title: "Stage Plans", CId: "DB5DB99F7F8F6191", ResId: "DB5DB99F7F8F6191%215375", AuthKey: "AHyLufgVs6YtSr0" }
     ];
-         
-    $scope.open = function (video) {        
 
-        var modalInstance = $modal.open({
-            templateUrl: 'myModalContent.html',
-            controller: 'ModalInstanceCtrl',
-            resolve: {
-                video: function () {
-                    return video;
-                }
-            }
-        });
+    $scope.open = function (document) {
 
-        modalInstance.result.then(function (selectedItem) {
-            $scope.selected = selectedItem;
-        }, function () {
-            $log.info('Modal dismissed at: ' + new Date());
-        });
+        var url = "//onedrive.live.com/embed?" +
+            "cid=" + document.CId +
+            "&resid=" + document.ResId +
+            "&authkey=" + document.AuthKey +
+            "&em=2";
+
+        document.iframeSrc = $sce.trustAsResourceUrl(url);
+
     };
 
 }]);
 
-myApp.controller('ModalInstanceCtrl', ['$scope', '$modalInstance', '$sce', 'video', function ($scope, $modalInstance, $sce, video) {
+myApp.controller('YouTubeCtrl', ['$scope', '$http', '$window', '$modal', '$log', '$sce', function ($scope, $http, $window, $modal, $log, $sce) {
 
-    var videoUrl = "http://www.youtube.com/embed/" + video.Id + "?rel=0"
-    $scope.videoUrl = $sce.trustAsResourceUrl(videoUrl);
-    $scope.videoTitle = video.Title;
+    $scope.videos = [
+        { "Id": "dxqZgbYE8eE", "Title": "4, 3, 2, 1in52.com" },
+        { "Id": "4sDDW8c4_sc", "Title": "Shaun does magic in the coffee shop" },
+        { "Id": "6esexn7Sy3c", "Title": "Magic man Shaun's amazing card trick" },
+        { "Id": "kUNO1J4r5KQ", "Title": "Card to match book on dark deck with Scott" },
+        { "Id": "jfexPoZzwjQ", "Title": "Blind shuffles, Erdnase System Of" },
+        { "Id": "s5a4u_bukBk", "Title": "Blind riffles and cuts, Erdnase System Of" },
+        { "Id": "49IyCnIl_Ok", "Title": "Theo four aces" },
+        { "Id": "oEi3FZ_ZWbc", "Title": "Noah equivoke" },
+        { "Id": "Kzi8_zXYEMs", "Title": "Noah monte" },
+        { "Id": "Dyxts0syTBY", "Title": "Shaun yeast card" },
+        { "Id": "fHfDtsDd34I", "Title": "Party in the Park" },
+        { "Id": "7A6vSAW0BEs", "Title": "Dealt teaser" },
+        { "Id": "Ngmcu9-xRSk", "Title": "Lance Burton Dove Act" }
+    ];
 
-    $scope.ok = function () {
-        $modalInstance.close();
+    $scope.open = function (video) {
+
+        var url = "//www.youtube.com/embed/" + video.Id + "?rel=0"
+        video.iframeSrc = $sce.trustAsResourceUrl(url);
+
     };
 
-    $scope.cancel = function () {
-        $modalInstance.dismiss('cancel');
-    };
 }]);
 
 myApp.controller('ConductCtrl', ['$scope', function ($scope) {
