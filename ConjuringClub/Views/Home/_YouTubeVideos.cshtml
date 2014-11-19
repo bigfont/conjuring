@@ -10,39 +10,19 @@
     <div class="page-header">
         <h1 id="videos">Videos</h1>
     </div>
-    <ul class="list-group">
-        <li class="list-group-item {{ $odd ? 'odd-child' : 'even-child' }}" ng-repeat="video in videos">
-            <div class="row">
-                <div class="col-md-4">
-                    <img class="img-responsive" ng-src="http://img.youtube.com/vi/{{ video.Id }}/0.jpg" alt="{{ video.Title }}" ng-click="open(video)">
-                </div>
-                <div class="col-md-8">
-                    <h4>{{ video.Title }}</h4>
-                </div>
-            </div>
-        </li>
-    </ul>
 
-    <script type="text/ng-template" id="myModalContent.html">
-        <div class="modal-header">
-            <h3 class="modal-title">{{ videoTitle }}</h3>
-        </div>
-        <div class="modal-body">
-            @* hFrame: This was a copy and paste from the _hFrame partial view. *@
-            <div class="hframe-wrapper img-thumbnail">
-                <div class="hframe">
-                    <!-- a transparent image is preferable -->
-                    <img class="ratio" src="http://placehold.it/16x9" />
-                    <iframe ng-src="{{ videoUrl }}"
-                            frameborder=" 0"
-                            allowfullscreen
-                            scrolling="no"></iframe>
-                </div>
+    <div class="row">
+        <div class="col-md-6" ng-repeat="video in videos">
+            <h4>{{ video.Title }}</h4>
+            <img class="img-responsive"
+                 ng-src="//img.youtube.com/vi/{{ video.Id }}/0.jpg"
+                 ng-show="video.iframeSrc == null"
+                 alt="{{ video.Title }}"
+                 ng-click="open(video)">
+            <div class="embed-responsive embed-responsive-4by3" ng-hide="video.iframeSrc == null">
+                <iframe class="embed-responsive-item" ng-src="{{ video.iframeSrc }}"></iframe>
             </div>
-            @* End hFrame  *@
         </div>
-        <div class="modal-footer">
-            <button class="btn btn-primary" ng-click="ok()">Close</button>            
-        </div>
-    </script>
+    </div>
+
 </section>
