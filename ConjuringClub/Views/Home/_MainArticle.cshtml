@@ -6,7 +6,7 @@
 
         <div class="col-sm-4">
 
-            @Html.Partial("_FigureAside", new FigureAsideViewModel("/Images/asides/MagicShow_Small_028_360x540.jpg", "Skill takes practice."))
+            @Html.Partial("Media/_FigureAside", new FigureAsideViewModel("/Images/asides/MagicShow_Small_028_360x540.jpg", "Skill takes practice."))
 
         </div>
 
@@ -14,11 +14,13 @@
 
             @*@Html.Partial("_Login")*@
 
-            @Html.Partial("_Schedule")
+            @Html.Partial("Administrivia/_Schedule")
 
-            @Html.Partial("_Calendar")
+            @Html.Partial("Administrivia/_Calendar")
 
-            @Html.Partial("_Conduct")
+            @Html.Partial("Administrivia/_Conduct")
+
+            @Html.Partial("Administrivia/_WhoShouldAttend")            
 
         </div>
 
@@ -26,13 +28,11 @@
 
     <div class="row">
 
-        <div class="col-md-12">
+        <div class="col-md-12">            
 
-            @Html.Partial("_ImageGalleries")
+            @Html.Partial("About/_Members")
 
-            @Html.Partial("_Members")
-
-            @Html.Partial("_AboutUs")
+            @Html.Partial("About/_AboutUs")
 
             @*
                 Right click the document in OneDrive, choose embed, and generate the embed code.
@@ -46,14 +46,15 @@
                     OnWebsite
             *@
 
-            @Html.Partial("_OneDriveDocuments")
+            @Html.Partial("Media/_ImageGalleries")
 
-            @Html.Partial("_YouTubeVideos")
+            @Html.Partial("Media/_OneDriveDocuments")
+
+            @Html.Partial("Media/_YouTubeVideos")
+
         </div>
 
     </div>
-
-
 
     <div class="row">
 
@@ -65,7 +66,7 @@
 
         <div class="col-sm-4">
 
-            @Html.Partial("_FigureAside", new FigureAsideViewModel("/Images/asides/MagicShow_Small_005_360x540.jpg", "Practice makes permanent."))
+            @Html.Partial("Media/_FigureAside", new FigureAsideViewModel("/Images/asides/MagicShow_Small_005_360x540.jpg", "Practice makes permanent."))
 
         </div>
 

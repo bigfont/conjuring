@@ -375,8 +375,8 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
-    <Content Include="Views\Home\_FigureAside.cshtml" />
-    <Content Include="Views\Home\_ImageGalleries.cshtml" />
+    <Content Include="Views\Home\Media\_FigureAside.cshtml" />
+    <Content Include="Views\Home\Media\_ImageGalleries.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -409,10 +409,10 @@
     <Content Include="Views\Home\_Login.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\Home\_Conduct.cshtml" />
+    <Content Include="Views\Home\Administrivia\_Conduct.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\Home\_Levels.cshtml" />
+    <Content Include="Views\Home\_SecretKnowledge.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\Home\_Books.cshtml" />
@@ -424,22 +424,16 @@
     <Content Include="Views\Home\_Header.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\Home\_Schedule.cshtml" />
+    <Content Include="Views\Home\Administrivia\_Schedule.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\Home\_YouTubeVideos.cshtml" />
+    <Content Include="Views\Home\Media\_YouTubeVideos.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\Home\_OneDriveDocument.cshtml" />
+    <Content Include="Views\Home\Media\_OneDriveDocuments.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\Home\_hFrame.cshtml" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Views\Home\_OneDriveDocuments.cshtml" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Views\Home\_AboutUs.cshtml" />
+    <Content Include="Views\Home\About\_AboutUs.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\Home\_Subnav.cshtml" />
@@ -457,19 +451,22 @@
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\Home\_Members.cshtml" />
+    <Content Include="Views\Home\About\_Members.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\Home\_Member.cshtml" />
+    <Content Include="Views\Home\About\_Member.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\Home\_Calendar.cshtml" />
+    <Content Include="Views\Home\Administrivia\_Calendar.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\Home\_ImageGalleryFromFolder.cshtml" />
+    <Content Include="Views\Home\Media\_ImageGalleryFromFolder.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\Home\_MagicInMovies.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Home\Administrivia\_WhoShouldAttend.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
