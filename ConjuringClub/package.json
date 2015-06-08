@@ -1,15 +1,15 @@
 {
-  "name": "conjuring-club",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "Shaun Luttin",
-  "license": "ISC",
-  "devDependencies": {
-    "gulp": "^3.9.0",
-    "gulp-less": "^3.0.3"
-  }
+    "author": "Shaun Luttin",
+    "description": "",
+    "devDependencies": {
+        "gulp": "^3.9.0",
+        "gulp-less": "^3.0.3"
+    },
+    "license": "ISC",
+    "main": "index.js",
+    "name": "conjuring-club",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "version": "1.0.0"
 }
