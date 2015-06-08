@@ -26,6 +26,12 @@ myApp.controller('CalendarCtrl', ['$scope', '$sce', function ($scope, $sce) {
     // end date creation
 
     $scope.events = [{
+        Name: 'Vegas Night',
+        StartDate: createDatePDT('2015-06-13', '18:00'),
+        EndDate: createDatePDT('2015-06-13', '20:00'),
+        Location: 'Salt Spring Island Public Library',
+        Description: $sce.trustAsHtml('This is the first event put on by the Salt Spring Library Youth Advisory Council. The Conjuring Club will perform a mini-show that includes an expose of gambling scams.')
+    }, {
         Name: 'Party in the Park',
         StartDate: createDatePDT('2014-08-24', '12:00'),
         EndDate: createDatePDT('2014-08-24', '15:00'),
