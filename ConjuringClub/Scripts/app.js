@@ -144,22 +144,13 @@ myApp.controller('OneDriveCtrl', ['$scope', '$http', '$window', '$modal', '$log'
 
 }]);
 
-myApp.controller('YouTubeCtrl', ['$scope', '$http', '$window', '$modal', '$log', '$sce', function ($scope, $http, $window, $modal, $log, $sce) {
+myApp.controller('YouTubeCtrl', ['$scope', '$sce', function ($scope, $sce) {
 
     $scope.videos = [
-        { "Id": "dxqZgbYE8eE", "Title": "4, 3, 2, 1in52.com" },
-        { "Id": "4sDDW8c4_sc", "Title": "Shaun does magic in the coffee shop" },
-        { "Id": "6esexn7Sy3c", "Title": "Magic man Shaun's amazing card trick" },
-        { "Id": "kUNO1J4r5KQ", "Title": "Card to match book on dark deck with Scott" },
-        { "Id": "jfexPoZzwjQ", "Title": "Blind shuffles, Erdnase System Of" },
-        { "Id": "s5a4u_bukBk", "Title": "Blind riffles and cuts, Erdnase System Of" },
-        { "Id": "49IyCnIl_Ok", "Title": "Theo four aces" },
-        { "Id": "oEi3FZ_ZWbc", "Title": "Noah equivoke" },
-        { "Id": "Kzi8_zXYEMs", "Title": "Noah monte" },
-        { "Id": "Dyxts0syTBY", "Title": "Shaun yeast card" },
-        { "Id": "fHfDtsDd34I", "Title": "Party in the Park" },
-        { "Id": "7A6vSAW0BEs", "Title": "Dealt teaser" },
-        { "Id": "Ngmcu9-xRSk", "Title": "Lance Burton Dove Act" }
+        { Id: "4sDDW8c4_sc", Title: "Shaun does magic in the coffee shop" },
+        { Id: "6esexn7Sy3c", Title: "Magic man Shaun's amazing card trick" },    
+        { Id: "7A6vSAW0BEs", Title: "Dealt teaser" },
+        { Id: "Ngmcu9-xRSk", Title: "Lance Burton Dove Act" }
     ];
 
     $scope.open = function (video) {
@@ -168,6 +159,26 @@ myApp.controller('YouTubeCtrl', ['$scope', '$http', '$window', '$modal', '$log',
         video.iframeSrc = $sce.trustAsResourceUrl(url);
 
     };
+
+}]);
+
+myApp.controller("AzureVideoCtrl", ['$scope', '$sce', function ($scope, $sce) {
+
+    $scope.videos = [
+        {
+            Id: "asset-9320445d-1500-80c3-6746-f1e50d7c5ead/jazz_aces_cafe.mp4?sv=2012-02-12&sr=c&si=592838ea-8c3a-4292-8400-e7b969c00026&sig=RRIbwKo3WKttzIOUJxkQfphUzMCFkAjXpoTYWpsI1oE%3D&st=2015-06-08T01%3A22%3A05Z&se=2115-05-15T01%3A22%3A05Z",
+            Title: "Jazz Aces au Cafe"
+        },
+        {
+            Id: "asset-9b20445d-1500-80c3-fcbb-f1e50d79fcfe/four_three_two_one_in_52.mp4?sv=2012-02-12&sr=c&si=0973bc78-c7c2-48a0-800b-7a45182ddb9a&sig=iQBQkeVE2DcG9qrh2rtgWGU8YcYB4kIRridv%2BgLZhs4%3D&st=2015-06-08T01%3A21%3A55Z&se=2115-05-15T01%3A21%3A55Z",
+            Title: "4, 3, 2, 1in52.ca"
+        }
+    ];
+
+    $scope.makeVideoSrc = function (video) {
+        var url = "//bigfont.blob.core.windows.net/" + video.Id;
+        return $sce.trustAsResourceUrl(url);
+    }
 
 }]);
 

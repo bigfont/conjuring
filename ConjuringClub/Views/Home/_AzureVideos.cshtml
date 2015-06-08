@@ -1,0 +1,25 @@
+﻿@*
+    In Azure, go to media services > conjuring > copy the publish url.
+    In a text editor, go to app.js > AzureVideoCtrl, and paste the url there.
+*@
+
+<section ng-controller="AzureVideoCtrl">
+    <div class="page-header">
+        <h1 id="videos">Our Videos</h1>
+    </div>
+    <p>There are videos, which we've recorded for Conjuring Club members.</p>
+    <div class="row">
+        <div class="col-md-6" ng-repeat="video in videos">
+            <h4>{{ video.Title }}</h4>            
+            <div class="embed-responsive embed-responsive-4by3">
+                <video
+                       controls 
+                       class="embed-responsive-item" 
+                       ng-src="{{ makeVideoSrc(video) }}">
+                    Your browser doesn't support HTML5.
+                </video>
+            </div>
+        </div>
+    </div>
+
+</section>
