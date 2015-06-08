@@ -140,8 +140,16 @@ div,
 
 /*#region images*/
 
-.img-stacked {
+[class^=col-] img {
+    /* because we images to fill their columns
+    */
+    width:100%;
+}
+
+img.img-stacked {
+    margin:auto;
     margin-bottom: 20px;
+    display:block; /* for centering */
 }
 
 /*#endregion*/
