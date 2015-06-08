@@ -1,21 +1,52 @@
 ﻿@model ConjuringClub.ViewModels.ImageGalleryFromFolderViewModel
 
-<div class="row">
-
-    @foreach (var fileInfo in ImageGallery.GetGalleryImages(@Model.GalleryDirectory))
-    {
-        var imgSrcOriginal = ImageGallery.ImageSrc_Original(fileInfo.FullName);
-        var imgSrcResized = ImageGallery.ImageSrc_Resized(fileInfo, new System.Drawing.Size(300, 0));
-        var imgTitle = ImageGallery.ImgTitle(fileInfo);
-
-        <div class="col-md-4 col-sm-6">
-
-            <a class="img-thumbnail" href="@imgSrcOriginal">
-                <img class="img-responsive" src="@imgSrcResized" />
-            </a>
-
-        </div>
-
+<style type="text/css">
+    .accordion-toggle:hover {
+        text-decoration: none;
+        cursor: pointer;
     }
-</div>
 
+    .gallery-preview {
+        background: black;
+        padding: 10px;
+        margin-bottom: 10px;
+    }
+</style>
+
+@{
+    var galleryImages = ImageGallery.GetGalleryImages(Model.GalleryDirectory);
+}
+
+<accordion-group>
+    <accordion-heading>
+        <div>
+            <h3>@Model.Title</h3>
+            <p>@Model.Caption</p>
+            <div class="gallery-preview">
+                <div class="row">
+                    @foreach (var fileInfo in galleryImages.Take(4))
+            {
+                        <div class="col-sm-3 col-xs-6">
+                            <img class="img-responsive"
+                                 src="@ImageGallery.ImageSrc_Resized(fileInfo, new System.Drawing.Size(300, 0))" />
+                        </div>
+                    }
+                </div>
+            </div>
+            <a href="#">...view more.</a>
+        </div>
+    </accordion-heading>
+    <div class="row">
+        @foreach (var fileInfo in galleryImages)
+        {
+            var imgSrcOriginal = ImageGallery.ImageSrc_Original(fileInfo.FullName);
+            var imgSrcResized = ImageGallery.ImageSrc_Resized(fileInfo, new System.Drawing.Size(400, 0));
+            var imgTitle = ImageGallery.ImgTitle(fileInfo);
+            <div class="col-sm-4 col-xs-6">
+                <a class="img-thumbnail" href="@imgSrcOriginal">
+                    <img class="img-responsive" src="@imgSrcResized" />
+                </a>
+            </div>
+        }
+    </div>
+</accordion-group>

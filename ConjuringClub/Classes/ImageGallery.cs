@@ -24,7 +24,8 @@ public class ImageGallery
 
     public static string ImageSrc_Resized(FileInfo fileInfo, Size size)
     {
-        var saveDirectory = Path.Combine(fileInfo.Directory.FullName, "resized");
+        var directoryName = string.Format("resized{0}x{1}", size.Height, size.Width);
+        var saveDirectory = Path.Combine(fileInfo.Directory.FullName, directoryName);
         Directory.CreateDirectory(saveDirectory);
 
         var savePath = Path.Combine(saveDirectory, fileInfo.Name);

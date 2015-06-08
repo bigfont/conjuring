@@ -11,10 +11,20 @@
 
 */
 
-
-
 body {
     padding-bottom: 20px;
+}
+
+article > section > h2:after {
+    border-bottom: thin solid #FF6666;
+    display: block;
+    content: "";
+    width: 75%;
+    margin-top: 10px;
+}
+
+article section h2 small {
+    color: #990000;
 }
 
 #books div.input-group {
@@ -25,14 +35,11 @@ small {
     display: inline-block;
 }
 
-
-
 /*#region affix*/
 
 #subnav.affix {
     visibility: hidden;
 }
-
 
 @media (min-width: 992px) {
 
@@ -48,9 +55,6 @@ small {
 
 /*#endregion */
 
-
-
-
 /*#region lists*/
 
 dl > dt {
@@ -62,9 +66,6 @@ dl > dt {
     }
 
 /*#endregion*/
-
-
-
 
 /*#region figures */
 
@@ -94,11 +95,7 @@ figure.figure-aside {
 
 /*#endregion */
 
-
-
-
 /*#region page title */
-
 
 .page-title {
     border-bottom: 1px solid;
@@ -124,9 +121,6 @@ figure.figure-aside {
 
 /*#endregion */
 
-
-
-
 /*#region accented items*/
 
 h1,
@@ -144,9 +138,6 @@ div,
 
 /*#endregion */
 
-
-
-
 /*#region images*/
 
 .img-stacked {
@@ -154,9 +145,6 @@ div,
 }
 
 /*#endregion*/
-
-
-
 
 /* #region Book Search */
 

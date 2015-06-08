@@ -1,25 +1,40 @@
 ﻿@using ConjuringClub.ViewModels
 
-<section>
+@{
+    var galleries = new List<ImageGalleryFromFolderViewModel>() {
 
+        new ImageGalleryFromFolderViewModel()
+        {
+            GalleryDirectory = "/stage",
+            Title = "Building the Stage",
+            Caption = "Thank you to Windsor Plywood, Eric Jacobson, Mouat's Trading Co and Gary Bywater!"
+        },
+        new ImageGalleryFromFolderViewModel()
+        {
+            GalleryDirectory = "/coopCarnival2014",
+            Title = "Coop Carnival 2014",
+            Caption = "A few of us performed at the coop-op's annual carnival."
+        },
+        new ImageGalleryFromFolderViewModel()
+        {
+            GalleryDirectory = "/meetings",
+            Title = "Meetings",
+            Caption = "Some candid shots of the Conjuring Club Meetings."
+        }
+    };
+
+}
+
+<section>
     <div class="page-header">
         <h1 id="images">Image Galleries</h1>
     </div>
-
-    <h2>Building the Stage at Windsor Plywood</h2>
-    <p>Thank you to Windsor Plywood and Eric Jacobson for help in contructing the stage, from Mouat's Trading Co for the curtains, and Gary Bywater for final touches!</p>
-
-    @Html.Partial("Media/_ImageGalleryFromFolder", new ImageGalleryFromFolderViewModel() { GalleryDirectory = "/stage" })
-
-    <h2>Coop Carnival 2014</h2>
-    <p>A few of us performed at the coop-op's annual carnival.</p>
-
-    @Html.Partial("Media/_ImageGalleryFromFolder", new ImageGalleryFromFolderViewModel() { GalleryDirectory = "/coopCarnival2014" })
-
-    <h2>Meetings</h2>
-    <p>Some candid shots of the Conjuring Club Meetings.</p>
-
-    @Html.Partial("Media/_ImageGalleryFromFolder", new ImageGalleryFromFolderViewModel() { GalleryDirectory = "/meetings" })
-
-
+    <accordion close-others="false">
+        @foreach (var gallery in galleries)
+        {
+            ViewBag.IsFirst = galleries.First() == gallery;
+            @Html.Partial("Media/_ImageGalleryFromFolder", gallery)
+        }
+    </accordion>
 </section>
+

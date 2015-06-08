@@ -1,11 +1,17 @@
-﻿<section>
+﻿<style type="text/css">
+    div.calendar-item {
+        height: 300px;
+    }
+</style>
+
+<section>
     <div class="page-header">
         <h1 id="calendar">Calendar</h1>
         <p>From time to time, we have special events. These are listed here.</p>
     </div>
     <div ng-controller="CalendarCtrl">
-        <ul class="list-unstyled">
-            <li ng-repeat="event in events | orderBy:'StartDate':true" itemscope itemtype="http://data-vocabulary.org/Event">
+        <div class="row">
+            <div class="col-sm-6 calendar-item" ng-repeat="event in events | orderBy:'StartDate':true" itemscope itemtype="http://data-vocabulary.org/Event">
                 <h2 itemprop="name">{{ event.Name }}</h2>
                 <dl>
                     <dt>Date &amp; Time</dt>
@@ -29,8 +35,7 @@
                     <dt>Description</dt>
                     <dd itemprop="description" ng-bind-html="event.Description"></dd>
                 </dl>
-            </li>
-        </ul>
+            </div>
+        </div>
     </div>
-
 </section>
