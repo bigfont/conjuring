@@ -1,0 +1,36 @@
+﻿<section>
+    <div class="page-header">
+        <h1 id="calendar">Calendar</h1>
+        <p>From time to time, we have special events. These are listed here.</p>
+    </div>
+    <div ng-controller="CalendarCtrl">
+        <ul class="list-unstyled">
+            <li ng-repeat="event in events | orderBy:'StartDate':true" itemscope itemtype="http://data-vocabulary.org/Event">
+                <h2 itemprop="name">{{ event.Name }}</h2>
+                <dl>
+                    <dt>Date &amp; Time</dt>
+                    <dd>
+                        <span ng-if="event.StartDate != null">
+                            <time itemprop="startDate" datetime="{{ event.StartDate.toISOString() }}">
+                                <span class="date">{{ event.StartDate | date:'MMM d, y' }}</span> @@ <span class="time">{{ event.StartDate | date:'h:mm a' }}</span>
+                            </time>
+                            <time ng-if="event.EndDate != null" itemprop="endDate" datetime="{{ event.EndDate.toISOString() }}">
+                                to <span class="date">{{ event.EndDate | date:'MMM d, y' }}</span>  @@ <span class="time">{{ event.EndDate | date:'h:mm a' }}</span>
+                            </time>
+                        </span>
+                        <span ng-if="event.StartDate == null">
+                            To be announced.
+                        </span>
+                    </dd>
+                    <dt>Location</dt>
+                    <dd itemprop="location">
+                        {{ event.Location }}
+                    </dd>
+                    <dt>Description</dt>
+                    <dd itemprop="description" ng-bind-html="event.Description"></dd>
+                </dl>
+            </li>
+        </ul>
+    </div>
+
+</section>

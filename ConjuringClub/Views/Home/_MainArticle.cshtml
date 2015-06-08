@@ -4,19 +4,9 @@
 
     <div class="row">
 
-        <div class="col-md-12">
-
-            @Html.Partial("_ImageGalleries")
-
-        </div>
-
-    </div>
-
-    <div class="row">
-
         <div class="col-sm-4">
 
-            @Html.Partial("_FigureAside", new FigureAsideViewModel("/Images/asides/MagicShow_Small_028_360x540.jpg", "Skill takes practice."))
+            @Html.Partial("Media/_FigureAside", new FigureAsideViewModel("/Images/asides/MagicShow_Small_028_360x540.jpg", "Skill takes practice."))
 
         </div>
 
@@ -24,55 +14,77 @@
 
             @*@Html.Partial("_Login")*@
 
-            @Html.Partial("_Schedule")
+            @Html.Partial("Administrivia/_Schedule")
 
-            @Html.Partial("_Calendar")
+            @Html.Partial("Administrivia/_Calendar")
 
-            @Html.Partial("_Conduct")
+            @Html.Partial("Administrivia/_Conduct")
+
+            @Html.Partial("Administrivia/_WhoShouldAttend")            
 
         </div>
 
     </div>
 
-    @Html.Partial("_Members")
+    <div class="row">
 
-    @Html.Partial("_AboutUs")
+        <div class="col-md-12">            
 
-    @*
-        Right click the document in OneDrive, choose embed, and generate the embed code.
-        The CId, ResId, and AuthKey will be within the iFrame embed code.
-        As of Nov 2014 these are location inside
-            Shaun's OneDrive (via shaunluttin@hotmail.com) > 
-            Documents > 
-            Work > 
-            Conjuring > 
-            Conjuring Club > 
-            OnWebsite
-    *@
+            @Html.Partial("About/_Members")
 
-    @Html.Partial("_OneDriveDocuments")
+            @Html.Partial("About/_AboutUs")
 
-    @Html.Partial("_AzureVideos")
+            @*
+                Right click the document in OneDrive, choose embed, and generate the embed code.
+                The CId, ResId, and AuthKey will be within the iFrame embed code.
+                As of Nov 2014 these are location inside
+                    Shaun's OneDrive (via shaunluttin@hotmail.com) >
+                    Documents >
+                    Work >
+                    Conjuring >
+                    Conjuring Club >
+                    OnWebsite
+            *@
 
-    @Html.Partial("_YouTubeVideos")
+            @Html.Partial("Media/_ImageGalleries")
+
+            @Html.Partial("Media/_OneDriveDocuments")
+
+            @Html.Partial("Media/_AzureVideos")
+
+            @Html.Partial("Media/_YouTubeVideos")
+
+        </div>
+
+    </div>
 
     <div class="row">
 
         <div class="col-sm-8">
 
-            @Html.Partial("_Levels")
+            @Html.Partial("_SecretKnowledge")
 
         </div>
 
         <div class="col-sm-4">
 
-            @Html.Partial("_FigureAside", new FigureAsideViewModel("/Images/asides/MagicShow_Small_005_360x540.jpg", "Practice makes permanent."))
+            @Html.Partial("Media/_FigureAside", new FigureAsideViewModel("/Images/asides/MagicShow_Small_005_360x540.jpg", "Practice makes permanent."))
 
         </div>
 
     </div>
 
-    @Html.Partial("_Books")
+    <div class="row">
+
+        <div class="col-md-12">
+
+            @Html.Partial("_MagicInMovies")
+
+            @Html.Partial("_Books")
+
+        </div>
+
+    </div>
 
     @Html.Partial("_Footer")
 

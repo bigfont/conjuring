@@ -339,25 +339,39 @@
     <Content Include="Images\members\theo.png" />
     <Content Include="Images\placeholders\3x4.jpg" />
     <Content Include="Images\placeholders\4x3.jpg" />
-    <Content Include="Images\stage\IMG_0568.JPG" />
-    <Content Include="Images\stage\IMG_0572.JPG" />
-    <Content Include="Images\stage\IMG_0573.JPG" />
-    <Content Include="Images\stage\IMG_0575.JPG" />
-    <Content Include="Images\stage\IMG_0585.JPG" />
-    <Content Include="Images\stage\IMG_0588.JPG" />
-    <Content Include="Images\stage\noah_eric01.JPG" />
-    <Content Include="Images\stage\noah_eric03.JPG" />
-    <Content Include="Images\stage\noah_eric06.JPG" />
-    <Content Include="Images\stage\resized\IMG_0566.JPG" />
-    <Content Include="Images\stage\resized\IMG_0568.JPG" />
-    <Content Include="Images\stage\resized\IMG_0572.JPG" />
-    <Content Include="Images\stage\resized\IMG_0573.JPG" />
-    <Content Include="Images\stage\resized\IMG_0575.JPG" />
-    <Content Include="Images\stage\resized\IMG_0585.JPG" />
-    <Content Include="Images\stage\resized\IMG_0588.JPG" />
-    <Content Include="Images\stage\resized\noah_eric01.JPG" />
-    <Content Include="Images\stage\resized\noah_eric03.JPG" />
-    <Content Include="Images\stage\resized\noah_eric06.JPG" />
+    <Content Include="Images\stage\00_noah_eric.JPG" />
+    <Content Include="Images\stage\01_noah_eric.JPG" />
+    <Content Include="Images\stage\02_noah_eric.JPG" />
+    <Content Include="Images\stage\03_noah_eric.JPG" />
+    <Content Include="Images\stage\04_noah_eric.JPG" />
+    <Content Include="Images\stage\05_noah_eric.JPG" />
+    <Content Include="Images\stage\08_noah_eric.JPG" />
+    <Content Include="Images\stage\09_noah_eric.JPG" />
+    <Content Include="Images\stage\10_noah_eric.JPG" />
+    <Content Include="Images\stage\14_eric_cindy.jpg" />
+    <Content Include="Images\stage\15_cindy.jpg" />
+    <Content Include="Images\stage\16_eric_cindy.jpg" />
+    <Content Include="Images\stage\17_eric_cindy.jpg" />
+    <Content Include="Images\stage\18_jacobsons_painting.jpg" />
+    <Content Include="Images\stage\19_noah_painting.jpg" />
+    <Content Include="Images\stage\20_noah_painting.jpg" />
+    <Content Include="Images\stage\21_noah_painting.jpg" />
+    <Content Include="Images\stage\32.JPG" />
+    <Content Include="Images\stage\34.JPG" />
+    <Content Include="Images\stage\38.JPG" />
+    <Content Include="Images\stage\39.JPG" />
+    <Content Include="Images\stage\42.JPG" />
+    <Content Include="Images\stage\44.JPG" />
+    <Content Include="Images\stage\45.JPG" />
+    <Content Include="Images\stage\52.JPG" />
+    <Content Include="Images\stage\53.JPG" />
+    <Content Include="Images\stage\54.JPG" />
+    <Content Include="Images\stage\56.JPG" />
+    <Content Include="Images\stage\58.JPG" />
+    <Content Include="Images\stage\61.JPG" />
+    <Content Include="Images\stage\62.JPG" />
+    <Content Include="Images\stage\63.JPG" />
+    <Content Include="Images\stage\64.JPG" />
     <Content Include="Scripts\app.js" />
     <Content Include="Scripts\bigfont-toc.js" />
     <Content Include="Scripts\controllers\identityControllers.js" />
@@ -376,8 +390,8 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
-    <Content Include="Views\Home\_FigureAside.cshtml" />
-    <Content Include="Views\Home\_ImageGalleries.cshtml" />
+    <Content Include="Views\Home\Media\_FigureAside.cshtml" />
+    <Content Include="Views\Home\Media\_ImageGalleries.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -410,10 +424,10 @@
     <Content Include="Views\Home\_Login.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\Home\_Conduct.cshtml" />
+    <Content Include="Views\Home\Administrivia\_Conduct.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\Home\_Levels.cshtml" />
+    <Content Include="Views\Home\_SecretKnowledge.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\Home\_Books.cshtml" />
@@ -425,22 +439,16 @@
     <Content Include="Views\Home\_Header.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\Home\_Schedule.cshtml" />
+    <Content Include="Views\Home\Administrivia\_Schedule.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\Home\_YouTubeVideos.cshtml" />
+    <Content Include="Views\Home\Media\_YouTubeVideos.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\Home\_OneDriveDocument.cshtml" />
+    <Content Include="Views\Home\Media\_OneDriveDocuments.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\Home\_hFrame.cshtml" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Views\Home\_OneDriveDocuments.cshtml" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Views\Home\_AboutUs.cshtml" />
+    <Content Include="Views\Home\About\_AboutUs.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\Home\_Subnav.cshtml" />
@@ -458,19 +466,25 @@
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\Home\_Members.cshtml" />
+    <Content Include="Views\Home\About\_Members.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\Home\_Member.cshtml" />
+    <Content Include="Views\Home\About\_Member.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\Home\_Calendar.cshtml" />
+    <Content Include="Views\Home\Administrivia\_Calendar.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\Home\_ImageGalleryFromFolder.cshtml" />
+    <Content Include="Views\Home\Media\_ImageGalleryFromFolder.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\Home\_AzureVideos.cshtml" />
+    <Content Include="Views\Home\_MagicInMovies.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Home\Administrivia\_WhoShouldAttend.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Home\Media\_AzureVideos.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
