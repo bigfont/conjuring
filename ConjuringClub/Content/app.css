@@ -1,163 +1,116 @@
-﻿/*
-    See also: http://hexcolortool.com/
-
-    Darker
-    #990000
-    #CC3333
-    #FF6666
-    #FF9999
-    #FFCCCC
-    Lighter
-
-*/
-
+/* See also: http://hexcolortool.com */
 body {
-    padding-bottom: 20px;
+  padding-bottom: 20px;
 }
-
 article > section > h2:after {
-    border-bottom: thin solid #FF6666;
-    display: block;
-    content: "";
-    width: 75%;
-    margin-top: 10px;
+  border-bottom: thin solid #ff6666;
+  display: block;
+  content: "";
+  width: 75%;
+  margin-top: 10px;
 }
-
 article section h2 small {
-    color: #990000;
+  color: #990000;
 }
-
 #books div.input-group {
-    margin-bottom: 20px;
+  margin-bottom: 20px;
 }
-
 small {
-    display: inline-block;
+  display: inline-block;
 }
-
 /*#region affix*/
-
 #subnav.affix {
-    visibility: hidden;
+  visibility: hidden;
 }
-
 @media (min-width: 992px) {
-
-    #subnav {
-        border-left: thin solid;
-    }
-
-        #subnav.affix {
-            top: 30px;
-            visibility: visible;
-        }
+  #subnav {
+    border-left: thin solid;
+  }
+  #subnav.affix {
+    top: 30px;
+    visibility: visible;
+  }
 }
-
 /*#endregion */
-
 /*#region lists*/
-
 dl > dt {
-    margin-top: 10px;
+  margin-top: 10px;
 }
-
-    dl > dt:first-child {
-        margin-top: 0px;
-    }
-
+dl > dt:first-child {
+  margin-top: 0px;
+}
 /*#endregion*/
-
 /*#region figures */
-
 div.figure-aside-wrapper {
-    text-align: center;
+  text-align: center;
 }
-
 figure.figure-aside {
-    margin-top: 40px;
-    position: relative;
-    display: inline-block;
-    max-width: 100%;
+  margin-top: 40px;
+  position: relative;
+  display: inline-block;
+  max-width: 100%;
 }
-
-    figure.figure-aside figcaption {
-        position: absolute;
-        bottom: 0;
-        background: white;
-        margin: 5px;
-        right: 0;
-        padding: 0 5px;
-    }
-
-    figure.figure-aside img {
-        margin: auto;
-    }
-
+figure.figure-aside figcaption {
+  position: absolute;
+  bottom: 0;
+  background: white;
+  margin: 5px;
+  right: 0;
+  padding: 0 5px;
+}
+figure.figure-aside img {
+  margin: auto;
+}
 /*#endregion */
-
 /*#region page title */
-
 .page-title {
-    border-bottom: 1px solid;
-    margin-bottom: 30px;
+  border-bottom: 1px solid;
+  margin-bottom: 30px;
 }
-
-    .page-title,
-    .page-title img {
-        margin-right: auto;
-        margin-left: auto;
-        text-align: center;
-    }
-
-        .page-title img {
-            width: 200px;
-        }
-
-        .page-title h1,
-        .page-title h1 small {
-            margin-top: 0;
-            display: block;
-        }
-
+.page-title,
+.page-title img {
+  margin-right: auto;
+  margin-left: auto;
+  text-align: center;
+}
+.page-title img {
+  width: 200px;
+}
+.page-title h1,
+.page-title h1 small {
+  margin-top: 0;
+  display: block;
+}
 /*#endregion */
-
 /*#region accented items*/
-
 h1,
 figcaption,
 .accented {
-    color: #990000;
+  color: #990000;
 }
-
 div,
 .page-header,
 .page-title,
 #subnav {
-    border-color: #FF6666;
+  border-color: #ff6666;
 }
-
 /*#endregion */
-
 /*#region images*/
-
 [class^=col-] img {
-    /* because we images to fill their columns
+  /* 
+        because we images to fill their columns
     */
-    width:100%;
+  width: 100%;
 }
-
 img.img-stacked {
-    margin:auto;
-    margin-bottom: 20px;
-    display:block; /* for centering */
+  margin: auto;
+  margin-bottom: 20px;
+  display: block;
+  /* for centering */
 }
-
 /*#endregion*/
-
 /* #region Book Search */
-
 [ng-controller="BookCtrl"] ul.list-group {
-    min-height: 400px;
+  min-height: 400px;
 }
-
 /*#endregion */
