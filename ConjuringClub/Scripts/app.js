@@ -172,6 +172,10 @@ myApp.controller("AzureVideoCtrl", ['$scope', '$sce', function ($scope, $sce) {
 
     $scope.videos = [        
         {
+            Id: "asset-cc1e445d-1500-80c3-3dce-f1e51d50c102/misbehaving_cards.mp4?sv=2012-02-12&sr=c&si=162a8bb5-baf1-4714-a595-febf634504aa&sig=xEH4pcRjWSbxl1CNv%2FLqu%2B0u8OIyBCftuhwJwDkHW%2Bk%3D&st=2015-06-28T04%3A51%3A27Z&se=2115-06-04T04%3A51%3A27Z",
+            Title: "Misbehaving Cards"
+        },        
+        {
             Id: "asset-9b20445d-1500-80c3-fcbb-f1e50d79fcfe/four_three_two_one_in_52.mp4?sv=2012-02-12&sr=c&si=0973bc78-c7c2-48a0-800b-7a45182ddb9a&sig=iQBQkeVE2DcG9qrh2rtgWGU8YcYB4kIRridv%2BgLZhs4%3D&st=2015-06-08T01%3A21%3A55Z&se=2115-05-15T01%3A21%3A55Z",
             Title: "4, 3, 2, 1in52.ca"
         },
@@ -186,10 +190,6 @@ myApp.controller("AzureVideoCtrl", ['$scope', '$sce', function ($scope, $sce) {
         {
             Id: "asset-2a22445d-1500-80c3-ca39-f1e50d7c1e18/jazz_aces.mp4?sv=2012-02-12&sr=c&si=3973092e-7fbf-40bc-9c1e-6d3b2eaa41b2&sig=pEh3n4AK9kd%2FtCq6QF8hbbqWaq5hhyiu9RA2vzebDZA%3D&st=2015-06-08T01%3A22%3A41Z&se=2115-05-15T01%3A22%3A41Z",
             Title: "Jazz Aces at a Private Residence"
-        },
-        {
-            Id: "asset-cc1e445d-1500-80c3-3dce-f1e51d50c102/misbehaving_cards.mp4?sv=2012-02-12&sr=c&si=162a8bb5-baf1-4714-a595-febf634504aa&sig=xEH4pcRjWSbxl1CNv%2FLqu%2B0u8OIyBCftuhwJwDkHW%2Bk%3D&st=2015-06-28T04%3A51%3A27Z&se=2115-06-04T04%3A51%3A27Z",
-            Title: "Misbehaving Cards"
         }
     ];
     $scope.makeVideoSrc = function (video) {
