@@ -1,8 +1,7 @@
-﻿//app
+//app
 var myApp = angular.module('conjuringApp', ['identityModule', 'ui.bootstrap']);
 
 //controllers
-
 myApp.controller('CalendarCtrl', ['$scope', '$sce', function ($scope, $sce) {
 
     // date creation
@@ -156,7 +155,8 @@ myApp.controller('YouTubeCtrl', ['$scope', '$sce', function ($scope, $sce) {
         { Id: "4sDDW8c4_sc", Title: "Shaun does magic in the coffee shop" },
         { Id: "6esexn7Sy3c", Title: "Magic man Shaun's amazing card trick" },    
         { Id: "7A6vSAW0BEs", Title: "Dealt teaser" },
-        { Id: "Ngmcu9-xRSk", Title: "Lance Burton Dove Act" }
+        { Id: "Ngmcu9-xRSk", Title: "Lance Burton Dove Act" },
+        { Id: "FtgUSUHnzLI", Title: "Ricky Jay and His 52 Assistants" }
     ];
 
     $scope.open = function (video) {
